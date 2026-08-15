@@ -1,0 +1,608 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description"
+    content="Tu sitio web profesional que atrae clientes. Diseñamos, programamos y lo ponemos online. Rápido, seguro, y que funciona." />
+
+  <title>Inspire Webs - Tu Web Profesional que Atrae Clientes</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" aria-hidden="true">
+    <span></span>
+  </div>
+
+  <div class="page-shell">
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+    <nav class="nav glass-card" aria-label="Navegación principal">
+
+      <a class="brand" href="#top">
+        <div class="brand-logo-wrapper">
+          <div class="brand-text">Inspire Webs</div>
+          <div class="brand-author">yassine yahya</div>
+        </div>
+      </a>
+
+      <a class="nav-cta" href="#contacto">
+        Hablemos <span aria-hidden="true">↗</span>
+      </a>
+
+    </nav>
+
+
+    <main id="top">
+
+      <!-- =========================
+           HERO
+      ========================== -->
+      <section class="hero card card-yellow">
+
+        <div class="hero-copy">
+
+
+          <h1>
+            Consigue
+            <em>hasta un <span class="highlight-green">37%</span> más de clientes</em>
+            con tu página web.
+          </h1>
+
+          <a class="text-link hero-how-link" href="#proceso">
+            Cómo funciona →
+          </a>
+
+          <p>
+            Creamos sitios web claros, rápidos y efectivos
+            que hacen que tus clientes potenciales
+            confíen en ti desde el primer vistazo.
+          </p>
+
+          <div class="trust-row">
+
+            <div>
+              <strong>100%</strong>
+              <span>personalizada</span>
+            </div>
+
+            <div>
+              <strong>1–3</strong>
+              <span>semanas</span>
+            </div>
+
+            <div>
+              <strong>24/7</strong>
+              <span>disponible</span>
+            </div>
+
+            <div>
+              <strong>✓</strong>
+              <span>segura</span>
+            </div>
+
+          </div>
+
+          <h2 class="hero-subheading">Hablemos</h2>
+
+          <form class="hero-form-pill" id="hero-form" action="https://formspree.io/f/mqpzdqao" method="POST">
+            <label class="sr-only" for="hero-contacto">Tu email o teléfono</label>
+            <input
+              id="hero-contacto"
+              type="text"
+              name="contacto"
+              placeholder="Tu email o teléfono"
+              aria-label="Tu email o teléfono"
+              autocomplete="email"
+            />
+            <button type="submit" class="hero-form-pill-btn">
+              Empezar
+              <span aria-hidden="true">↗</span>
+            </button>
+          </form>
+
+          <div class="hero-actions">
+
+            <div class="hero-socials">
+              <a href="#" class="hero-social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <circle cx="17.5" cy="6.5" r="1"></circle>
+                </svg>
+              </a>
+              <a href="https://wa.me/34602317364" class="hero-social-icon" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.29-1.39a9.87 9.87 0 0 0 4.7 1.2h.01c5.46 0 9.91-4.45 9.91-9.9c0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.8a8.07 8.07 0 0 1 5.73 2.38a8.07 8.07 0 0 1 2.37 5.73c0 4.47-3.64 8.1-8.11 8.1a8.1 8.1 0 0 1-4.13-1.13l-.3-.17l-3.14.82l.84-3.06l-.19-.32a8.08 8.08 0 0 1-1.24-4.32c0-4.47 3.64-8.11 8.11-8.11m-4.38 4.15c-.15 0-.4.06-.61.29c-.21.24-.8.78-.8 1.9s.82 2.21.93 2.36c.12.15 1.63 2.55 4.03 3.5c1.99.8 2.4.64 2.83.6c.43-.04 1.39-.57 1.58-1.11c.2-.55.2-1.02.14-1.12c-.06-.1-.21-.16-.44-.27c-.23-.12-1.39-.68-1.6-.76c-.22-.08-.37-.12-.53.12c-.16.24-.61.76-.74.92c-.14.15-.27.17-.5.06c-.24-.12-1-.37-1.9-1.17c-.7-.63-1.18-1.4-1.31-1.64c-.14-.24-.02-.37.1-.49c.11-.11.24-.28.36-.42c.12-.14.16-.24.24-.4c.08-.16.04-.3-.02-.42c-.06-.12-.53-1.28-.73-1.75c-.19-.46-.38-.4-.53-.4h-.4z"></path>
+                </svg>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           SERVICIO
+      ========================== -->
+      <section id="servicio" class="card card-lilac split-card section-dark">
+
+        <div>
+
+
+          <h2>
+            Diseño, desarrollo y publicación.
+            <br />
+            <span>
+              Todo incluido.
+            </span>
+          </h2>
+
+          <p>
+            Diseñamos tu web, la programamos, nos aseguramos de que sea rápida
+            y segura, y la ponemos online. Desde la idea hasta que esté lista
+            para usar. Todo incluido.
+          </p>
+
+          <div class="service-features">
+
+            <div class="feature-item">
+              <div class="feature-icon" aria-hidden="true">✓</div>
+              <span>Diseño que atrae y convierte</span>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon" aria-hidden="true">✓</div>
+              <span>Funciona perfectamente</span>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon" aria-hidden="true">✓</div>
+              <span>Segura y protegida</span>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon" aria-hidden="true">✓</div>
+              <span>Soporte cuando lo necesites</span>
+            </div>
+
+          </div>
+
+          <div class="section-cta">
+            <a class="cta-link" href="#contacto">
+              Empezar ahora
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           IMPACTO
+      ========================== -->
+      <section class="card card-mint testimonial-card">
+
+        <div>
+
+
+          <h2>
+            Tu página web trabaja por ti.
+          </h2>
+
+          <p>
+            Tu web trabaja para ti las 24 horas.
+            Clínicas dentales, salones, estéticas, restaurantes y autónomos
+            ya la usan para que los clientes los encuentren y confíen en ellos.
+          </p>
+
+          <div class="impact-highlight">
+
+            <strong>
+              Más confianza, más contactos, más éxito
+            </strong>
+
+            <span>
+              Presente en internet las 24 horas, todos los días del año.
+            </span>
+
+          </div>
+
+          <div class="service-features" style="margin-top: clamp(28px, 4vh, 44px);">
+
+            <div class="feature-item">
+              <div class="feature-icon" aria-hidden="true">✓</div>
+              <span>Te encuentran en Google</span>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon" aria-hidden="true">✓</div>
+              <span>Te contactan directamente</span>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon" aria-hidden="true">✓</div>
+              <span>Confían en ti al instante</span>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon" aria-hidden="true">✓</div>
+              <span>Siempre abierto, 24/7</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           PROCESO
+      ========================== -->
+      <section id="proceso" class="card card-peach process-card section-dark">
+
+        <div>
+
+
+          <h2>
+            Simple, claro y sin sorpresas.
+          </h2>
+
+        </div>
+
+
+        <div class="process-steps">
+
+          <!-- Step 01 -->
+          <div class="process-step">
+
+            <div class="step-number">
+              01
+            </div>
+
+            <div class="step-content">
+
+              <h3>
+                Hablamos y entendemos
+              </h3>
+
+              <p>
+                Me cuentas tu negocio, qué necesitas, y quién son tus clientes.
+                Así entiendo exactamente qué debe hacer tu web.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- Step 02 -->
+          <div class="process-step">
+
+            <div class="step-number">
+              02
+            </div>
+
+            <div class="step-content">
+
+              <h3>
+                Diseñamos juntos
+              </h3>
+
+              <p>
+                Te muestro cómo se vería tu web. Tú me das tu opinión,
+                hacemos cambios, hasta que te encante.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- Step 03 -->
+          <div class="process-step">
+
+            <div class="step-number">
+              03
+            </div>
+
+            <div class="step-content">
+
+              <h3>
+                La lanzamos
+              </h3>
+
+              <p>
+                Programo todo, la pruebo bien, y la pongo online.
+                Tu web está lista, funciona perfectamente, y empieza a traerte clientes.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="section-cta">
+          <a class="cta-link" href="#contacto">
+            Quiero comenzar
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           PROYECTOS
+      ========================== -->
+      <section id="proyectos" class="card card-rose projects-card">
+
+
+        <h2>
+          En móvil, tablet, computadora. Siempre perfecta.
+        </h2>
+
+        <p style="max-width: 560px; margin-top: clamp(16px, 2vh, 22px);">
+          Tu web se adapta sola a cualquier pantalla. Tus clientes la ven
+          perfecta, ya sea desde el móvil, la tablet o el ordenador.
+        </p>
+
+        <div class="mockups-image-container">
+          <img src="assets/mockup-removebg-preview.png" alt="Diseño responsive en computadora, tablet y móvil" class="mockups-image" loading="lazy" />
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           PRECIOS
+      ========================== -->
+      <section id="precios" class="card card-blue pricing-card section-dark">
+
+        <div>
+
+
+          <h2>
+            Sabés lo que pagas, sin letra pequeña.
+          </h2>
+
+          <p>
+            Un sitio web profesional, que funciona bien, que la gente puede usar
+            en cualquier dispositivo. Hecho con cuidado. Sin letras pequeñas.
+          </p>
+
+        </div>
+
+
+        <div class="price-box">
+
+          <div class="price-label">
+            A PARTIR DE
+          </div>
+
+          <div class="price">
+            490<span>€</span>
+          </div>
+
+          <div class="price-note">
+            Web completa, rápida, que funciona, y que te trae clientes
+          </div>
+
+          <a class="cta-link" href="#contacto">
+            Obtener una oferta
+            <span aria-hidden="true">→</span>
+          </a>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           CONTACTO
+      ========================== -->
+      <section id="contacto" class="card card-cream contact-card">
+
+        <div>
+
+
+          <h2>
+            Cuéntame tu idea.
+          </h2>
+
+          <p>
+            No necesitas saber exactamente qué hacer.
+            Hablamos, yo te asesoro, y juntos encontramos
+            la mejor solución para tu negocio.
+          </p>
+
+        </div>
+
+
+        <div class="contact-panel">
+
+          <!-- Contact form -->
+          <form class="contact-form" id="contact-form" action="https://formspree.io/f/mqpzdqao" method="POST">
+
+            <div class="form-row">
+
+              <label>
+
+                <span>
+                  Nombre
+                </span>
+
+                <input type="text" name="nombre" placeholder="Tu nombre completo" autocomplete="name" required />
+
+              </label>
+
+
+              <label>
+
+                <span>
+                  Correo electrónico
+                </span>
+
+                <input type="email" name="email" placeholder="tu@email.com" autocomplete="email" required />
+
+              </label>
+
+            </div>
+
+
+            <label>
+
+              <span>
+                Tu mensaje
+              </span>
+
+              <textarea name="mensaje" rows="3" placeholder="Cuéntame brevemente qué necesitas" required></textarea>
+
+            </label>
+
+
+            <p class="form-status" aria-live="polite"></p>
+
+            <div class="contact-actions">
+              <button type="submit" class="form-submit-cta">
+                Enviar
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+
+          </form>
+
+          <div class="contact-actions" style="margin-top: 20px;">
+
+            <a class="form-submit-cta" href="https://wa.me/34602317364" target="_blank" rel="noopener noreferrer">
+              Escribir por WhatsApp
+              <span aria-hidden="true">↗</span>
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="footer">
+
+      <div class="footer-logo">
+        <img src="assets/logo2.png" alt="Inspire Webs logo">
+      </div>
+
+      <div>
+        © <span class="year">2026</span> Inspire Webs · Yassine Yahya
+      </div>
+
+      <div class="footer-social">
+        <a href="https://www.instagram.com" class="footer-social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+            <circle cx="12" cy="12" r="4"></circle>
+            <circle cx="17.5" cy="6.5" r="1"></circle>
+          </svg>
+        </a>
+        <a href="https://wa.me/34602317364" class="footer-social-icon" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.29-1.39a9.87 9.87 0 0 0 4.7 1.2h.01c5.46 0 9.91-4.45 9.91-9.9c0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.8a8.07 8.07 0 0 1 5.73 2.38a8.07 8.07 0 0 1 2.37 5.73c0 4.47-3.64 8.1-8.11 8.1a8.1 8.1 0 0 1-4.13-1.13l-.3-.17l-3.14.82l.84-3.06l-.19-.32a8.08 8.08 0 0 1-1.24-4.32c0-4.47 3.64-8.11 8.11-8.11m-4.38 4.15c-.15 0-.4.06-.61.29c-.21.24-.8.78-.8 1.9s.82 2.21.93 2.36c.12.15 1.63 2.55 4.03 3.5c1.99.8 2.4.64 2.83.6c.43-.04 1.39-.57 1.58-1.11c.2-.55.2-1.02.14-1.12c-.06-.1-.21-.16-.44-.27c-.23-.12-1.39-.68-1.6-.76c-.22-.08-.37-.12-.53.12c-.16.24-.61.76-.74.92c-.14.15-.27.17-.5.06c-.24-.12-1-.37-1.9-1.17c-.7-.63-1.18-1.4-1.31-1.64c-.14-.24-.02-.37.1-.49c.11-.11.24-.28.36-.42c.12-.14.16-.24.24-.4c.08-.16.04-.3-.02-.42c-.06-.12-.53-1.28-.73-1.75c-.19-.46-.38-.4-.53-.4h-.4z"></path>
+          </svg>
+        </a>
+      </div>
+
+    </footer>
+
+  </div>
+
+  <!-- Modal genérico (éxito / aviso) -->
+  <div class="site-modal" id="site-modal" aria-hidden="true">
+    <div class="site-modal-overlay" data-modal-close></div>
+    <div class="site-modal-box" role="dialog" aria-modal="true">
+      <button type="button" class="site-modal-close" data-modal-close aria-label="Cerrar">×</button>
+      <div class="site-modal-icon" id="site-modal-icon"></div>
+      <h3 class="site-modal-title" id="site-modal-title"></h3>
+      <p class="site-modal-message" id="site-modal-message"></p>
+      <button type="button" class="site-modal-btn" data-modal-close>Entendido</button>
+    </div>
+  </div>
+
+
+  <!-- JavaScript -->
+  <script>
+    // Animar números del trust-row
+    document.addEventListener('DOMContentLoaded', () => {
+      const trustRow = document.querySelector('.trust-row');
+      if (!trustRow) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !entry.target.dataset.animated) {
+            entry.target.dataset.animated = 'true';
+
+            const strongs = entry.target.querySelectorAll('strong');
+            strongs.forEach((strong) => {
+              const text = strong.textContent.trim();
+              if (text === '100%') {
+                animateCounter(strong, 0, 100, 1000, '%');
+              } else if (text === '1–3') {
+                animateCounter(strong, 0, 3, 1000, '', '1–');
+              }
+            });
+          }
+        });
+      }, { threshold: 0.5 });
+
+      observer.observe(trustRow);
+
+      function animateCounter(element, start, end, duration, suffix = '', prefix = '') {
+        const startTime = performance.now();
+        const animate = (currentTime) => {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const value = Math.floor(start + (end - start) * progress);
+          element.textContent = prefix + value + suffix;
+
+          if (progress < 1) {
+            requestAnimationFrame(animate);
+          }
+        };
+        requestAnimationFrame(animate);
+      }
+    });
+  </script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
