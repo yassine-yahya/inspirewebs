@@ -32,6 +32,42 @@ document.addEventListener('DOMContentLoaded', () => {
     yearEl.textContent = new Date().getFullYear();
   }
 
+  // Animación de contador (p.ej. el "37%" del título del hero)
+  const countEls = document.querySelectorAll('[data-count-to]');
+  countEls.forEach((el) => {
+    const target = parseInt(el.getAttribute('data-count-to'), 10);
+    const suffix = el.getAttribute('data-count-suffix') || '';
+    if (Number.isNaN(target)) return;
+
+    if (prefersReducedMotion) {
+      el.textContent = `${target}${suffix}`;
+      return;
+    }
+
+    const start = 10;
+    const duration = 1400;
+    const startDelay = 300;
+    el.textContent = `${start}${suffix}`;
+
+    // ease-in-out cubic: arranque y final suaves, sin tirones
+    const easeInOutCubic = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+
+    const run = () => {
+      let startTime = null;
+      const step = (timestamp) => {
+        if (startTime === null) startTime = timestamp;
+        const progress = Math.min((timestamp - startTime) / duration, 1);
+        const eased = easeInOutCubic(progress);
+        const current = Math.round(start + eased * (target - start));
+        el.textContent = `${current}${suffix}`;
+        if (progress < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+
+    setTimeout(run, startDelay);
+  });
+
   // Cierra el desplazamiento suave del nav sin salto brusco al hacer clic en enlaces internos
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener('click', (e) => {
