@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Tu sitio web profesional que atrae clientes. Diseñamos, programamos y lo ponemos online. Rápido, seguro, y que funciona." />
+  <meta name="description" content="Tu sitio web profesional que atrae clientes. Diseño, programo y lo pongo online. Rápido, seguro, y que funciona." />
   <meta name="keywords" content="diseño web, desarrollo web, páginas web profesionales, web design, web development, Barcelona" />
   <meta name="author" content="Yassine Yahya" />
   <meta name="robots" content="index, follow" />
@@ -67,7 +67,7 @@
       </a>
 
       <a class="nav-cta" href="#contacto">
-        Hablemos <span aria-hidden="true">↗</span>
+        Contáctame <span aria-hidden="true">↗</span>
       </a>
 
     </nav>
@@ -93,10 +93,9 @@
             Cómo funciona →
           </a>
 
-          <p>
-            Creamos sitios web claros, rápidos y efectivos
-            que hacen que tus clientes potenciales
-            confíen en ti desde el primer vistazo.
+          <p style="font-weight: 700; color: var(--accent); font-size: clamp(1.5rem, 2.4vw, 2rem);">
+            Me cuentas tu negocio, diseño tu web,
+            y en poco la tienes lista.
           </p>
 
           <div class="trust-row">
@@ -123,22 +122,53 @@
 
           </div>
 
-          <h2 class="hero-subheading">Hablemos</h2>
+          <h2 class="hero-subheading">Contáctame</h2>
 
-          <form class="hero-form-pill" id="hero-form" action="https://formspree.io/f/mqpzdqao" method="POST">
-            <label class="sr-only" for="hero-contacto">Tu email o teléfono</label>
-            <input
-              id="hero-contacto"
-              type="text"
-              name="contacto"
-              placeholder="Tu email o teléfono"
-              aria-label="Tu email o teléfono"
-              autocomplete="email"
-            />
-            <button type="submit" class="hero-form-pill-btn">
+          <form class="hero-form-full" id="hero-form" action="https://formspree.io/f/mqpzdqao" method="POST">
+
+            <div class="form-row">
+
+              <label>
+                <span class="sr-only">Nombre</span>
+                <input type="text" name="nombre" placeholder="Tu nombre" autocomplete="name" required />
+              </label>
+
+              <label>
+                <span class="sr-only">Correo electrónico o teléfono</span>
+                <input type="text" name="contacto" placeholder="Tu email o teléfono" autocomplete="email" required />
+              </label>
+
+            </div>
+
+            <label>
+              <span class="sr-only">Tipo de negocio</span>
+              <select name="negocio" required>
+                <option value="" disabled selected>Necesito web para:</option>
+                <option value="Peluqueria">Peluquería / salón</option>
+                <option value="Clinica dental">Clínica dental</option>
+                <option value="Centro de belleza">Centro de belleza / estética</option>
+                <option value="Restaurante">Restaurante / bar</option>
+                <option value="Gimnasio">Gimnasio / centro deportivo</option>
+                <option value="Veterinaria">Clínica veterinaria</option>
+                <option value="Tienda">Tienda / comercio</option>
+                <option value="Inmobiliaria">Inmobiliaria</option>
+                <option value="Fisioterapia">Fisioterapia</option>
+                <option value="Abogacia">Abogado / asesoría</option>
+                <option value="Autonomo">Autónomo / profesional</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </label>
+
+            <label>
+              <span class="sr-only">Tu mensaje</span>
+              <textarea name="mensaje" rows="2" placeholder="Cuéntame brevemente qué necesitas"></textarea>
+            </label>
+
+            <button type="submit" class="hero-form-full-btn">
               Empezar
               <span aria-hidden="true">↗</span>
             </button>
+
           </form>
 
           <div class="hero-actions">
@@ -182,8 +212,8 @@
           </h2>
 
           <p>
-            Diseñamos tu web, la programamos, nos aseguramos de que sea rápida
-            y segura, y la ponemos online. Desde la idea hasta que esté lista
+            Diseño tu web, la programo, me aseguro de que sea rápida
+            y segura, y la pongo online. Desde la idea hasta que esté lista
             para usar. Todo incluido.
           </p>
 
@@ -309,7 +339,7 @@
             <div class="step-content">
 
               <h3>
-                Hablamos y entendemos
+                Te escucho y entiendo
               </h3>
 
               <p>
@@ -332,12 +362,12 @@
             <div class="step-content">
 
               <h3>
-                Diseñamos juntos
+                Diseño contigo
               </h3>
 
               <p>
                 Te muestro cómo se vería tu web. Tú me das tu opinión,
-                hacemos cambios, hasta que te encante.
+                hago cambios, hasta que te encante.
               </p>
 
             </div>
@@ -355,7 +385,7 @@
             <div class="step-content">
 
               <h3>
-                La lanzamos
+                La lanzo
               </h3>
 
               <p>
@@ -459,7 +489,7 @@
 
           <p>
             No necesitas saber exactamente qué hacer.
-            Hablamos, yo te asesoro, y juntos encontramos
+            Te escucho, te asesoro, y juntos encontramos
             la mejor solución para tu negocio.
           </p>
 
@@ -469,53 +499,52 @@
         <div class="contact-panel">
 
           <!-- Contact form -->
-          <form class="contact-form" id="contact-form" action="https://formspree.io/f/mqpzdqao" method="POST">
+          <form class="hero-form-full" id="contact-form" action="https://formspree.io/f/mqpzdqao" method="POST">
 
             <div class="form-row">
 
               <label>
-
-                <span>
-                  Nombre
-                </span>
-
-                <input type="text" name="nombre" placeholder="Tu nombre completo" autocomplete="name" required />
-
+                <span class="sr-only">Nombre</span>
+                <input type="text" name="nombre" placeholder="Tu nombre" autocomplete="name" required />
               </label>
 
-
               <label>
-
-                <span>
-                  Correo electrónico
-                </span>
-
-                <input type="email" name="email" placeholder="tu@email.com" autocomplete="email" required />
-
+                <span class="sr-only">Correo electrónico o teléfono</span>
+                <input type="text" name="contacto" placeholder="Tu email o teléfono" autocomplete="email" required />
               </label>
 
             </div>
 
-
             <label>
-
-              <span>
-                Tu mensaje
-              </span>
-
-              <textarea name="mensaje" rows="3" placeholder="Cuéntame brevemente qué necesitas" required></textarea>
-
+              <span class="sr-only">Necesito web para</span>
+              <select name="negocio" required>
+                <option value="" disabled selected>Necesito web para:</option>
+                <option value="Peluqueria">Peluquería / salón</option>
+                <option value="Clinica dental">Clínica dental</option>
+                <option value="Centro de belleza">Centro de belleza / estética</option>
+                <option value="Restaurante">Restaurante / bar</option>
+                <option value="Gimnasio">Gimnasio / centro deportivo</option>
+                <option value="Veterinaria">Clínica veterinaria</option>
+                <option value="Tienda">Tienda / comercio</option>
+                <option value="Inmobiliaria">Inmobiliaria</option>
+                <option value="Fisioterapia">Fisioterapia</option>
+                <option value="Abogacia">Abogado / asesoría</option>
+                <option value="Autonomo">Autónomo / profesional</option>
+                <option value="Otro">Otro</option>
+              </select>
             </label>
 
+            <label>
+              <span class="sr-only">Tu mensaje</span>
+              <textarea name="mensaje" rows="2" placeholder="Cuéntame brevemente qué necesitas"></textarea>
+            </label>
 
             <p class="form-status" aria-live="polite"></p>
 
-            <div class="contact-actions">
-              <button type="submit" class="form-submit-cta">
-                Enviar
-                <span aria-hidden="true">→</span>
-              </button>
-            </div>
+            <button type="submit" class="hero-form-full-btn">
+              Enviar
+              <span aria-hidden="true">→</span>
+            </button>
 
           </form>
 

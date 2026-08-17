@@ -185,21 +185,25 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   };
 
-  // ---- Formulario del hero (un solo campo: email o teléfono) ----
-  const heroForm = document.getElementById('hero-form');
-  if (heroForm) {
-    heroForm.addEventListener('submit', (e) => {
+  // ---- Formularios rápidos (hero y contacto: nombre, email/teléfono, negocio, mensaje) ----
+  const handleQuickForm = (form) => {
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      const contactoInput = heroForm.querySelector('input[name="contacto"]');
-      const contacto = contactoInput ? contactoInput.value.trim() : '';
+      const nombreInput = form.querySelector('input[name="nombre"]');
+      const contactoInput = form.querySelector('input[name="contacto"]');
+      const negocioInput = form.querySelector('select[name="negocio"]');
 
-      if (!contacto) {
+      const nombre = nombreInput ? nombreInput.value.trim() : '';
+      const contacto = contactoInput ? contactoInput.value.trim() : '';
+      const negocio = negocioInput ? negocioInput.value.trim() : '';
+
+      if (!nombre || !contacto || !negocio) {
         openModal({
           type: 'warning',
           icon: '!',
           title: 'Falta un dato',
-          message: 'Por favor, proporciona tu email o tu teléfono para que podamos contactarte.',
+          message: 'Completa tu nombre, tu email o teléfono, y el tipo de negocio antes de enviar.',
         });
         return;
       }
@@ -216,33 +220,15 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      submitFormWithModal(heroForm);
+      submitFormWithModal(form);
     });
-  }
+  };
 
-  // ---- Formulario de contacto ----
+  const heroForm = document.getElementById('hero-form');
+  if (heroForm) handleQuickForm(heroForm);
+
   const contactForm = document.getElementById('contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      const nombre = contactForm.querySelector('input[name="nombre"]').value.trim();
-      const email = contactForm.querySelector('input[name="email"]').value.trim();
-      const mensaje = contactForm.querySelector('textarea[name="mensaje"]').value.trim();
-
-      if (!nombre || !email || !mensaje) {
-        openModal({
-          type: 'warning',
-          icon: '!',
-          title: 'Faltan datos',
-          message: 'Completa tu nombre, email y mensaje antes de enviar el formulario.',
-        });
-        return;
-      }
-
-      submitFormWithModal(contactForm);
-    });
-  }
+  if (contactForm) handleQuickForm(contactForm);
 
   // Carousel de proyectos (deshabilitado - usando mockup responsive)
   // const projectsGrid = document.getElementById('projectsGrid');
