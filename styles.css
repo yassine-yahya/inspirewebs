@@ -8,13 +8,20 @@
   --accent: #10B981;
   --accent-secondary: #D8B4FE;
 
-  --cream: #ffffff;
-  --yellow: #fafafa;
-  --lilac: #ffffff;
-  --mint: #f8f8f8;
-  --peach: #ffffff;
-  --blue: #fafafa;
-  --rose: #ffffff;
+  --section-light: #eefaf4;
+  --section-deep: #e0f3e9;
+
+  --cream: var(--section-light);
+  --yellow: var(--section-light);
+  --lilac: var(--section-light);
+  --mint: var(--section-light);
+  --peach: var(--section-light);
+  --blue: var(--section-light);
+  --rose: var(--section-light);
+
+  --lilac-deep: var(--section-deep);
+  --peach-deep: var(--section-deep);
+  --blue-deep: var(--section-deep);
 
   --white: rgba(255, 255, 255, 0.68);
 
@@ -479,7 +486,7 @@ main > section:nth-of-type(7) { position: relative; z-index: 6; }
   background-color: #0f0f10;
   background-image:
     linear-gradient(180deg, rgba(8, 8, 9, 0.88) 0%, rgba(8, 8, 9, 0.55) 45%, rgba(8, 8, 9, 0.62) 100%),
-    url("assets/mockup-inspirewebs.png");
+    url("assets/hero-inspirewebs.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -865,12 +872,12 @@ main > section:nth-of-type(7) { position: relative; z-index: 6; }
   margin-top: clamp(20px, 3vh, 32px);
   margin-bottom: clamp(20px, 3vh, 30px);
 
-  background: var(--yellow);
+  background: #f6f5f3;
   border-radius: 24px;
   padding: 16px;
 
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(25, 24, 23, 0.06);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(16, 185, 129, 0.4), 0 0 32px rgba(16, 185, 129, 0.18);
+  border: 1px solid rgba(16, 185, 129, 0.35);
 }
 
 .hero-form-full .form-row {
@@ -932,8 +939,8 @@ main > section:nth-of-type(7) { position: relative; z-index: 6; }
   border: none;
   border-radius: 999px;
 
-  background: var(--ink);
-  color: #fff;
+  background: var(--accent);
+  color: var(--ink);
 
   font-family: inherit;
   font-size: 0.95rem;
@@ -942,14 +949,15 @@ main > section:nth-of-type(7) { position: relative; z-index: 6; }
   cursor: pointer;
   white-space: nowrap;
 
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
 }
 
 .hero-form-full-btn::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: var(--accent);
+  background: var(--ink);
   border-radius: 999px;
   transform: scaleX(0);
   transform-origin: left;
@@ -958,8 +966,9 @@ main > section:nth-of-type(7) { position: relative; z-index: 6; }
 }
 
 .hero-form-full-btn:hover {
+  color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 10px 22px rgba(25, 24, 23, 0.28);
+  box-shadow: 0 10px 26px rgba(16, 185, 129, 0.45);
 }
 
 .hero-form-full-btn:hover::before {
@@ -1993,7 +2002,7 @@ main > section:nth-of-type(7) { position: relative; z-index: 6; }
 ========================================================= */
 
 .card-cream {
-  background: #ececea;
+  background: var(--cream);
 
   display: grid;
 
@@ -2460,6 +2469,8 @@ main > section:nth-of-type(7) { position: relative; z-index: 6; }
 
     align-items: flex-start;
     overflow: visible;
+
+    background-position: 78% top;
   }
 
   .hero-how-link {
@@ -3388,10 +3399,16 @@ main > section:nth-of-type(7) { position: relative; z-index: 6; }
    SECCIONES ALTERNADAS (gris claro / gris un poco más oscuro)
 ========================================================= */
 
-.section-dark.card-lilac,
-.section-dark.card-peach,
+.section-dark.card-lilac {
+  background: var(--lilac-deep);
+}
+
+.section-dark.card-peach {
+  background: var(--peach-deep);
+}
+
 .section-dark.card-blue {
-  background: #ececea;
+  background: var(--blue-deep);
 }
 
 
