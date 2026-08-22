@@ -1,682 +1,1029 @@
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Tu sitio web profesional que atrae clientes. Diseño, programo y lo pongo online. Rápido, seguro, y que funciona." />
-  <meta name="keywords" content="diseño web, desarrollo web, páginas web profesionales, web design, web development, Barcelona" />
-  <meta name="author" content="Yassine Yahya" />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#10B981" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Open Graph para redes sociales -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Inspire Webs - Tu Web Profesional que Atrae Clientes" />
-  <meta property="og:description" content="Diseño, desarrollo y publicación de sitios web profesionales. Entrega en 1-3 semanas." />
-  <meta property="og:url" content="https://inspirewebs.com" />
-  <meta property="og:image" content="https://inspirewebs.com/assets/logo.png" />
-  <meta property="og:site_name" content="Inspire Webs" />
-  <meta property="og:locale" content="es_ES" />
+    <!-- SEO & Metadata -->
+    <title>InspireWebs | Website Responsive, Diseño Optimizado &amp; Redes</title>
+    <meta name="description"
+        content="Diseño web profesional, website responsive, diseño optimizado, automatizaciones sencillas y packs para redes sociales para autónomos y comercios locales.">
+    <meta name="author" content="Yassine Yahya">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords"
+        content="diseño web autonomos, website responsive, diseño optimizado, automatizaciones pymes, plantillas redes sociales">
+    <meta name="theme-color" content="#10B981">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Inspire Webs - Tu Web Profesional" />
-  <meta name="twitter:description" content="Diseño y desarrollo web profesional. Rápido, seguro y que funciona." />
-  <meta name="twitter:image" content="https://inspirewebs.com/assets/logo.png" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://inspirewebs.com">
 
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://inspirewebs.com" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo.png">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/logo.png" />
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="InspireWebs | Digitalización para Pequeños Negocios">
+    <meta property="og:description"
+        content="Impulsa tu negocio con una website responsive, diseño optimizado y plantillas para redes sociales.">
+    <meta property="og:url" content="https://inspirewebs.com">
+    <meta property="og:image" content="https://inspirewebs.com/assets/logo.png">
+    <meta property="og:site_name" content="InspireWebs">
+    <meta property="og:locale" content="es_ES">
 
-  <title>Inspire Webs - Tu Web Profesional que Atrae Clientes</title>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="InspireWebs | Digitalización para Pequeños Negocios">
+    <meta name="twitter:description"
+        content="Impulsa tu negocio con una website responsive, diseño optimizado y plantillas para redes sociales.">
+    <meta name="twitter:image" content="https://inspirewebs.com/assets/logo.png">
 
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- CSS Externo y Estilos Críticos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet" />
+    <!-- Datos estructurados -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "InspireWebs",
+        "url": "https://inspirewebs.com"
+    }
+    </script>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles.css" />
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Inspire Webs",
-    "url": "https://inspirewebs.com"
-  }
-  </script>
-  
+        .bg-grid-pattern {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+
+        @keyframes subtle-float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .animate-subtle-float {
+            animation: subtle-float 5s ease-in-out infinite;
+        }
+
+        .hero-glow {
+            background: radial-gradient(circle at 50% 30%, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+        }
+    </style>
 </head>
 
-<body>
-
-  <!-- Scroll progress -->
-  <div class="scroll-progress" aria-hidden="true">
-    <span></span>
-  </div>
-
-  <div class="page-shell">
-
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
-    <nav class="nav glass-card" aria-label="Navegación principal">
-
-      <a class="brand" href="#top">
-        <img class="brand-logo" src="assets/logo.png" alt="Inspire Webs" />
-        <div class="brand-logo-wrapper">
-          <div class="brand-author">yassine yahya</div>
-        </div>
-      </a>
-
-      <div class="nav-actions">
-
-        <div class="nav-socials">
-          <a href="https://www.instagram.com/inspirewebs_/" class="nav-social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-              <circle cx="12" cy="12" r="4"></circle>
-              <circle cx="17.5" cy="6.5" r="1"></circle>
-            </svg>
-          </a>
-          <a href="https://wa.me/34602317364" class="nav-social-icon" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.29-1.39a9.87 9.87 0 0 0 4.7 1.2h.01c5.46 0 9.91-4.45 9.91-9.9c0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.8a8.07 8.07 0 0 1 5.73 2.38a8.07 8.07 0 0 1 2.37 5.73c0 4.47-3.64 8.1-8.11 8.1a8.1 8.1 0 0 1-4.13-1.13l-.3-.17l-3.14.82l.84-3.06l-.19-.32a8.08 8.08 0 0 1-1.24-4.32c0-4.47 3.64-8.11 8.11-8.11m-4.38 4.15c-.15 0-.4.06-.61.29c-.21.24-.8.78-.8 1.9s.82 2.21.93 2.36c.12.15 1.63 2.55 4.03 3.5c1.99.8 2.4.64 2.83.6c.43-.04 1.39-.57 1.58-1.11c.2-.55.2-1.02.14-1.12c-.06-.1-.21-.16-.44-.27c-.23-.12-1.39-.68-1.6-.76c-.22-.08-.37-.12-.53.12c-.16.24-.61.76-.74.92c-.14.15-.27.17-.5.06c-.24-.12-1-.37-1.9-1.17c-.7-.63-1.18-1.4-1.31-1.64c-.14-.24-.02-.37.1-.49c.11-.11.24-.28.36-.42c.12-.14.16-.24.24-.4c.08-.16.04-.3-.02-.42c-.06-.12-.53-1.28-.73-1.75c-.19-.46-.38-.4-.53-.4h-.4z"></path>
-            </svg>
-          </a>
-        </div>
-
-        <a class="nav-cta" href="#contacto">
-          Contáctame <span aria-hidden="true">↗</span>
-        </a>
-
-      </div>
-
-    </nav>
-
-
-    <main id="top">
-
-      <!-- =========================
-           HERO
-      ========================== -->
-      <section class="hero card card-yellow">
-
-        <div class="hero-copy">
-
-
-          <h1>
-            Tú también
-            <em><span class="highlight-green">mereces una web.</span></em>
-          </h1>
-
-          <a class="text-link hero-how-link" href="#proceso">
-            Cómo funciona →
-          </a>
-
-          <p style="font-weight: 700; color: #ffffff; font-size: clamp(1.5rem, 2.4vw, 2rem);">
-            Páginas web bonitas y sencillas para negocios y tiendas,
-            fáciles y sin complicaciones.
-          </p>
-
-          <div class="trust-row">
-
-            <div>
-              <strong class="highlight-green" data-count-to="37" data-count-suffix="%">37%</strong>
-              <span>más clientes</span>
-            </div>
-
-            <div>
-              <strong>100%</strong>
-              <span>personalizada</span>
-            </div>
-
-            <div>
-              <strong>1–3</strong>
-              <span>semanas</span>
-            </div>
-
-            <div>
-              <strong>24/7</strong>
-              <span>disponible</span>
-            </div>
-
-            <div>
-              <strong>✓</strong>
-              <span>segura</span>
-            </div>
-
-          </div>
-
-          <h2 class="hero-subheading">Contáctame</h2>
-
-          <form class="hero-form-full" id="hero-form" action="https://formspree.io/f/mqpzdqao" method="POST">
-
-            <div class="form-row">
-
-              <label>
-                <span class="sr-only">Nombre</span>
-                <input type="text" name="nombre" placeholder="Tu nombre" autocomplete="name" required />
-              </label>
-
-              <label>
-                <span class="sr-only">Correo electrónico o teléfono</span>
-                <input type="text" name="contacto" placeholder="Tu email o teléfono" autocomplete="email" required />
-              </label>
-
-            </div>
-
-            <label>
-              <span class="sr-only">Tipo de negocio</span>
-              <select name="negocio" required>
-                <option value="" disabled selected>Necesito web para:</option>
-                <option value="Peluqueria">Peluquería / salón</option>
-                <option value="Clinica dental">Clínica dental</option>
-                <option value="Centro de belleza">Centro de belleza / estética</option>
-                <option value="Restaurante">Restaurante / bar</option>
-                <option value="Gimnasio">Gimnasio / centro deportivo</option>
-                <option value="Veterinaria">Clínica veterinaria</option>
-                <option value="Tienda">Tienda / comercio</option>
-                <option value="Inmobiliaria">Inmobiliaria</option>
-                <option value="Fisioterapia">Fisioterapia</option>
-                <option value="Abogacia">Abogado / asesoría</option>
-                <option value="Autonomo">Autónomo / profesional</option>
-                <option value="Otro">Otro</option>
-              </select>
-            </label>
-
-            <label>
-              <span class="sr-only">Tu mensaje</span>
-              <textarea name="mensaje" rows="2" placeholder="Cuéntame brevemente qué necesitas"></textarea>
-            </label>
-
-            <button type="submit" class="hero-form-full-btn">
-              Empezar
-              <span aria-hidden="true">↗</span>
-            </button>
-
-          </form>
-
-        </div>
-
-      </section>
-
-
-      <!-- =========================
-           SERVICIO
-      ========================== -->
-      <section id="servicio" class="card card-lilac split-card section-dark">
-
-        <div>
-
-
-          <h2>
-            Diseño, desarrollo y publicación.
-            <br />
-            <span>
-              Todo incluido.
-            </span>
-          </h2>
-
-          <p>
-            Diseño tu web, la programo, me aseguro de que sea rápida
-            y segura, y la pongo online. Desde la idea hasta que esté lista
-            para usar. Todo incluido.
-          </p>
-
-          <div class="service-features">
-
-            <div class="feature-item">
-              <div class="feature-icon" aria-hidden="true">✓</div>
-              <span>Diseño que atrae y convierte</span>
-            </div>
-
-            <div class="feature-item">
-              <div class="feature-icon" aria-hidden="true">✓</div>
-              <span>Funciona perfectamente</span>
-            </div>
-
-            <div class="feature-item">
-              <div class="feature-icon" aria-hidden="true">✓</div>
-              <span>Segura y protegida</span>
-            </div>
-
-            <div class="feature-item">
-              <div class="feature-icon" aria-hidden="true">✓</div>
-              <span>Soporte cuando lo necesites</span>
-            </div>
-
-          </div>
-
-          <div class="section-cta">
-            <a class="cta-link" href="#contacto">
-              Empezar ahora
-              <span aria-hidden="true">→</span>
-            </a>
-          </div>
-
-        </div>
-
-      </section>
-
-
-      <!-- =========================
-           IMPACTO
-      ========================== -->
-      <section class="card card-mint testimonial-card">
-
-        <div>
-
-
-          <h2>
-            Tu página web trabaja <span class="highlight-green">por ti.</span>
-          </h2>
-
-          <p>
-            Tu web trabaja para ti las 24 horas.
-            Clínicas dentales, salones, estéticas, restaurantes y autónomos
-            ya la usan para que los clientes los encuentren y confíen en ellos.
-          </p>
-
-          <div class="impact-highlight">
-
-            <strong>
-              Más confianza, más contactos, más éxito
-            </strong>
-
-            <span>
-              Presente en internet las 24 horas, todos los días del año.
-            </span>
-
-          </div>
-
-          <div class="service-features" style="margin-top: clamp(28px, 4vh, 44px);">
-
-            <div class="feature-item">
-              <div class="feature-icon" aria-hidden="true">✓</div>
-              <span>Te encuentran en Google</span>
-            </div>
-
-            <div class="feature-item">
-              <div class="feature-icon" aria-hidden="true">✓</div>
-              <span>Te contactan directamente</span>
-            </div>
-
-            <div class="feature-item">
-              <div class="feature-icon" aria-hidden="true">✓</div>
-              <span>Confían en ti al instante</span>
-            </div>
-
-            <div class="feature-item">
-              <div class="feature-icon" aria-hidden="true">✓</div>
-              <span>Siempre abierto, 24/7</span>
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      <!-- =========================
-           PROCESO
-      ========================== -->
-      <section id="proceso" class="card card-peach process-card section-dark">
-
-        <div>
-
-
-          <h2>
-            Simple, claro y <span class="highlight-green">sin sorpresas.</span>
-          </h2>
-
-        </div>
-
-
-        <div class="process-steps">
-
-          <!-- Step 01 -->
-          <div class="process-step">
-
-            <div class="step-number">
-              01
-            </div>
-
-            <div class="step-content">
-
-              <h3>
-                Te escucho y entiendo
-              </h3>
-
-              <p>
-                Me cuentas tu negocio, qué necesitas, y quién son tus clientes.
-                Así entiendo exactamente qué debe hacer tu web.
-              </p>
-
-            </div>
-
-          </div>
-
-
-          <!-- Step 02 -->
-          <div class="process-step">
-
-            <div class="step-number">
-              02
-            </div>
-
-            <div class="step-content">
-
-              <h3>
-                Diseño contigo
-              </h3>
-
-              <p>
-                Te muestro cómo se vería tu web. Tú me das tu opinión,
-                hago cambios, hasta que te encante.
-              </p>
-
-            </div>
-
-          </div>
-
-
-          <!-- Step 03 -->
-          <div class="process-step">
-
-            <div class="step-number">
-              03
-            </div>
-
-            <div class="step-content">
-
-              <h3>
-                La lanzo
-              </h3>
-
-              <p>
-                Programo todo, la pruebo bien, y la pongo online.
-                Tu web está lista, funciona perfectamente, y empieza a traerte clientes.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="section-cta">
-          <a class="cta-link" href="#contacto">
-            Quiero comenzar
-            <span aria-hidden="true">→</span>
-          </a>
-        </div>
-
-      </section>
-
-
-      <!-- =========================
-           PROYECTOS
-      ========================== -->
-      <section id="proyectos" class="card card-rose projects-card">
-
-
-        <h2>
-          En móvil, tablet, computadora. <span class="highlight-green">Siempre perfecta.</span>
-        </h2>
-
-        <p style="max-width: 560px; margin-top: clamp(16px, 2vh, 22px);">
-          Tu web se adapta sola a cualquier pantalla. Tus clientes la ven
-          perfecta, ya sea desde el móvil, la tablet o el ordenador.
-        </p>
-
-        <div class="mockups-image-container">
-          <img src="assets/mockup-inspirewebs.png" alt="Diseño responsive en computadora, tablet y móvil" class="mockups-image" loading="lazy" />
-        </div>
-
-      </section>
-
-
-      <!-- =========================
-           PRECIOS
-      ========================== -->
-      <section id="precios" class="card card-blue pricing-card section-dark">
-
-        <div>
-
-
-          <h2>
-            Sabés lo que pagas, <span class="highlight-green">sin letra pequeña.</span>
-          </h2>
-
-          <p>
-            Un sitio web profesional, que funciona bien, que la gente puede usar
-            en cualquier dispositivo. Hecho con cuidado. Sin letras pequeñas.
-          </p>
-
-        </div>
-
-
-        <div class="price-box">
-
-          <div class="price-label">
-            A PARTIR DE
-          </div>
-
-          <div class="price">
-            490<span>€</span>
-          </div>
-
-          <div class="price-note">
-            Web completa, rápida, que funciona, y que te trae clientes
-          </div>
-
-          <a class="cta-link" href="#contacto">
-            Obtener una oferta
-            <span aria-hidden="true">→</span>
-          </a>
-
-        </div>
-
-      </section>
-
-
-      <!-- =========================
-           CONTACTO
-      ========================== -->
-      <section id="contacto" class="card card-cream contact-card">
-
-        <div>
-
-
-          <h2>
-            Cuéntame <span class="highlight-green">tu idea.</span>
-          </h2>
-
-          <p>
-            No necesitas saber exactamente qué hacer.
-            Te escucho, te asesoro, y juntos encontramos
-            la mejor solución para tu negocio.
-          </p>
-
-        </div>
-
-
-        <div class="contact-panel">
-
-          <!-- Contact form -->
-          <form class="hero-form-full" id="contact-form" action="https://formspree.io/f/mqpzdqao" method="POST">
-
-            <div class="form-row">
-
-              <label>
-                <span class="sr-only">Nombre</span>
-                <input type="text" name="nombre" placeholder="Tu nombre" autocomplete="name" required />
-              </label>
-
-              <label>
-                <span class="sr-only">Correo electrónico o teléfono</span>
-                <input type="text" name="contacto" placeholder="Tu email o teléfono" autocomplete="email" required />
-              </label>
-
-            </div>
-
-            <label>
-              <span class="sr-only">Necesito web para</span>
-              <select name="negocio" required>
-                <option value="" disabled selected>Necesito web para:</option>
-                <option value="Peluqueria">Peluquería / salón</option>
-                <option value="Clinica dental">Clínica dental</option>
-                <option value="Centro de belleza">Centro de belleza / estética</option>
-                <option value="Restaurante">Restaurante / bar</option>
-                <option value="Gimnasio">Gimnasio / centro deportivo</option>
-                <option value="Veterinaria">Clínica veterinaria</option>
-                <option value="Tienda">Tienda / comercio</option>
-                <option value="Inmobiliaria">Inmobiliaria</option>
-                <option value="Fisioterapia">Fisioterapia</option>
-                <option value="Abogacia">Abogado / asesoría</option>
-                <option value="Autonomo">Autónomo / profesional</option>
-                <option value="Otro">Otro</option>
-              </select>
-            </label>
-
-            <label>
-              <span class="sr-only">Tu mensaje</span>
-              <textarea name="mensaje" rows="2" placeholder="Cuéntame brevemente qué necesitas"></textarea>
-            </label>
-
-            <p class="form-status" aria-live="polite"></p>
-
-            <button type="submit" class="hero-form-full-btn">
-              Enviar
-              <span aria-hidden="true">→</span>
-            </button>
-
-          </form>
-
-          <div class="contact-actions" style="margin-top: 20px;">
-
-            <a class="form-submit-cta" href="https://wa.me/34602317364" target="_blank" rel="noopener noreferrer">
-              Escribir por WhatsApp
-              <span aria-hidden="true">↗</span>
+<body
+    class="bg-zinc-950 text-zinc-100 antialiased selection:bg-emerald-600 selection:text-white overflow-x-hidden bg-grid-pattern">
+
+    <!-- NAVBAR CON LOGO INTEGRADO -->
+    <header
+        class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/85 backdrop-blur-md border-b border-zinc-800/80 transition-all">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center" aria-label="Navegación principal">
+
+            <!-- LOGO INSPIREWEBS -->
+            <a href="#" class="flex items-center gap-2 group focus:outline-none" aria-label="InspireWebs Inicio">
+                <img src="assets/logo-white.png" alt="InspireWebs Logo"
+                    class="h-5 md:h-6 w-auto object-contain transition-transform group-hover:scale-105"
+                    onerror="this.onerror=null; this.replaceWith(document.getElementById('logo-fallback').cloneNode(true));">
+
+                <div id="logo-fallback" class="hidden flex items-center">
+                    <span class="text-2xl md:text-3xl font-extrabold tracking-tighter text-white relative">
+                        I<span
+                            class="inline-block w-2.5 h-2.5 rounded-full bg-[#10B981] absolute -top-1 left-[3px]"></span>nspire<span
+                            class="font-extrabold">Webs</span>
+                    </span>
+                </div>
             </a>
 
-          </div>
+            <div class="flex items-center space-x-6">
+                <a href="#servicios"
+                    class="text-sm font-medium text-zinc-300 hover:text-emerald-400 transition-colors hidden sm:inline-block">Servicios</a>
+                <a href="#precios"
+                    class="text-sm font-medium text-zinc-300 hover:text-emerald-400 transition-colors hidden sm:inline-block">Precios</a>
+                <a href="#faq"
+                    class="text-sm font-medium text-zinc-300 hover:text-emerald-400 transition-colors hidden sm:inline-block">FAQ</a>
+                <a href="#contacto"
+                    class="bg-zinc-100 hover:bg-white text-zinc-900 px-5 py-2 rounded-xl text-sm font-semibold transition-all shadow-md flex items-center gap-2 hover:scale-[1.02]">
+                    <span>Contactar</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION CON BLOQUE DE GARANTÍAS -->
+    <section class="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden hero-glow">
+        <div class="container mx-auto px-6 relative z-10 max-w-5xl">
+
+            <div class="text-center max-w-3xl mx-auto">
+                <div data-aos="fade-down" data-aos-duration="800"
+                    class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-zinc-900 text-zinc-300 text-xs font-medium tracking-wide mb-8 border border-zinc-800">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Websites, Diseños & Automatización.
+                </div>
+
+                <h1 data-aos="fade-up" data-aos-duration="800" data-aos-delay="100"
+                    class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight text-white">
+                    Website responsive y automatizaciones con un <span
+                        class="underline decoration-emerald-500 underline-offset-8">diseño optimizado</span>
+                </h1>
+
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200"
+                    class="text-base md:text-lg text-zinc-300 mb-10 max-w-2xl mx-auto font-normal leading-relaxed">
+                    Desarrollamos sitios web adaptables, automatizamos flujos de trabajo y impulsamos la imagen de
+                    tu marca en redes sociales.
+                </p>
+
+                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="300"
+                    class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+                    <a href="#contacto"
+                        class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-8 py-4 rounded-xl transition-all shadow-lg shadow-emerald-600/25 text-center flex items-center justify-center gap-2">
+                        <i data-lucide="message-square" class="w-5 h-5" aria-hidden="true"></i>
+                        Hablar de mi proyecto
+                    </a>
+                    <a href="#servicios"
+                        class="bg-zinc-900 border border-emerald-500/60 hover:border-emerald-400 text-zinc-300 font-semibold px-8 py-4 rounded-xl transition-all text-center flex items-center justify-center gap-2 hover:bg-zinc-800/80">
+                        <i data-lucide="layout-grid" class="w-5 h-5" aria-hidden="true"></i>
+                        Ver servicios
+                    </a>
+                </div>
+            </div>
+
+            <!-- BLOQUE DE ICONOS DE GARANTÍA DE CALIDAD -->
+            <div data-aos="fade-up" data-aos-delay="400"
+                class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 pt-6 border-t border-zinc-800/80">
+                <div
+                    class="p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-emerald-500/40 transition-all flex flex-col items-center text-center group">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                        <i data-lucide="palette" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-sm font-bold text-white mb-1">Diseño 100% Único</span>
+                    <span class="text-xs text-zinc-400">Personalizado a la medida de tu marca</span>
+                </div>
+
+                <div
+                    class="p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-amber-500/40 transition-all flex flex-col items-center text-center group">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-sm font-bold text-white mb-1">Carga &lt; 0.8 Segundos</span>
+                    <span class="text-xs text-zinc-400">Puntuación máxima 100/100 Speed</span>
+                </div>
+
+                <div
+                    class="p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-emerald-500/40 transition-all flex flex-col items-center text-center group">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                        <i data-lucide="smartphone" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-sm font-bold text-white mb-1">Website Responsive</span>
+                    <span class="text-xs text-zinc-400">Adaptabilidad perfecta en smartphones</span>
+                </div>
+
+                <div
+                    class="p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-purple-500/40 transition-all flex flex-col items-center text-center group">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-sm font-bold text-white mb-1">Garantía & Seguridad</span>
+                    <span class="text-xs text-zinc-400">Código limpio y protección SSL</span>
+                </div>
+
+                <div
+                    class="p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-cyan-500/40 transition-all flex flex-col items-center text-center group">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                        <i data-lucide="search" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-sm font-bold text-white mb-1">Optimización SEO</span>
+                    <span class="text-xs text-zinc-400">Estructura lista para destacar en Google</span>
+                </div>
+
+                <div
+                    class="p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-pink-500/40 transition-all flex flex-col items-center text-center group">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-500/20 text-pink-400 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                        <i data-lucide="headphones" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-sm font-bold text-white mb-1">Soporte Directo</span>
+                    <span class="text-xs text-zinc-400">Atención cercana de persona a persona</span>
+                </div>
+            </div>
 
         </div>
+    </section>
 
-      </section>
+    <!-- SERVICIO 1: PÁGINAS WEB -->
+    <section id="servicios" class="py-24 border-t border-zinc-800/80 relative">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="mb-12" data-aos="fade-right">
+                <span
+                    class="text-emerald-400 text-xs font-semibold uppercase tracking-wider bg-emerald-500/10 px-3 py-1 rounded-md border border-emerald-500/20">Servicio
+                    01</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mt-3">Websites Design & Automations</h2>
+            </div>
 
-    </main>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right" data-aos-delay="150">
+                    <p class="text-zinc-300 mb-8 text-base font-normal leading-relaxed">
+                        Creamos páginas web orientadas a resultados. Con una maquetación responsive garantizada y una
+                        estructura completamente optimizada para cargar rápido en smartphones, tablets y ordenadores.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div
+                            class="p-5 bg-zinc-900/60 border border-zinc-800/80 rounded-xl hover:border-zinc-700 transition-colors">
+                            <i data-lucide="smartphone" class="w-5 h-5 text-emerald-400 mb-2" aria-hidden="true"></i>
+                            <span class="text-zinc-200 text-sm font-semibold block mb-1">Website Responsive</span>
+                            <span class="text-xs text-zinc-400">Adaptabilidad total a móviles y monitores.</span>
+                        </div>
+                        <div
+                            class="p-5 bg-zinc-900/60 border border-zinc-800/80 rounded-xl hover:border-zinc-700 transition-colors">
+                            <i data-lucide="zap" class="w-5 h-5 text-emerald-400 mb-2" aria-hidden="true"></i>
+                            <span class="text-zinc-200 text-sm font-semibold block mb-1">Diseño Optimizado</span>
+                            <span class="text-xs text-zinc-400">Velocidad extrema y código limpio.</span>
+                        </div>
+                        <div
+                            class="p-5 bg-zinc-900/60 border border-zinc-800/80 rounded-xl hover:border-zinc-700 transition-colors">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-emerald-400 mb-2" aria-hidden="true"></i>
+                            <span class="text-zinc-200 text-sm font-semibold block mb-1">Enfoque Local</span>
+                            <span class="text-xs text-zinc-400">Preparada para destacar en tu ciudad.</span>
+                        </div>
+                        <div
+                            class="p-5 bg-zinc-900/60 border border-zinc-800/80 rounded-xl hover:border-zinc-700 transition-colors">
+                            <i data-lucide="user" class="w-5 h-5 text-emerald-400 mb-2" aria-hidden="true"></i>
+                            <span class="text-zinc-200 text-sm font-semibold block mb-1">Contacto Directo</span>
+                            <span class="text-xs text-zinc-400">Canales ágiles para comunicarte con clientes.</span>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- SVG WEB ADAPTATIVA -->
+                <div class="relative flex justify-center items-center" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="w-full max-w-md animate-subtle-float">
+                        <svg class="w-full h-auto drop-shadow-2xl" viewBox="0 0 400 240" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración web adaptativa">
+                            <rect x="20" y="20" width="360" height="200" rx="12" fill="#18181B" stroke="#27272A"
+                                stroke-width="2" />
+                            <rect x="20" y="20" width="360" height="32" rx="12" fill="#27272A" />
+                            <circle cx="40" cy="36" r="4" fill="#EF4444" />
+                            <circle cx="52" cy="36" r="4" fill="#F59E0B" />
+                            <circle cx="64" cy="36" r="4" fill="#10B981" />
+                            <rect x="90" y="28" width="180" height="16" rx="8" fill="#18181B" />
+                            <rect x="40" y="70" width="180" height="16" rx="4" fill="#10B981" />
+                            <rect x="40" y="96" width="220" height="8" rx="4" fill="#3F3F46" />
+                            <rect x="40" y="110" width="160" height="8" rx="4" fill="#27272A" />
+                            <rect x="40" y="132" width="90" height="28" rx="8" fill="#059669" />
+                            <rect x="270" y="80" width="90" height="120" rx="10" fill="#09090B" stroke="#3F3F46"
+                                stroke-width="2" />
+                            <rect x="280" y="95" width="70" height="8" rx="4" fill="#10B981" />
+                            <rect x="280" y="110" width="50" height="6" rx="3" fill="#3F3F46" />
+                            <rect x="280" y="122" width="60" height="6" rx="3" fill="#27272A" />
+                            <rect x="280" y="138" width="40" height="18" rx="6" fill="#10B981" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
-    <footer class="footer">
+    <!-- SERVICIO 2: AUTOMATIZACIONES SENCILLAS -->
+    <section id="automatizaciones" class="py-24 bg-zinc-900/40 border-t border-zinc-800/80 relative">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="mb-12" data-aos="fade-right">
+                <span
+                    class="text-emerald-400 text-xs font-semibold uppercase tracking-wider bg-emerald-500/10 px-3 py-1 rounded-md border border-emerald-500/20">Servicio
+                    02</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mt-3">Automatizaciones e Integración</h2>
+            </div>
 
-      <div class="footer-logo">
-        <img src="assets/logo.png" alt="Inspire Webs logo">
-      </div>
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-12">
+                <!-- SVG FLUJO AUTOMATIZACIÓN -->
+                <div class="relative flex justify-center items-center order-2 lg:order-1" data-aos="zoom-in"
+                    data-aos-delay="200">
+                    <div class="w-full max-w-md animate-subtle-float">
+                        <svg class="w-full h-auto drop-shadow-2xl" viewBox="0 0 400 240" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" role="img"
+                            aria-label="Ilustración flujo de automatización">
+                            <rect x="30" y="60" width="100" height="120" rx="10" fill="#18181B" stroke="#3F3F46"
+                                stroke-width="2" />
+                            <rect x="42" y="75" width="50" height="8" rx="4" fill="#10B981" />
+                            <rect x="42" y="95" width="76" height="12" rx="4" fill="#27272A" />
+                            <rect x="42" y="115" width="76" height="12" rx="4" fill="#27272A" />
+                            <rect x="42" y="140" width="40" height="16" rx="6" fill="#059669" />
+                            <path d="M 130 120 L 190 120" stroke="#10B981" stroke-width="3" stroke-dasharray="6 6" />
+                            <circle cx="190" cy="120" r="6" fill="#10B981" />
+                            <rect x="190" y="85" width="70" height="70" rx="16" fill="#10B981" opacity="0.15"
+                                stroke="#10B981" stroke-width="2" />
+                            <circle cx="225" cy="120" r="16" fill="#10B981" />
+                            <path d="M220 120L223 123L230 116" stroke="white" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M 260 120 L 310 120" stroke="#10B981" stroke-width="3" />
+                            <rect x="300" y="50" width="70" height="140" rx="12" fill="#09090B" stroke="#10B981"
+                                stroke-width="2" />
+                            <rect x="312" y="70" width="46" height="30" rx="6" fill="#10B981" opacity="0.2" />
+                            <circle cx="335" cy="85" r="6" fill="#10B981" />
+                            <rect x="312" y="110" width="46" height="6" rx="3" fill="#3F3F46" />
+                            <rect x="312" y="122" width="30" height="6" rx="3" fill="#27272A" />
+                        </svg>
+                    </div>
+                </div>
 
-      <div>
-        © <span class="year">2026</span> Inspire Webs · Yassine Yahya
-      </div>
+                <div class="order-1 lg:order-2" data-aos="fade-left" data-aos-delay="100">
+                    <p class="text-zinc-300 text-base font-normal leading-relaxed mb-6">
+                        Conectamos tu sitio con tu email, bases de datos o mensajes para garantizar una respuesta rápida
+                        y sin perder tiempo con tareas manuales repetitivas.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 p-3.5 bg-zinc-900/80 border border-zinc-800 rounded-xl">
+                            <i data-lucide="check" class="w-5 h-5 text-emerald-400 shrink-0" aria-hidden="true"></i>
+                            <span class="text-xs text-zinc-300">Avisos inmediatos en tu móvil al completar
+                                formularios.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3.5 bg-zinc-900/80 border border-zinc-800 rounded-xl">
+                            <i data-lucide="check" class="w-5 h-5 text-emerald-400 shrink-0" aria-hidden="true"></i>
+                            <span class="text-xs text-zinc-300">Confirmación instantánea para tus futuros
+                                clientes.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-      <div class="footer-legal-links">
-        <a href="legal/aviso-legal.html">Aviso Legal</a>
-        <span>·</span>
-        <a href="legal/privacidad.html">Privacidad</a>
-        <span>·</span>
-        <a href="legal/cookies.html">Cookies</a>
-      </div>
+            <!-- PASOS DEL FLUJO -->
+            <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-zinc-900/60 border border-zinc-800/80 p-5 rounded-xl" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <span class="text-xs font-mono text-emerald-400 font-bold block mb-2">01</span>
+                    <h3 class="font-semibold text-white mb-1 text-sm">El cliente escribe</h3>
+                    <p class="text-xs text-zinc-400">Completa el formulario en la web.</p>
+                </div>
+                <div class="bg-zinc-900/60 border border-zinc-800/80 p-5 rounded-xl" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <span class="text-xs font-mono text-emerald-400 font-bold block mb-2">02</span>
+                    <h3 class="font-semibold text-white mb-1 text-sm">Alerta instantánea</h3>
+                    <p class="text-xs text-zinc-400">Aviso a tu correo o WhatsApp.</p>
+                </div>
+                <div class="bg-zinc-900/60 border border-zinc-800/80 p-5 rounded-xl" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <span class="text-xs font-mono text-emerald-400 font-bold block mb-2">03</span>
+                    <h3 class="font-semibold text-white mb-1 text-sm">Respuesta auto</h3>
+                    <p class="text-xs text-zinc-400">Confirmación recibida al instante.</p>
+                </div>
+                <div class="bg-zinc-900/60 border border-zinc-800/80 p-5 rounded-xl" data-aos="fade-up"
+                    data-aos-delay="400">
+                    <span class="text-xs font-mono text-emerald-400 font-bold block mb-2">04</span>
+                    <h3 class="font-semibold text-white mb-1 text-sm">Gestión limpia</h3>
+                    <p class="text-xs text-zinc-400">Datos guardados de forma ordenada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <div class="footer-social">
-        <a href="https://www.instagram.com/inspirewebs_/" class="footer-social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-            <circle cx="12" cy="12" r="4"></circle>
-            <circle cx="17.5" cy="6.5" r="1"></circle>
-          </svg>
-        </a>
-        <a href="https://wa.me/34602317364" class="footer-social-icon" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.29-1.39a9.87 9.87 0 0 0 4.7 1.2h.01c5.46 0 9.91-4.45 9.91-9.9c0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.8a8.07 8.07 0 0 1 5.73 2.38a8.07 8.07 0 0 1 2.37 5.73c0 4.47-3.64 8.1-8.11 8.1a8.1 8.1 0 0 1-4.13-1.13l-.3-.17l-3.14.82l.84-3.06l-.19-.32a8.08 8.08 0 0 1-1.24-4.32c0-4.47 3.64-8.11 8.11-8.11m-4.38 4.15c-.15 0-.4.06-.61.29c-.21.24-.8.78-.8 1.9s.82 2.21.93 2.36c.12.15 1.63 2.55 4.03 3.5c1.99.8 2.4.64 2.83.6c.43-.04 1.39-.57 1.58-1.11c.2-.55.2-1.02.14-1.12c-.06-.1-.21-.16-.44-.27c-.23-.12-1.39-.68-1.6-.76c-.22-.08-.37-.12-.53.12c-.16.24-.61.76-.74.92c-.14.15-.27.17-.5.06c-.24-.12-1-.37-1.9-1.17c-.7-.63-1.18-1.4-1.31-1.64c-.14-.24-.02-.37.1-.49c.11-.11.24-.28.36-.42c.12-.14.16-.24.24-.4c.08-.16.04-.3-.02-.42c-.06-.12-.53-1.28-.73-1.75c-.19-.46-.38-.4-.53-.4h-.4z"></path>
-          </svg>
-        </a>
-      </div>
+    <!-- SERVICIO 3: DISEÑO PARA REDES SOCIALES -->
+    <section id="redes" class="py-24 border-t border-zinc-800/80 relative">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="mb-12" data-aos="fade-right">
+                <span
+                    class="text-emerald-400 text-xs font-semibold uppercase tracking-wider bg-emerald-500/10 px-3 py-1 rounded-md border border-emerald-500/20">Servicio
+                    03</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mt-3">Pack Visual para Redes Sociales</h2>
+            </div>
 
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right" data-aos-delay="100">
+                    <p class="text-zinc-300 text-base font-normal leading-relaxed mb-6">
+                        Mantén una imagen profesional e impecable en tus perfiles. Creamos un kit de plantillas
+                        personalizadas alineadas con los colores y la identidad de tu marca para que publicar en
+                        Instagram o Facebook sea rápido y sin complicaciones.
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-3 p-3.5 bg-zinc-900/60 border border-zinc-800/80 rounded-xl">
+                            <div class="p-2 bg-emerald-500/10 rounded-lg text-emerald-400 shrink-0">
+                                <i data-lucide="layout-grid" class="w-5 h-5" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-semibold text-white">9 Plantillas Editables</h3>
+                                <p class="text-xs text-zinc-400">Diseñadas para ser totalmente reutilizables en tus
+                                    publicaciones diarias.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 p-3.5 bg-zinc-900/60 border border-zinc-800/80 rounded-xl">
+                            <div class="p-2 bg-emerald-500/10 rounded-lg text-emerald-400 shrink-0">
+                                <i data-lucide="smartphone" class="w-5 h-5" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-semibold text-white">Historias y Feed</h3>
+                                <p class="text-xs text-zinc-400">Formatos optimizados para Reels/Stories (1080x1920) y
+                                    Muro (1080x1080).</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 p-3.5 bg-zinc-900/60 border border-zinc-800/80 rounded-xl">
+                            <div class="p-2 bg-emerald-500/10 rounded-lg text-emerald-400 shrink-0">
+                                <i data-lucide="palette" class="w-5 h-5" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-semibold text-white">Coherencia de Marca</h3>
+                                <p class="text-xs text-zinc-400">Tipografías, paleta de colores y elementos visuales
+                                    acordes a tu web.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SVG PLANTILLAS REDES -->
+                <div class="relative flex justify-center items-center" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-full max-w-md animate-subtle-float">
+                        <svg class="w-full h-auto drop-shadow-2xl" viewBox="0 0 400 240" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" role="img"
+                            aria-label="Ilustración plantillas redes sociales">
+                            <rect x="40" y="40" width="130" height="150" rx="12" fill="#18181B" stroke="#3F3F46"
+                                stroke-width="2" />
+                            <rect x="52" y="52" width="106" height="70" rx="6" fill="#10B981" opacity="0.2" />
+                            <circle cx="105" cy="87" r="16" fill="#10B981" />
+                            <rect x="52" y="132" width="70" height="8" rx="4" fill="#E4E4E7" />
+                            <rect x="52" y="146" width="90" height="6" rx="3" fill="#3F3F46" />
+                            <rect x="52" y="158" width="50" height="6" rx="3" fill="#27272A" />
+
+                            <rect x="190" y="20" width="100" height="180" rx="12" fill="#09090B" stroke="#10B981"
+                                stroke-width="2" />
+                            <rect x="200" y="32" width="80" height="110" rx="8" fill="#18181B" />
+                            <path d="M200 110 Q 240 70, 280 110 L 280 142 L 200 142 Z" fill="#059669" opacity="0.6" />
+                            <circle cx="240" cy="65" r="12" fill="#F59E0B" />
+                            <rect x="200" y="152" width="60" height="8" rx="4" fill="#E4E4E7" />
+                            <rect x="200" y="166" width="40" height="14" rx="6" fill="#10B981" />
+
+                            <rect x="265" y="60" width="95" height="120" rx="10" fill="#18181B" stroke="#27272A"
+                                stroke-width="2" />
+                            <rect x="275" y="72" width="75" height="45" rx="6" fill="#27272A" />
+                            <rect x="275" y="125" width="55" height="6" rx="3" fill="#A1A1AA" />
+                            <rect x="275" y="137" width="40" height="6" rx="3" fill="#3F3F46" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE PRECIOS -->
+    <section id="precios" class="py-24 bg-zinc-900/40 border-t border-zinc-800/80 relative">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+                <span
+                    class="text-emerald-400 text-xs font-semibold uppercase tracking-wider bg-emerald-500/10 px-3 py-1 rounded-md border border-emerald-500/20">Planes
+                    Transparentes</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mt-4">Soluciones a la medida de tu negocio</h2>
+                <p class="text-zinc-400 text-sm mt-2">Precios claros, sin sorpresas ni costes ocultos.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 items-stretch">
+                <!-- PLAN 1 -->
+                <div class="bg-zinc-900/80 border border-zinc-800 rounded-2xl p-8 flex flex-col justify-between hover:border-zinc-700 transition-all"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-2">Pack Visual Redes</h3>
+                        <p class="text-xs text-zinc-400 mb-6">Ideal para renovar la imagen de tu negocio en redes
+                            sociales.</p>
+                        <div class="text-3xl font-extrabold text-white mb-6">150€ <span
+                                class="text-xs font-normal text-zinc-400">/ pago único</span></div>
+                        <ul class="space-y-3 text-xs text-zinc-300 mb-8">
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-emerald-400"></i> 9 Plantillas editables</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-emerald-400"></i> Formatos Feed y Stories</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-emerald-400"></i> Paleta de colores de marca</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-emerald-400"></i> Entrega en 3-5 días</li>
+                        </ul>
+                    </div>
+                    <a href="#contacto"
+                        class="w-full bg-zinc-800 hover:bg-zinc-700 text-white font-semibold py-3 rounded-xl text-xs text-center transition-all block">Solicitar
+                        Pack</a>
+                </div>
+
+                <!-- PLAN 2 (DESTACADO) -->
+                <div class="bg-zinc-900 border-2 border-emerald-500 rounded-2xl p-8 flex flex-col justify-between relative shadow-xl shadow-emerald-500/10 hover:border-emerald-400 transition-all transform hover:-translate-y-1"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-emerald-500 text-zinc-950 font-extrabold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full">
+                        Más Recomendado
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-2">Web + Automatización</h3>
+                        <p class="text-xs text-zinc-400 mb-6">La solución completa para captar clientes en automático.
+                        </p>
+                        <div class="text-3xl font-extrabold text-white mb-6">799€ <span
+                                class="text-xs font-normal text-zinc-400">/ pago único</span></div>
+                        <ul class="space-y-3 text-xs text-zinc-300 mb-8">
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-emerald-400"></i> Website Responsive a medida</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-emerald-400"></i> Diseño Optimizado ultra rápido</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-emerald-400"></i> Integración WhatsApp & Email</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-emerald-400"></i> Flujo de avisos automatizado</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-emerald-400"></i> Pack 9 Plantillas para Redes</li>
+                        </ul>
+                    </div>
+                    <a href="#contacto"
+                        class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3 rounded-xl text-xs text-center transition-all block shadow-md">Comenzar
+                        Proyecto</a>
+                </div>
+
+                <!-- PLAN 3 -->
+                <div class="bg-zinc-900/80 border border-zinc-800 rounded-2xl p-8 flex flex-col justify-between hover:border-zinc-700 transition-all"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-2">Website Responsive</h3>
+                        <p class="text-xs text-zinc-400 mb-6">Perfecta para tener presencia profesional en internet.</p>
+                        <div class="text-3xl font-extrabold text-white mb-6">499€ <span
+                                class="text-xs font-normal text-zinc-400">/ pago único</span></div>
+                        <ul class="space-y-3 text-xs text-zinc-300 mb-8">
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-emerald-400"></i> Diseño 100% adaptable a móvil</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-emerald-400"></i> Optimización de velocidad</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-emerald-400"></i> Formulario de contacto directo</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-emerald-400"></i> SEO básico local incluido</li>
+                        </ul>
+                    </div>
+                    <a href="#contacto"
+                        class="w-full bg-zinc-800 hover:bg-zinc-700 text-white font-semibold py-3 rounded-xl text-xs text-center transition-all block">Solicitar
+                        Web</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section id="testimonios" class="py-24 border-t border-zinc-800/80 relative">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+                <span
+                    class="text-emerald-400 text-xs font-semibold uppercase tracking-wider bg-emerald-500/10 px-3 py-1 rounded-md border border-emerald-500/20">Confianza
+                    Directa</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mt-4">Lo que opinan otros autónomos</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-zinc-900/60 border border-zinc-800 p-6 rounded-2xl" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="flex text-amber-400 mb-3" aria-label="5 de 5 estrellas">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-xs text-zinc-300 leading-relaxed mb-4">"Ahora los mensajes del formulario me entran
+                        directos al WhatsApp. He ganado muchísimo tiempo y mis clientes agradecen la rapidez."</p>
+                    <span class="text-xs font-semibold text-white block">Carlos R.</span>
+                    <span class="text-[10px] text-zinc-400">Reformas & Electricidad</span>
+                </div>
+                <div class="bg-zinc-900/60 border border-zinc-800 p-6 rounded-2xl" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div class="flex text-amber-400 mb-3" aria-label="5 de 5 estrellas">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-xs text-zinc-300 leading-relaxed mb-4">"La web carga súper rápido en el móvil y se ve
+                        impecable. Nada de rodeos ni precios ocultos."</p>
+                    <span class="text-xs font-semibold text-white block">Elena M.</span>
+                    <span class="text-[10px] text-zinc-400">Estudio de Fisioterapia</span>
+                </div>
+                <div class="bg-zinc-900/60 border border-zinc-800 p-6 rounded-2xl" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <div class="flex text-amber-400 mb-3" aria-label="5 de 5 estrellas">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-xs text-zinc-300 leading-relaxed mb-4">"Trato directo y cercano de verdad. Me ayudó a
+                        preparar las plantillas de redes y la página web todo en uno."</p>
+                    <span class="text-xs font-semibold text-white block">Marcos V.</span>
+                    <span class="text-[10px] text-zinc-400">Consultor Independiente</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ ACCESIBLE Y DESPLEGABLE -->
+    <section id="faq" class="py-24 border-t border-zinc-800/80 bg-zinc-900/20 relative">
+        <div class="container mx-auto px-6 max-w-3xl" data-aos="fade-up">
+            <div class="text-center mb-12">
+                <span
+                    class="text-emerald-400 text-xs font-semibold uppercase tracking-wider bg-emerald-500/10 px-3 py-1 rounded-md border border-emerald-500/20">Dudas
+                    Frecuentes</span>
+                <h2 class="text-3xl font-bold text-white mt-4">Preguntas Frecuentes</h2>
+            </div>
+            <div class="space-y-4">
+                <details
+                    class="group bg-zinc-900/80 border border-zinc-800 rounded-xl p-4 [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between gap-1.5 text-zinc-200 font-semibold text-sm">
+                        <span>¿Por qué hay cuotas o costes de mantenimiento?</span>
+                        <span class="shrink-0 transition duration-300 group-open:-rotate-180">
+                            <i data-lucide="chevron-down" class="w-4 h-4 text-emerald-400"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-3 text-xs text-zinc-400 leading-relaxed">
+                        El diseño y desarrollo inicial son de pago único. Sin embargo, para mantener tu sitio visible en
+                        internet existen gastos externos obligatorios como el <strong>dominio</strong> (tu dirección
+                        .com/.es) y el <strong>servidor de alojamiento (hosting)</strong>, que suelen costar unos
+                        30-40€/año. En el caso de requerir integraciones de automatización muy avanzadas o soporte
+                        técnico continuo, pueden existir pequeñas licencias o planes opcionales que te explicamos con
+                        total transparencia antes de empezar.
+                    </p>
+                </details>
+                <details
+                    class="group bg-zinc-900/80 border border-zinc-800 rounded-xl p-4 [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between gap-1.5 text-zinc-200 font-semibold text-sm">
+                        <span>¿Cuánto tiempo tarda la entrega?</span>
+                        <span class="shrink-0 transition duration-300 group-open:-rotate-180">
+                            <i data-lucide="chevron-down" class="w-4 h-4 text-emerald-400"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-3 text-xs text-zinc-400 leading-relaxed">
+                        El plazo habitual es de entre 5 y 10 días laborables una vez recibida la información básica de
+                        tu negocio.
+                    </p>
+                </details>
+                <details
+                    class="group bg-zinc-900/80 border border-zinc-800 rounded-xl p-4 [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between gap-1.5 text-zinc-200 font-semibold text-sm">
+                        <span>¿Necesito contratar un hosting o dominio aparte?</span>
+                        <span class="shrink-0 transition duration-300 group-open:-rotate-180">
+                            <i data-lucide="chevron-down" class="w-4 h-4 text-emerald-400"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-3 text-xs text-zinc-400 leading-relaxed">
+                        Te asesoro gratuitamente en la contratación de tu propio dominio y alojamiento básico
+                        (aproximadamente 30-40€/año) para que la propiedad quede a tu nombre sin intermediarios.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO DE CONTACTO -->
+    <section id="contacto" class="py-24 border-t border-zinc-800/80 relative">
+        <div class="container mx-auto px-6 max-w-xl" data-aos="fade-up">
+            <div class="bg-zinc-900 border border-zinc-800 p-8 md:p-10 rounded-2xl shadow-xl">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Hablemos de tu proyecto</h2>
+                    <p class="text-zinc-400 text-sm font-normal">Respuesta rápida directa a tu correo en menos de 24
+                        horas.</p>
+                </div>
+
+                <form id="contact-form" action="https://formspree.io/f/mqpzdqao" method="POST" class="space-y-5" novalidate>
+                    <div>
+                        <label for="name"
+                            class="block text-xs font-semibold text-zinc-300 mb-2 uppercase tracking-wider">Tu
+                            Nombre</label>
+                        <input type="text" id="name" name="name" required placeholder="Ej. Juan Pérez"
+                            class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-zinc-200 focus:outline-none focus:border-emerald-500 transition-colors text-sm">
+                    </div>
+                    <div>
+                        <label for="email"
+                            class="block text-xs font-semibold text-zinc-300 mb-2 uppercase tracking-wider">Correo
+                            Electrónico</label>
+                        <input type="email" id="email" name="email" required placeholder="juan@minegocio.com"
+                            class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-zinc-200 focus:outline-none focus:border-emerald-500 transition-colors text-sm">
+                    </div>
+                    <div>
+                        <label for="service"
+                            class="block text-xs font-semibold text-zinc-300 mb-2 uppercase tracking-wider">¿Qué opción
+                            te interesa?</label>
+                        <select id="service" name="service"
+                            class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-zinc-200 focus:outline-none focus:border-emerald-500 transition-colors text-sm">
+                            <option value="Web + Automatización (799€)">Web + Automatización (799€) - Recomendado
+                            </option>
+                            <option value="Website Responsive (499€)">Website Responsive (499€)</option>
+                            <option value="Pack Visual Redes (150€)">Pack Visual Redes (150€)</option>
+                            <option value="Otra consulta">Otra consulta / Proyecto a medida</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message"
+                            class="block text-xs font-semibold text-zinc-300 mb-2 uppercase tracking-wider">Mensaje</label>
+                        <textarea id="message" name="message" rows="4"
+                            placeholder="Cuéntame brevemente qué hace tu negocio..."
+                            class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-zinc-200 focus:outline-none focus:border-emerald-500 transition-colors text-sm"></textarea>
+                    </div>
+                    <button type="submit" id="contact-submit-btn"
+                        class="w-full bg-emerald-600 hover:bg-emerald-500 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold py-3.5 rounded-xl transition-all shadow-md flex items-center justify-center gap-2">
+                        <i data-lucide="send" class="w-4 h-4" aria-hidden="true"></i>
+                        <span>Enviar Mensaje</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOTÓN FLOTANTE WHATSAPP -->
+    <a href="https://wa.me/34602317364?text=Hola,%20quisiera%20información%20para%20mi%20negocio" target="_blank"
+        rel="noopener noreferrer"
+        class="fixed bottom-6 right-6 z-50 bg-emerald-600 hover:bg-emerald-500 text-white p-4 rounded-full shadow-lg transition-all transform hover:scale-105 flex items-center justify-center group"
+        aria-label="Contactar por WhatsApp">
+        <i data-lucide="message-circle" class="w-6 h-6" aria-hidden="true"></i>
+        <span
+            class="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 ease-in-out whitespace-nowrap text-xs font-semibold">
+            Escribir por WhatsApp
+        </span>
+    </a>
+
+    <!-- FOOTER CON LOGO -->
+    <footer class="py-10 border-t border-zinc-800/60 text-center text-xs text-zinc-400">
+        <div class="container mx-auto px-6 flex flex-col items-center justify-center gap-4">
+            <a href="#" class="inline-block" aria-label="InspireWebs Inicio">
+                <img src="assets/logo-white.png" alt="InspireWebs Logo"
+                    class="h-4 w-auto opacity-80 hover:opacity-100 transition-opacity"
+                    onerror="this.onerror=null; this.replaceWith(document.getElementById('logo-fallback-footer').cloneNode(true));">
+                <div id="logo-fallback-footer" class="hidden text-lg font-extrabold text-zinc-300 relative">
+                    I<span
+                        class="w-2 h-2 rounded-full bg-[#10B981] inline-block absolute -top-0.5 left-[2px]"></span>nspireWebs
+                </div>
+            </a>
+            <span class="text-[11px] font-semibold tracking-wide text-zinc-500">yassine yahya</span>
+            <p>&copy; 2026 InspireWebs. Websites Design & Automations.</p>
+            <div class="flex items-center gap-3 text-[11px] text-zinc-500">
+                <a href="legal/aviso-legal.html" class="hover:text-zinc-300 transition-colors">Aviso Legal</a>
+                <span class="text-zinc-700">&middot;</span>
+                <a href="legal/privacidad.html" class="hover:text-zinc-300 transition-colors">Privacidad</a>
+                <span class="text-zinc-700">&middot;</span>
+                <a href="legal/cookies.html" class="hover:text-zinc-300 transition-colors">Cookies</a>
+            </div>
+        </div>
     </footer>
 
-  </div>
+    <!-- FORM VALIDATION / STATUS MODAL -->
+    <div id="form-modal" class="hidden fixed inset-0 z-[80] flex items-center justify-center p-4">
+        <div id="form-modal-backdrop" class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+        <div id="form-modal-panel" role="dialog" aria-modal="true" aria-labelledby="form-modal-title"
+            class="relative w-full max-w-sm bg-zinc-900 border border-zinc-800 rounded-2xl shadow-2xl shadow-black/50 p-6 scale-95 opacity-0 transition-all duration-300 ease-out">
+            <button type="button" id="form-modal-close"
+                class="absolute top-4 right-4 text-zinc-500 hover:text-zinc-300 transition-colors" aria-label="Cerrar">
+                <i data-lucide="x" class="w-5 h-5" aria-hidden="true"></i>
+            </button>
 
-  <!-- Modal genérico (éxito / aviso) -->
-  <div class="site-modal" id="site-modal" aria-hidden="true">
-    <div class="site-modal-overlay" data-modal-close></div>
-    <div class="site-modal-box" role="dialog" aria-modal="true">
-      <button type="button" class="site-modal-close" data-modal-close aria-label="Cerrar">×</button>
-      <div class="site-modal-icon" id="site-modal-icon"></div>
-      <h3 class="site-modal-title" id="site-modal-title"></h3>
-      <p class="site-modal-message" id="site-modal-message"></p>
-      <button type="button" class="site-modal-btn" data-modal-close>Entendido</button>
+            <div id="form-modal-icon"
+                class="w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                <i id="form-modal-icon-glyph" data-lucide="check" class="w-6 h-6" aria-hidden="true"></i>
+            </div>
+
+            <h3 id="form-modal-title" class="text-lg font-bold text-white mb-2"></h3>
+            <p id="form-modal-message" class="text-sm text-zinc-400 leading-relaxed"></p>
+            <ul id="form-modal-list" class="hidden mt-3 space-y-1.5 text-sm text-zinc-300"></ul>
+
+            <button type="button" id="form-modal-action"
+                class="mt-6 w-full bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold py-2.5 rounded-lg transition-colors">
+                Entendido
+            </button>
+        </div>
     </div>
-  </div>
 
+    <!-- COOKIE CONSENT BANNER -->
+    <div id="cookie-banner"
+        class="fixed inset-x-0 bottom-0 z-[60] hidden translate-y-full opacity-0 transition-all duration-500 ease-out"
+        role="dialog" aria-live="polite" aria-label="Consentimiento de cookies">
+        <div
+            class="mx-auto max-w-3xl m-4 bg-zinc-900 border border-zinc-800 rounded-2xl shadow-2xl shadow-black/40 p-5 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <p class="text-xs text-zinc-400 leading-relaxed flex-1">
+                Usamos cookies técnicas necesarias para el funcionamiento del sitio. No usamos cookies de
+                analítica ni publicidad. Más información en nuestra
+                <a href="legal/cookies.html"
+                    class="text-emerald-400 hover:text-emerald-300 underline underline-offset-2">política de
+                    cookies</a>.
+            </p>
+            <div class="flex items-center gap-2 shrink-0 w-full sm:w-auto">
+                <button type="button" id="cookie-reject"
+                    class="flex-1 sm:flex-none bg-zinc-800 hover:bg-zinc-700 text-zinc-300 text-xs font-semibold px-4 py-2.5 rounded-lg transition-colors">
+                    Rechazar
+                </button>
+                <button type="button" id="cookie-accept"
+                    class="flex-1 sm:flex-none bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold px-4 py-2.5 rounded-lg transition-colors">
+                    Aceptar
+                </button>
+            </div>
+        </div>
+    </div>
 
-  <!-- JavaScript -->
-  <script>
-    // Animar números del trust-row
-    document.addEventListener('DOMContentLoaded', () => {
-      const trustRow = document.querySelector('.trust-row');
-      if (!trustRow) return;
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !entry.target.dataset.animated) {
-            entry.target.dataset.animated = 'true';
-
-            const strongs = entry.target.querySelectorAll('strong');
-            strongs.forEach((strong) => {
-              const text = strong.textContent.trim();
-              if (text === '100%') {
-                animateCounter(strong, 0, 100, 1000, '%');
-              } else if (text === '1–3') {
-                animateCounter(strong, 0, 3, 1000, '', '1–');
-              }
-            });
-          }
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 700,
+                    once: true,
+                    easing: 'ease-out'
+                });
+            }
         });
-      }, { threshold: 0.5 });
+    </script>
+    <script>
+        // Banner de consentimiento de cookies (cookies técnicas, sin analítica ni publicidad)
+        (function () {
+            const STORAGE_KEY = 'iw_cookie_consent';
+            const banner = document.getElementById('cookie-banner');
+            if (!banner) return;
 
-      observer.observe(trustRow);
+            let consent;
+            try {
+                consent = window.localStorage.getItem(STORAGE_KEY);
+            } catch (e) {
+                consent = null;
+            }
+            if (consent) return;
 
-      function animateCounter(element, start, end, duration, suffix = '', prefix = '') {
-        const startTime = performance.now();
-        const animate = (currentTime) => {
-          const elapsed = currentTime - startTime;
-          const progress = Math.min(elapsed / duration, 1);
-          const value = Math.floor(start + (end - start) * progress);
-          element.textContent = prefix + value + suffix;
+            banner.classList.remove('hidden');
+            requestAnimationFrame(() => {
+                banner.classList.remove('translate-y-full', 'opacity-0');
+            });
 
-          if (progress < 1) {
-            requestAnimationFrame(animate);
-          }
-        };
-        requestAnimationFrame(animate);
-      }
-    });
-  </script>
-  <script src="script.js"></script>
-  <script src="cookies.js"></script>
+            const setConsent = (value) => {
+                try {
+                    window.localStorage.setItem(STORAGE_KEY, value);
+                } catch (e) {
+                    /* localStorage no disponible: no bloquea el cierre del banner */
+                }
+                banner.classList.add('translate-y-full', 'opacity-0');
+                setTimeout(() => banner.classList.add('hidden'), 500);
+            };
 
+            const acceptBtn = document.getElementById('cookie-accept');
+            const rejectBtn = document.getElementById('cookie-reject');
+            if (acceptBtn) acceptBtn.addEventListener('click', () => setConsent('accepted'));
+            if (rejectBtn) rejectBtn.addEventListener('click', () => setConsent('rejected'));
+        })();
+    </script>
+    <script>
+        // Validación del formulario de contacto + modal de estado (errores / éxito)
+        (function () {
+            const form = document.getElementById('contact-form');
+            const modal = document.getElementById('form-modal');
+            if (!form || !modal) return;
+
+            const panel = document.getElementById('form-modal-panel');
+            const backdrop = document.getElementById('form-modal-backdrop');
+            const iconWrap = document.getElementById('form-modal-icon');
+            const iconGlyph = document.getElementById('form-modal-icon-glyph');
+            const titleEl = document.getElementById('form-modal-title');
+            const messageEl = document.getElementById('form-modal-message');
+            const listEl = document.getElementById('form-modal-list');
+            const actionBtn = document.getElementById('form-modal-action');
+            const closeBtn = document.getElementById('form-modal-close');
+            const submitBtn = document.getElementById('contact-submit-btn');
+            const submitBtnLabel = submitBtn ? submitBtn.querySelector('span') : null;
+
+            const ICON_STYLES = {
+                error: { wrap: 'bg-red-500/10 text-red-400', icon: 'alert-triangle' },
+                success: { wrap: 'bg-emerald-500/10 text-emerald-400', icon: 'check' },
+                warning: { wrap: 'bg-amber-500/10 text-amber-400', icon: 'alert-circle' },
+            };
+
+            function openModal({ type, title, message, items }) {
+                const style = ICON_STYLES[type] || ICON_STYLES.error;
+                iconWrap.className = 'w-12 h-12 rounded-full flex items-center justify-center mb-4 ' + style.wrap;
+                iconGlyph.setAttribute('data-lucide', style.icon);
+                titleEl.textContent = title;
+                messageEl.textContent = message || '';
+                messageEl.classList.toggle('hidden', !message);
+
+                listEl.innerHTML = '';
+                if (items && items.length) {
+                    items.forEach((item) => {
+                        const li = document.createElement('li');
+                        li.className = 'flex items-start gap-2';
+                        li.innerHTML = '<i data-lucide="circle-dot" class="w-3.5 h-3.5 mt-0.5 shrink-0 text-red-400" aria-hidden="true"></i><span>' + item + '</span>';
+                        listEl.appendChild(li);
+                    });
+                    listEl.classList.remove('hidden');
+                } else {
+                    listEl.classList.add('hidden');
+                }
+
+                modal.classList.remove('hidden');
+                if (typeof lucide !== 'undefined') lucide.createIcons();
+                requestAnimationFrame(() => {
+                    panel.classList.remove('scale-95', 'opacity-0');
+                });
+                document.addEventListener('keydown', onKeydown);
+            }
+
+            function closeModal() {
+                panel.classList.add('scale-95', 'opacity-0');
+                document.removeEventListener('keydown', onKeydown);
+                setTimeout(() => modal.classList.add('hidden'), 250);
+            }
+
+            function onKeydown(e) {
+                if (e.key === 'Escape') closeModal();
+            }
+
+            actionBtn.addEventListener('click', closeModal);
+            closeBtn.addEventListener('click', closeModal);
+            backdrop.addEventListener('click', closeModal);
+
+            function isValidEmail(value) {
+                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+            }
+
+            function setLoading(isLoading) {
+                if (!submitBtn) return;
+                submitBtn.disabled = isLoading;
+                if (submitBtnLabel) submitBtnLabel.textContent = isLoading ? 'Enviando...' : 'Enviar Mensaje';
+            }
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const nameInput = document.getElementById('name');
+                const emailInput = document.getElementById('email');
+                const errors = [];
+
+                if (!nameInput.value.trim()) {
+                    errors.push('Escribe tu nombre.');
+                }
+                if (!emailInput.value.trim()) {
+                    errors.push('Escribe tu correo electrónico.');
+                } else if (!isValidEmail(emailInput.value.trim())) {
+                    errors.push('El correo electrónico no parece válido.');
+                }
+
+                if (errors.length) {
+                    openModal({
+                        type: 'error',
+                        title: 'Revisa el formulario',
+                        message: 'Antes de enviar, corrige lo siguiente:',
+                        items: errors,
+                    });
+                    return;
+                }
+
+                setLoading(true);
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' },
+                })
+                    .then((response) => {
+                        if (response.ok) {
+                            form.reset();
+                            openModal({
+                                type: 'success',
+                                title: '¡Mensaje enviado!',
+                                message: 'Gracias, nos ponemos en contacto contigo lo antes posible.',
+                            });
+                        } else {
+                            openModal({
+                                type: 'warning',
+                                title: 'No se pudo enviar',
+                                message: 'Algo falló al enviar el formulario. Prueba de nuevo o escríbenos directamente por WhatsApp o a yassineyahya50@gmail.com.',
+                            });
+                        }
+                    })
+                    .catch(() => {
+                        openModal({
+                            type: 'warning',
+                            title: 'No se pudo enviar',
+                            message: 'Parece que hay un problema de conexión. Prueba de nuevo o escríbenos directamente por WhatsApp o a yassineyahya50@gmail.com.',
+                        });
+                    })
+                    .finally(() => setLoading(false));
+            });
+        })();
+    </script>
 </body>
 
 </html>
