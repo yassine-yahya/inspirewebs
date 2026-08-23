@@ -81,9 +81,27 @@
         }
 
         .msg-item.msg-in,
-        .email-item.email-in {
+        .email-item.email-in,
+        .form-item.form-in,
+        .sheet-item.sheet-in {
             opacity: 1 !important;
             transform: translateY(0) !important;
+        }
+
+        @keyframes emailPopIn {
+            from {
+                opacity: 0;
+                transform: scale(0.85);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        #email-mockup.email-mockup-in {
+            animation: emailPopIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
         }
 
         @keyframes ctaGlow {
@@ -98,8 +116,24 @@
             }
         }
 
-        .email-cta.email-in {
+        .email-cta.email-in,
+        .submit-btn.form-in,
+        .sheet-badge.sheet-in {
             animation: ctaGlow 1.8s ease-out 1;
+        }
+
+        @keyframes rowFlash {
+            0% {
+                background-color: rgba(16, 185, 129, 0.16);
+            }
+
+            100% {
+                background-color: rgba(16, 185, 129, 0);
+            }
+        }
+
+        .sheet-row.sheet-in {
+            animation: rowFlash 1.4s ease-out forwards;
         }
 
         @keyframes typingDotBounce {
@@ -123,6 +157,42 @@
 
         .typing-dot:nth-child(2) {
             animation-delay: 0.15s;
+        }
+
+        .field-box.field-focus {
+            border-color: rgb(16 185 129);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+        }
+
+        .field-cursor {
+            display: none;
+            width: 1px;
+            height: 1em;
+            margin-left: 1px;
+            background: rgb(16 185 129);
+            vertical-align: -2px;
+            animation: cursorBlink 0.9s steps(1) infinite;
+        }
+
+        .field-focus .field-cursor {
+            display: inline-block;
+        }
+
+        @keyframes cursorBlink {
+
+            0%,
+            50% {
+                opacity: 1;
+            }
+
+            50.01%,
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .submit-btn.submit-pressed {
+            transform: scale(0.96);
         }
 
         .typing-dot:nth-child(3) {
@@ -165,20 +235,15 @@
                 </div>
                 <a href="#contacto"
                     class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 md:px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-md">
-                    Empezar un proyecto
+                    Contáctame
                 </a>
             </div>
         </nav>
     </header>
 
     <!-- HERO -->
-    <section class="relative min-h-screen flex flex-col justify-center pt-24 pb-12 overflow-hidden bg-grid-pattern">
+    <section class="relative pt-28 md:pt-32 pb-12 overflow-hidden bg-grid-pattern">
         <div class="container mx-auto px-6 max-w-6xl">
-            <div data-aos="fade-up" data-aos-duration="700"
-                class="font-mono text-[11px] md:text-xs tracking-[0.2em] text-emerald-400 mb-5">
-                WEBSITES · AUTOMATIZACIÓN · DISEÑO
-            </div>
-
             <h1 data-aos="fade-up" data-aos-duration="700" data-aos-delay="100"
                 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.94] text-white max-w-5xl mb-6">
                 Construyo tu web y hago que siga trabajando por ti.
@@ -197,7 +262,7 @@
                     <i data-lucide="eye" class="w-4 h-4" aria-hidden="true"></i>
                     Ver servicios
                 </a>
-                <a href="https://wa.me/34602317364?text=Hola%2C%20quisiera%20informaci%C3%B3n%20para%20mi%20negocio"
+                <a href="https://wa.me/34602317364?text=Hola%2C%20quiero%20agendar%20una%20llamada%20de%2015%20minutos%20contigo"
                     target="_blank" rel="noopener noreferrer"
                     class="border border-zinc-700 hover:border-emerald-500/60 text-zinc-200 font-semibold px-7 py-3.5 rounded-lg transition-all text-center flex items-center justify-center gap-2">
                     <i data-lucide="phone-call" class="w-4 h-4" aria-hidden="true"></i>
@@ -212,24 +277,24 @@
         <div class="container mx-auto px-6 max-w-4xl">
             <div class="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-8">
                 <div data-aos="fade-up" data-parallax="left"
-                    class="aspect-square w-full max-w-md bg-white rounded-2xl p-8 md:p-10 flex flex-col justify-between shadow-2xl shadow-black/40 border border-zinc-200">
-                    <div class="font-mono text-xs md:text-sm tracking-[0.2em] text-zinc-400">
+                    class="aspect-square w-full max-w-xs bg-gradient-to-br from-white via-zinc-100 to-zinc-300 border border-zinc-200 rounded-lg p-5 flex flex-col justify-between overflow-hidden">
+                    <div class="font-mono text-[10.5px] text-zinc-500">
                         LO QUE HACEMOS
                     </div>
-                    <div class="text-4xl md:text-6xl leading-[0.95] font-black tracking-tight text-zinc-950">
+                    <div class="text-4xl sm:text-xl md:text-3xl lg:text-2xl leading-[0.95] font-black tracking-tight text-zinc-950">
                         37% más de clientes con la web.
                     </div>
-                    <div class="text-sm md:text-base font-bold text-zinc-400">inspirewebs.com</div>
+                    <div class="text-xs font-bold text-zinc-500">inspirewebs.com</div>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="100" data-parallax="right"
-                    class="aspect-square w-full max-w-md bg-zinc-900 border border-zinc-800 rounded-2xl p-8 md:p-10 flex flex-col justify-between shadow-2xl shadow-black/40">
-                    <div class="font-mono text-xs md:text-sm tracking-[0.2em] text-emerald-400">
+                    class="aspect-square w-full max-w-xs bg-zinc-900 border border-zinc-800 rounded-lg p-5 flex flex-col justify-between overflow-hidden">
+                    <div class="font-mono text-[10.5px] text-emerald-400">
                         LO QUE ENTREGAMOS
                     </div>
-                    <div class="text-4xl md:text-6xl leading-[0.95] font-black tracking-tight text-white">
+                    <div class="text-4xl sm:text-xl md:text-3xl lg:text-2xl leading-[0.95] font-black tracking-tight text-white">
                         Rápida. Clara. Permanente.
                     </div>
-                    <div class="text-sm md:text-base font-bold text-zinc-500">inspirewebs.com</div>
+                    <div class="text-xs font-bold text-zinc-500">inspirewebs.com</div>
                 </div>
             </div>
         </div>
@@ -247,7 +312,7 @@
             <!-- 01 WEBSITES -->
             <div data-aos="fade-up"
                 class="grid grid-cols-1 lg:grid-cols-[120px_1fr_280px] gap-4 lg:gap-10 py-9 border-b border-zinc-800">
-                <div class="font-mono text-5xl md:text-6xl font-black leading-none text-emerald-500/30">01</div>
+                <div class="font-mono text-5xl md:text-6xl font-black leading-none text-emerald-500/30">W</div>
                 <div>
                     <div class="text-3xl md:text-4xl font-extrabold tracking-tight text-white">Websites</div>
                     <p class="mt-3 text-zinc-400 text-[15px] leading-relaxed max-w-lg">
@@ -255,8 +320,8 @@
                         la diseño y la construyo yo mismo, así que nada se pierde por el camino. Te quedas con
                         los archivos y los accesos, lista para crecer cuando lo necesites.
                     </p>
-                    <div class="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-white border border-emerald-500/30 bg-emerald-500/5 rounded-full px-3 py-1.5">
-                        DESDE 499€
+                    <div class="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-white bg-emerald-500/5 rounded-full px-3 py-1.5">
+                        DESDE 400€ - 900€
                     </div>
                 </div>
                 <div class="flex flex-wrap gap-2 content-start">
@@ -273,16 +338,17 @@
             <!-- 02 AUTOMATIZACIÓN -->
             <div data-aos="fade-up"
                 class="grid grid-cols-1 lg:grid-cols-[120px_1fr_280px] gap-4 lg:gap-10 py-9 border-b border-zinc-800">
-                <div class="font-mono text-5xl md:text-6xl font-black leading-none text-emerald-500/30">02</div>
+                <div class="font-mono text-5xl md:text-6xl font-black leading-none text-emerald-500/30">A</div>
                 <div>
                     <div class="text-3xl md:text-4xl font-extrabold tracking-tight text-white">Automatización</div>
                     <p class="mt-3 text-zinc-400 text-[15px] leading-relaxed max-w-lg">
-                        Alguien rellena el formulario a las 11 de la noche. Recibe un email amable al instante,
-                        un recordatorio por WhatsApp dos días después, y tú recibes un aviso en tu bandeja de
-                        entrada. Nadie tiene que acordarse de nada.
+                        Automatizo las tareas repetitivas que hoy haces a mano: mensajes de bienvenida,
+                        recordatorios y seguimientos por email o WhatsApp, y la actualización de tus datos
+                        en el CRM, en Excel o en Notion. Todo ocurre solo, en el momento justo, sin que
+                        tengas que acordarte de nada ni copiar información entre herramientas.
                     </p>
-                    <div class="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-white border border-emerald-500/30 bg-emerald-500/5 rounded-full px-3 py-1.5">
-                        DESDE 300€
+                    <div class="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-white bg-emerald-500/5 rounded-full px-3 py-1.5">
+                        DESDE 100€ - 250€ / MES
                     </div>
                 </div>
                 <div class="flex flex-wrap gap-2 content-start">
@@ -292,22 +358,22 @@
                         por WhatsApp</span>
                     <span
                         class="border border-zinc-800 text-zinc-400 text-xs px-3 py-1.5 rounded-full">Recordatorios</span>
-                    <span class="border border-zinc-800 text-zinc-400 text-xs px-3 py-1.5 rounded-full">Gestión
-                        de contactos</span>
+                    <span class="border border-zinc-800 text-zinc-400 text-xs px-3 py-1.5 rounded-full">CRM, Excel
+                        y Notion</span>
                 </div>
             </div>
 
             <!-- 03 DISEÑO -->
             <div data-aos="fade-up" class="grid grid-cols-1 lg:grid-cols-[120px_1fr_280px] gap-4 lg:gap-10 py-9">
-                <div class="font-mono text-5xl md:text-6xl font-black leading-none text-emerald-500/30">03</div>
+                <div class="font-mono text-5xl md:text-6xl font-black leading-none text-emerald-500/30">D</div>
                 <div>
                     <div class="text-3xl md:text-4xl font-extrabold tracking-tight text-white">Diseño</div>
                     <p class="mt-3 text-zinc-400 text-[15px] leading-relaxed max-w-lg">
                         Publicaciones para redes, anuncios y algún que otro menú o flyer, con la misma
                         tipografía, colores y estilo que tu web, para que todo parezca un mismo negocio.
                     </p>
-                    <div class="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-white border border-emerald-500/30 bg-emerald-500/5 rounded-full px-3 py-1.5">
-                        DESDE 150€ / MES
+                    <div class="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-white bg-emerald-500/5 rounded-full px-3 py-1.5">
+                        DESDE 80€ - 200€ / MES
                     </div>
                 </div>
                 <div class="flex flex-wrap gap-2 content-start">
@@ -323,62 +389,217 @@
         </div>
     </section>
 
+    <!-- WEBSITES EN LA PRÁCTICA -->
+    <section class="py-20 md:py-24 overflow-hidden">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <h2 data-aos="fade-up"
+                class="text-3xl md:text-[40px] font-extrabold tracking-tight text-white mb-3 max-w-2xl">
+                Una página web inteligente que trae al visitante hasta tu agenda
+            </h2>
+            <p data-aos="fade-up" class="text-zinc-400 text-base max-w-lg mb-12">
+                Así se convierte un visitante en cliente: rellena, envía, y la automatización hace el resto.
+            </p>
+
+            <div data-aos="fade-up" class="bg-white rounded-xl border border-zinc-200 shadow-2xl shadow-black/30 overflow-hidden">
+                <div class="flex items-center gap-3 px-4 py-3 border-b border-zinc-200 bg-zinc-50">
+                    <div class="flex items-center gap-1.5 shrink-0">
+                        <span class="w-2.5 h-2.5 rounded-full bg-zinc-300"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-zinc-300"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-zinc-300"></span>
+                    </div>
+                    <div class="flex-1 text-center font-mono text-[10.5px] text-zinc-400 truncate">tuweb.com/reservas</div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-8 lg:gap-10 p-6 md:p-10 items-center">
+                    <div>
+                        <div class="font-mono text-[10.5px] tracking-[0.15em] text-zinc-500">TIEMPO DE RESPUESTA</div>
+                        <div class="mt-3 text-5xl md:text-6xl font-black tracking-tight text-zinc-900">24h</div>
+                        <div class="mt-3 text-lg md:text-xl font-bold leading-snug text-zinc-700 max-w-sm">
+                            Formularios interactivos que te avisan al instante, para que respondas a cada cliente en el momento óptimo.
+                        </div>
+                        <div class="mt-5 text-xs font-bold text-zinc-400">inspirewebs.com</div>
+                    </div>
+
+                    <div id="form-mockup" class="bg-stone-50 rounded-xl border border-zinc-200 overflow-hidden shrink-0">
+                        <div class="flex items-center gap-1.5 px-4 py-2.5 border-b border-zinc-200 font-mono text-[10px] text-emerald-600">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                            RESERVA TU CITA
+                        </div>
+                        <div class="p-5 space-y-3.5">
+                            <div class="form-field" data-value="Sara Martín">
+                                <div class="text-[11px] font-semibold text-zinc-500 mb-1.5">Nombre</div>
+                                <div class="field-box border border-zinc-200 rounded-lg px-3.5 py-2.5 text-sm text-zinc-800 bg-white transition-shadow">
+                                    <span class="field-value"></span><span class="field-cursor"></span>
+                                </div>
+                            </div>
+                            <div class="form-field" data-value="sara@example.com">
+                                <div class="text-[11px] font-semibold text-zinc-500 mb-1.5">Email</div>
+                                <div class="field-box border border-zinc-200 rounded-lg px-3.5 py-2.5 text-sm text-zinc-800 bg-white transition-shadow">
+                                    <span class="field-value"></span><span class="field-cursor"></span>
+                                </div>
+                            </div>
+                            <div class="form-field" data-value="Hola, me gustaría reservar una cita para la próxima semana.">
+                                <div class="text-[11px] font-semibold text-zinc-500 mb-1.5">Mensaje</div>
+                                <div class="field-box border border-zinc-200 rounded-lg px-3.5 py-2.5 text-sm text-zinc-800 bg-white min-h-[64px] transition-shadow">
+                                    <span class="field-value"></span><span class="field-cursor"></span>
+                                </div>
+                            </div>
+                            <div class="form-item opacity-0 translate-y-3 transition-all duration-500 ease-out">
+                                <div class="submit-btn bg-emerald-600 text-white text-sm font-semibold text-center rounded-lg px-4 py-3 transition-transform">
+                                    Enviar mensaje
+                                </div>
+                            </div>
+                            <div class="form-item form-success opacity-0 translate-y-3 transition-all duration-500 ease-out flex items-center justify-center gap-2 text-emerald-600 text-sm font-semibold">
+                                <i data-lucide="check-circle" class="w-4 h-4" aria-hidden="true"></i>
+                                Mensaje enviado — te responderemos enseguida
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DISEÑO EN LA PRÁCTICA -->
+    <section class="py-20 md:py-24 overflow-hidden">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <h2 data-aos="fade-up" class="text-3xl md:text-[40px] font-extrabold tracking-tight text-white mb-10 max-w-2xl">
+                El mismo diseño para tu web, tus redes sociales y tu marca
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+                <div data-aos="fade-up" data-parallax="left">
+                    <div class="aspect-square bg-gradient-to-br from-emerald-400 via-emerald-600 to-emerald-800 rounded-lg p-5 flex flex-col justify-between overflow-hidden">
+                        <div class="font-mono text-[10.5px] text-emerald-950/70">01 / OFERTA</div>
+                        <div class="text-4xl sm:text-xl md:text-3xl lg:text-2xl leading-[0.95] font-black tracking-tight text-emerald-950">
+                            Diseño personalizado que atrae leads.
+                        </div>
+                        <div class="text-xs font-bold text-emerald-950/70">inspirewebs.com</div>
+                    </div>
+                    <div class="font-mono text-[10.5px] text-zinc-600 mt-2.5">INSTAGRAM 1:1</div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="aspect-square bg-gradient-to-br from-white via-zinc-100 to-zinc-300 border border-zinc-200 rounded-lg p-5 flex flex-col justify-between overflow-hidden">
+                        <div class="font-mono text-[10.5px] text-zinc-500">02 / IDENTIDAD</div>
+                        <div class="text-4xl sm:text-xl md:text-3xl lg:text-2xl leading-[0.95] font-black tracking-tight text-zinc-950">
+                            Clara. Consistente. Que funciona.
+                        </div>
+                        <div class="text-xs font-bold text-zinc-500">inspirewebs.com</div>
+                    </div>
+                    <div class="font-mono text-[10.5px] text-zinc-600 mt-2.5">INSTAGRAM 1:1</div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200" data-parallax="right">
+                    <div class="aspect-square bg-zinc-900 border border-zinc-800 rounded-lg p-5 flex flex-col justify-between overflow-hidden">
+                        <div class="font-mono text-[10.5px] text-emerald-400">03 / PRINCIPIO</div>
+                        <div class="text-4xl sm:text-xl md:text-3xl lg:text-2xl leading-[0.95] font-black tracking-tight text-white">
+                            Disponible. Adaptada. Personalizada.
+                        </div>
+                        <div class="text-xs font-bold text-zinc-500">inspirewebs.com</div>
+                    </div>
+                    <div class="font-mono text-[10.5px] text-zinc-600 mt-2.5">INSTAGRAM 1:1</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- AUTOMATIZACIÓN EN LA PRÁCTICA -->
     <section class="py-20 md:py-24 bg-zinc-900/40 border-y border-zinc-800/80">
         <div class="container mx-auto px-6 max-w-5xl">
-            <div data-aos="fade-up" class="font-mono text-[11px] tracking-[0.18em] text-emerald-400 mb-3">
-                AUTOMATIZACIÓN EN LA PRÁCTICA
-            </div>
             <h2 data-aos="fade-up"
                 class="text-3xl md:text-[40px] font-extrabold tracking-tight text-white mb-3 max-w-2xl">
-                Los dos mensajes que hacen la mayor parte del trabajo
+                Menos tareas repetitivas. Más cosas automáticas.
             </h2>
             <p data-aos="fade-up" class="text-zinc-400 text-base max-w-lg mb-12">
-                Escritos con tu voz, enviados en un horario que puedes explicar en una frase.
+                La automatización se encarga de escribir y enviar por ti, siempre a tiempo, para que dejes de perseguir tareas manuales.
             </p>
 
             <div data-aos="fade-up" class="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-6 items-start">
 
                 <!-- MOCKUP WHATSAPP -->
-                <div id="whatsapp-mockup" class="bg-[#111b21] border border-zinc-800 rounded-xl overflow-hidden">
+                <div id="whatsapp-mockup" class="bg-[#111b21] border border-zinc-800 rounded-xl overflow-hidden flex flex-col">
                     <div class="flex items-center gap-2.5 px-4 py-3 border-b border-black/30 bg-[#202c33]">
-                        <div class="w-8 h-8 rounded-full bg-zinc-700"></div>
-                        <div>
-                            <div class="text-[13px] font-bold text-white">InspireWebs</div>
+                        <div class="w-8 h-8 rounded-full bg-zinc-700 shrink-0"></div>
+                        <div class="flex-1 min-w-0">
+                            <div class="text-[13px] font-bold text-white truncate">InspireWebs</div>
                             <div class="font-mono text-[10px] text-emerald-400">en línea · responde en minutos</div>
                         </div>
+                        <div class="flex items-center gap-3 text-zinc-400 shrink-0">
+                            <i data-lucide="video" class="w-4 h-4" aria-hidden="true"></i>
+                            <i data-lucide="phone" class="w-4 h-4" aria-hidden="true"></i>
+                            <i data-lucide="more-vertical" class="w-4 h-4" aria-hidden="true"></i>
+                        </div>
                     </div>
-                    <div class="px-4 py-4 flex flex-col gap-2.5 whatsapp-bg">
-                        <div class="msg-item opacity-0 translate-y-3 transition-all duration-500 ease-out self-end max-w-[85%] bg-emerald-600 text-white text-sm leading-snug px-3.5 py-2.5 rounded-2xl rounded-br-sm">
-                            Hola Sara, te escribo para confirmar que recibiste nuestro correo del martes
-                            sobre la página de reservas. ¿Seguimos adelante con el proyecto?
+                    <div class="px-4 py-3.5 flex flex-col justify-end gap-1.5 whatsapp-bg min-h-[300px]">
+                        <div class="msg-item opacity-0 translate-y-3 transition-all duration-500 ease-out self-end max-w-[85%] bg-emerald-600 text-white rounded-2xl rounded-br-sm px-3 py-2">
+                            <div class="text-[13px] leading-snug">
+                                Hola Sara, soy de InspireWebs. ¿Recibiste el correo sobre tu web de
+                                reservas? Podemos empezar cuando quieras.
+                            </div>
+                            <div class="flex items-center justify-end gap-1 mt-0.5">
+                                <span class="text-[10px] text-emerald-100/70">09:12</span>
+                                <i data-lucide="check-check" class="w-3.5 h-3.5 text-sky-300" aria-hidden="true"></i>
+                            </div>
                         </div>
-                        <div class="msg-item opacity-0 translate-y-3 transition-all duration-500 ease-out self-end font-mono text-[10px] text-zinc-600 -mt-1">09:12 · enviado el día 2</div>
-                        <div class="msg-item msg-typing opacity-0 translate-y-3 transition-all duration-500 ease-out self-start bg-zinc-800 rounded-2xl rounded-bl-sm px-3.5 py-2.5 flex gap-1 items-center">
+                        <div class="msg-item msg-typing opacity-0 translate-y-3 transition-all duration-500 ease-out self-start bg-zinc-800 rounded-2xl rounded-bl-sm px-3 py-2 flex gap-1 items-center">
                             <span class="w-1.5 h-1.5 rounded-full bg-zinc-500 typing-dot"></span>
                             <span class="w-1.5 h-1.5 rounded-full bg-zinc-500 typing-dot"></span>
                             <span class="w-1.5 h-1.5 rounded-full bg-zinc-500 typing-dot"></span>
                         </div>
-                        <div class="msg-item msg-reply opacity-0 translate-y-3 transition-all duration-500 ease-out self-start max-w-[85%] bg-zinc-800 text-zinc-100 text-sm leading-snug px-3.5 py-2.5 rounded-2xl rounded-bl-sm">
-                            Sí, disculpa la demora. ¿Podríamos hablar el jueves?
+                        <div class="msg-item msg-reply opacity-0 translate-y-3 transition-all duration-500 ease-out self-start max-w-[85%] bg-zinc-800 text-zinc-100 rounded-2xl rounded-bl-sm px-3 py-2">
+                            <div class="text-[13px] leading-snug">Sí, perdón la demora. ¿Hablamos el jueves?</div>
+                            <div class="flex items-center justify-end mt-0.5">
+                                <span class="text-[10px] text-zinc-500">09:14</span>
+                            </div>
                         </div>
-                        <div class="msg-item opacity-0 translate-y-3 transition-all duration-500 ease-out self-end max-w-[85%] bg-emerald-600 text-white text-sm leading-snug px-3.5 py-2.5 rounded-2xl rounded-br-sm">
-                            Perfecto, el jueves nos viene bien. ¿A las 10:00 o a las 16:00?
+                        <div class="msg-item opacity-0 translate-y-3 transition-all duration-500 ease-out self-end max-w-[85%] bg-emerald-600 text-white rounded-2xl rounded-br-sm px-3 py-2">
+                            <div class="text-[13px] leading-snug">Perfecto, el jueves nos viene bien. ¿A las 10:00 o a las 16:00?</div>
+                            <div class="flex items-center justify-end gap-1 mt-0.5">
+                                <span class="text-[10px] text-emerald-100/70">09:15</span>
+                                <i data-lucide="check-check" class="w-3.5 h-3.5 text-sky-300" aria-hidden="true"></i>
+                            </div>
                         </div>
-                        <div class="msg-item opacity-0 translate-y-3 transition-all duration-500 ease-out self-start flex gap-2 mt-1">
-                            <span class="border border-zinc-700 text-zinc-300 text-xs px-3 py-1.5 rounded-full">10:00</span>
-                            <span class="border border-zinc-700 text-zinc-300 text-xs px-3 py-1.5 rounded-full">16:00</span>
+                        <div class="msg-item opacity-0 translate-y-3 transition-all duration-500 ease-out self-start flex gap-2">
+                            <span class="border border-zinc-700 text-zinc-300 text-xs px-2.5 py-1 rounded-full">10:00</span>
+                            <span class="border border-zinc-700 text-zinc-300 text-xs px-2.5 py-1 rounded-full">16:00</span>
                         </div>
+                        <div class="msg-item msg-typing opacity-0 translate-y-3 transition-all duration-500 ease-out self-start bg-zinc-800 rounded-2xl rounded-bl-sm px-3 py-2 flex gap-1 items-center">
+                            <span class="w-1.5 h-1.5 rounded-full bg-zinc-500 typing-dot"></span>
+                            <span class="w-1.5 h-1.5 rounded-full bg-zinc-500 typing-dot"></span>
+                            <span class="w-1.5 h-1.5 rounded-full bg-zinc-500 typing-dot"></span>
+                        </div>
+                        <div class="msg-item opacity-0 translate-y-3 transition-all duration-500 ease-out self-start max-w-[85%] bg-zinc-800 text-zinc-100 rounded-2xl rounded-bl-sm px-3 py-2">
+                            <div class="text-[13px] leading-snug">16:00 me viene perfecto 👍</div>
+                            <div class="flex items-center justify-end mt-0.5">
+                                <span class="text-[10px] text-zinc-500">09:17</span>
+                            </div>
+                        </div>
+                        <div class="msg-item opacity-0 translate-y-3 transition-all duration-500 ease-out self-end max-w-[85%] bg-emerald-600 text-white rounded-2xl rounded-br-sm px-3 py-2">
+                            <div class="text-[13px] leading-snug">Genial, te mando la invitación por correo ahora mismo.</div>
+                            <div class="flex items-center justify-end gap-1 mt-0.5">
+                                <span class="text-[10px] text-emerald-100/70">09:18</span>
+                                <i data-lucide="check-check" class="w-3.5 h-3.5 text-sky-300" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 px-3 py-2 border-t border-black/30 bg-[#202c33]">
+                        <i data-lucide="smile" class="w-5 h-5 text-zinc-400 shrink-0" aria-hidden="true"></i>
+                        <div class="flex-1 bg-[#2a3942] rounded-full px-3.5 py-2 text-xs text-zinc-500">Escribe un mensaje</div>
+                        <i data-lucide="mic" class="w-5 h-5 text-zinc-400 shrink-0" aria-hidden="true"></i>
                     </div>
                 </div>
 
                 <!-- MOCKUP EMAIL -->
-                <div id="email-mockup" class="bg-stone-100 rounded-xl overflow-hidden">
+                <div class="relative">
+                    <div id="email-placeholder"
+                        class="border border-dashed border-zinc-700 rounded-xl min-h-[380px] flex flex-col items-center justify-center gap-2 text-zinc-600 bg-zinc-900/20 transition-opacity duration-300">
+                        <i data-lucide="mail" class="w-4 h-4" aria-hidden="true"></i>
+                        <span class="text-[11px] font-mono tracking-wide">Esperando respuesta…</span>
+                    </div>
+                    <div id="email-mockup" class="absolute inset-0 bg-stone-100 rounded-xl overflow-hidden opacity-0 scale-90 shadow-xl">
                     <div
                         class="flex items-center justify-between px-5 py-3 border-b border-black/10 font-mono text-[10.5px] text-zinc-500">
-                        <span class="flex items-center gap-1.5">
-                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                            ENVIADO AUTOMÁTICAMENTE · 2 MIN DESPUÉS DEL FORMULARIO
+                        <span class="flex items-center gap-1.5 text-emerald-600">
+                            <i data-lucide="check" class="w-3 h-3" aria-hidden="true"></i>
+                            RECIBIDO · HACE 2 MIN
                         </span>
                         <span>Bandeja de entrada</span>
                     </div>
@@ -393,7 +614,7 @@
                             </div>
                         </div>
                         <div class="email-item opacity-0 translate-y-3 transition-all duration-500 ease-out text-xl md:text-2xl font-extrabold tracking-tight text-zinc-900 mb-4">
-                            Hemos recibido tu mensaje — esto es lo siguiente
+                            Hemos recibido tu mensaje
                         </div>
                         <p class="email-item opacity-0 translate-y-3 transition-all duration-500 ease-out text-[15px] leading-relaxed text-zinc-700 mb-3">
                             Hola Sara, gracias por contactar con nosotros. Hemos revisado tu mensaje sobre
@@ -412,90 +633,172 @@
                             automático.
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- DISEÑO EN LA PRÁCTICA -->
-    <section class="py-20 md:py-24 overflow-hidden">
-        <div class="container mx-auto px-6 max-w-5xl">
-            <div data-aos="fade-up" class="font-mono text-[11px] tracking-[0.18em] text-emerald-400 mb-3">
-                DISEÑO EN LA PRÁCTICA
-            </div>
-            <h2 data-aos="fade-up" class="text-3xl md:text-[40px] font-extrabold tracking-tight text-white mb-10 max-w-2xl">
-                Publicaciones creadas con el mismo estilo que tu web
-            </h2>
-
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
-                <div data-aos="fade-up" data-parallax="left">
-                    <div class="aspect-square bg-emerald-600 rounded-lg p-6 flex flex-col justify-between">
-                        <div class="font-mono text-[10.5px] text-emerald-950/70">01 / OFERTA</div>
-                        <div class="text-3xl md:text-4xl leading-[1.02] font-black tracking-tight text-emerald-950">
-                            Diseño personalizado que atrae leads.
-                        </div>
-                        <div class="text-xs font-bold text-emerald-950/70">inspirewebs.com</div>
                     </div>
-                    <div class="font-mono text-[10.5px] text-zinc-600 mt-2.5">INSTAGRAM 1:1</div>
                 </div>
-                <div data-aos="fade-up" data-aos-delay="100">
-                    <div class="aspect-square bg-stone-100 rounded-lg p-6 flex flex-col justify-between">
-                        <div class="font-mono text-[10.5px] text-zinc-500">02 / PRUEBA</div>
-                        <div>
-                            <div class="text-5xl md:text-6xl font-black tracking-tight text-zinc-900">48h</div>
-                            <div class="mt-2 text-lg md:text-xl font-bold leading-snug text-zinc-700">
-                                desde el primer mensaje hasta una llamada agendada, sin mover un dedo.
+            </div>
+
+            <div data-aos="fade-up" class="mt-14">
+                <div class="font-mono text-[10.5px] tracking-[0.15em] text-zinc-500 mb-1.5">MIENTRAS TANTO</div>
+                <h3 class="text-lg md:text-xl font-bold tracking-tight text-white mb-6">
+                    Cada cliente nuevo entra solo en tu Excel y tu Notion
+                </h3>
+                <div id="sheet-mockup" class="bg-white rounded-xl border border-zinc-200 overflow-hidden max-w-2xl">
+                    <div class="flex items-center justify-between px-4 py-2.5 border-b border-zinc-200 bg-zinc-50">
+                        <div class="flex items-center gap-2">
+                            <div class="w-5 h-5 rounded bg-emerald-600 flex items-center justify-center shrink-0">
+                                <i data-lucide="table" class="w-3 h-3 text-white" aria-hidden="true"></i>
                             </div>
+                            <span class="text-xs font-semibold text-zinc-700">Clientes.xlsx</span>
                         </div>
-                        <div class="text-xs font-bold text-zinc-500">inspirewebs.com</div>
-                    </div>
-                    <div class="font-mono text-[10.5px] text-zinc-600 mt-2.5">INSTAGRAM 1:1</div>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="200" data-parallax="right">
-                    <div class="aspect-square bg-zinc-900 border border-zinc-800 rounded-lg p-6 flex flex-col justify-between">
-                        <div class="font-mono text-[10.5px] text-emerald-400">03 / PRINCIPIO</div>
-                        <div class="text-3xl md:text-4xl leading-[1.02] font-black tracking-tight text-white">
-                            Disponible. Adaptada. Personalizada.
+                        <div class="sheet-item sheet-badge opacity-0 translate-y-2 transition-all duration-500 ease-out flex items-center gap-1.5 text-[11px] font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-full px-2.5 py-1">
+                            <i data-lucide="check" class="w-3 h-3" aria-hidden="true"></i>
+                            Sincronizado con Notion
                         </div>
-                        <div class="text-xs font-bold text-zinc-500">inspirewebs.com</div>
                     </div>
-                    <div class="font-mono text-[10.5px] text-zinc-600 mt-2.5">INSTAGRAM 1:1</div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-[13px]">
+                            <thead>
+                                <tr class="text-zinc-400 font-mono text-[10px] tracking-wide">
+                                    <th class="px-4 py-2 font-medium border-b border-zinc-100">NOMBRE</th>
+                                    <th class="px-4 py-2 font-medium border-b border-zinc-100">CONTACTO</th>
+                                    <th class="px-4 py-2 font-medium border-b border-zinc-100">ESTADO</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="px-4 py-2.5 text-zinc-700 border-b border-zinc-100">Marc Oliver</td>
+                                    <td class="px-4 py-2.5 text-zinc-500 border-b border-zinc-100">marc@studio.es</td>
+                                    <td class="px-4 py-2.5 border-b border-zinc-100"><span class="text-zinc-500 text-xs">Cliente</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-2.5 text-zinc-700 border-b border-zinc-100">Laura Gómez</td>
+                                    <td class="px-4 py-2.5 text-zinc-500 border-b border-zinc-100">laura@gomez.com</td>
+                                    <td class="px-4 py-2.5 border-b border-zinc-100"><span class="text-zinc-500 text-xs">Cliente</span></td>
+                                </tr>
+                                <tr class="sheet-item sheet-row opacity-0 translate-y-2 transition-all duration-500 ease-out">
+                                    <td class="px-4 py-2.5 font-semibold text-zinc-900">Sara Martín</td>
+                                    <td class="px-4 py-2.5 text-zinc-600">sara@example.com</td>
+                                    <td class="px-4 py-2.5">
+                                        <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-700">
+                                            <i data-lucide="sparkles" class="w-3 h-3" aria-hidden="true"></i>
+                                            Nuevo lead
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="sheet-item sheet-row opacity-0 translate-y-2 transition-all duration-500 ease-out">
+                                    <td class="px-4 py-2.5 font-semibold text-zinc-900">Diego Ruiz</td>
+                                    <td class="px-4 py-2.5 text-zinc-600">diego@ruizweb.com</td>
+                                    <td class="px-4 py-2.5">
+                                        <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-700">
+                                            <i data-lucide="sparkles" class="w-3 h-3" aria-hidden="true"></i>
+                                            Nuevo lead
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="sheet-item sheet-row opacity-0 translate-y-2 transition-all duration-500 ease-out">
+                                    <td class="px-4 py-2.5 font-semibold text-zinc-900">Elena Torres</td>
+                                    <td class="px-4 py-2.5 text-zinc-600">elena@torresdesign.com</td>
+                                    <td class="px-4 py-2.5">
+                                        <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-700">
+                                            <i data-lucide="sparkles" class="w-3 h-3" aria-hidden="true"></i>
+                                            Nuevo lead
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="sheet-item sheet-row opacity-0 translate-y-2 transition-all duration-500 ease-out">
+                                    <td class="px-4 py-2.5 font-semibold text-zinc-900">Javier Muñoz</td>
+                                    <td class="px-4 py-2.5 text-zinc-600">javier@munoz.io</td>
+                                    <td class="px-4 py-2.5">
+                                        <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-700">
+                                            <i data-lucide="sparkles" class="w-3 h-3" aria-hidden="true"></i>
+                                            Nuevo lead
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- PROCESO -->
-    <section id="proceso" class="pb-20 md:pb-28">
+    <section id="proceso" class="py-20 md:py-28">
         <div class="container mx-auto px-6 max-w-5xl">
             <div data-aos="fade-up"
-                class="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-zinc-800 border border-zinc-800 rounded-xl overflow-hidden">
-                <div class="p-7 md:p-8">
-                    <div class="font-mono text-[11px] text-emerald-400 mb-3">PASO 01</div>
+                class="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-8">
+                <div>
+                    <div class="font-mono text-4xl md:text-5xl font-black leading-none text-emerald-500/30 mb-4">01</div>
                     <div class="text-lg font-extrabold tracking-tight text-white mb-2">Una llamada, luego un
                         plan</div>
                     <p class="text-[14.5px] leading-relaxed text-zinc-400">
-                        Quince minutos para entender qué te está frenando. Te doy un plan por escrito y un
+                        Quince minutos para entender qué te está frenando. Te doy un plan y un
                         precio cerrado.
                     </p>
                 </div>
-                <div class="p-7 md:p-8">
-                    <div class="font-mono text-[11px] text-emerald-400 mb-3">PASO 02</div>
+                <div>
+                    <div class="font-mono text-4xl md:text-5xl font-black leading-none text-emerald-500/30 mb-4">02</div>
                     <div class="text-lg font-extrabold tracking-tight text-white mb-2">Construyo con
                         transparencia</div>
                     <p class="text-[14.5px] leading-relaxed text-zinc-400">
-                        Ves la web mientras se construye y revisas cada mensaje automático antes de que se
-                        envíe.
+                        Ves cómo avanza el trabajo y revisas cada detalle antes de que quede terminado.
                     </p>
                 </div>
-                <div class="p-7 md:p-8">
-                    <div class="font-mono text-[11px] text-emerald-400 mb-3">PASO 03</div>
+                <div>
+                    <div class="font-mono text-4xl md:text-5xl font-black leading-none text-emerald-500/30 mb-4">03</div>
                     <div class="text-lg font-extrabold tracking-tight text-white mb-2">Entrega, y sigo cerca
                     </div>
                     <p class="text-[14.5px] leading-relaxed text-zinc-400">
-                        Accesos, un vídeo explicativo corto, y un mes de ajustes incluido.
+                        Accesos, soporte y actualizaciones, y un mes de ajustes incluido.
                     </p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PACK -->
+    <section class="pb-16 md:pb-20">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div data-aos="fade-up"
+                class="relative lg:max-w-2xl bg-gradient-to-br from-emerald-500 via-emerald-600 to-emerald-800 rounded-2xl p-6 md:p-9 overflow-hidden">
+                <div
+                    class="absolute top-5 right-5 md:top-7 md:right-7 bg-white text-emerald-700 text-[11px] font-black tracking-wide px-3 py-1.5 rounded-full shadow-md">
+                    AHORRA 30%
+                </div>
+                <div class="font-mono text-[11px] tracking-[0.18em] text-emerald-100 mb-3">PACK</div>
+                <h3 class="text-2xl md:text-[32px] font-extrabold tracking-tight text-white max-w-lg leading-tight mb-5">
+                    Website nueva, 3 automatizaciones y diseño para redes, todo en un solo pack.
+                </h3>
+                <ul class="space-y-2 mb-7 text-emerald-50 text-sm max-w-md">
+                    <li class="flex items-start gap-2">
+                        <i data-lucide="check" class="w-4 h-4 text-white shrink-0 mt-0.5" aria-hidden="true"></i>
+                        Website completa, lista para convertir visitas en clientes
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i data-lucide="check" class="w-4 h-4 text-white shrink-0 mt-0.5" aria-hidden="true"></i>
+                        3 automatizaciones a medida (WhatsApp, email, CRM/Excel/Notion)
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i data-lucide="check" class="w-4 h-4 text-white shrink-0 mt-0.5" aria-hidden="true"></i>
+                        Diseño para redes — hasta 12 publicaciones al mes
+                    </li>
+                </ul>
+                <div class="flex flex-wrap items-end gap-x-7 gap-y-3 mb-7">
+                    <div>
+                        <div class="font-mono text-[10px] tracking-wide text-emerald-100">PAGO ÚNICO</div>
+                        <div class="text-3xl font-black text-white">599€</div>
+                    </div>
+                    <div>
+                        <div class="font-mono text-[10px] tracking-wide text-emerald-100">DESPUÉS</div>
+                        <div class="text-3xl font-black text-white">299€<span class="text-base font-bold">/mes</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="#contacto"
+                    class="inline-flex items-center justify-center gap-2 bg-white hover:bg-emerald-50 text-emerald-700 font-bold px-6 py-3 rounded-lg transition-colors text-sm">
+                    Quiero el Pack
+                </a>
             </div>
         </div>
     </section>
@@ -509,22 +812,6 @@
                 <h2 class="text-4xl sm:text-5xl font-black tracking-tight text-zinc-950 max-w-xl leading-[1.02]">
                     Cuéntame qué te está frenando, y te digo si puedo arreglarlo.
                 </h2>
-                <p class="mt-4 max-w-md text-zinc-600 text-[15px] leading-relaxed">
-                    Nada de formularios interminables. Solo escríbeme y cuéntame más o menos qué necesitas.
-                </p>
-                <div class="mt-8 flex flex-col gap-2.5">
-                    <a href="mailto:yassineyahya50@gmail.com"
-                        class="inline-flex items-center justify-center gap-2 bg-zinc-950 hover:bg-zinc-800 text-white text-sm font-semibold px-6 py-3.5 rounded-lg transition-colors">
-                        <i data-lucide="mail" class="w-4 h-4" aria-hidden="true"></i>
-                        yassineyahya50@gmail.com
-                    </a>
-                    <a href="https://wa.me/34602317364?text=Hola%2C%20quisiera%20informaci%C3%B3n%20para%20mi%20negocio"
-                        target="_blank" rel="noopener noreferrer"
-                        class="inline-flex items-center justify-center gap-2 border border-zinc-950/25 hover:border-zinc-950/50 text-zinc-950 text-sm font-semibold px-6 py-3.5 rounded-lg transition-colors">
-                        <i data-lucide="message-circle" class="w-4 h-4" aria-hidden="true"></i>
-                        Escríbeme por WhatsApp
-                    </a>
-                </div>
             </div>
 
             <div data-aos="fade-up" data-aos-delay="100"
@@ -556,10 +843,10 @@
                             opción te interesa?</label>
                         <select id="service" name="service"
                             class="w-full bg-zinc-50 border border-zinc-300 rounded-lg px-3.5 py-2.5 text-zinc-900 focus:outline-none focus:border-emerald-600 transition-colors text-sm">
-                            <option value="Website (desde 499€)">Website (desde 499€)</option>
-                            <option value="Automatización (desde 300€)">Automatización (desde 300€)</option>
-                            <option value="Diseño para redes (desde 150€/mes)">Diseño para redes (desde
-                                150€/mes)</option>
+                            <option value="Pack (599€ + 299€/mes)">Pack (599€ + 299€/mes)</option>
+                            <option value="Website (desde 400€ - 900€)">Website (desde 400€ - 900€)</option>
+                            <option value="Automatización (desde 100€ - 250€/mes)">Automatización (desde 100€ - 250€/mes)</option>
+                            <option value="Diseño para redes (desde 80€ - 200€/mes)">Diseño para redes (desde 80€ - 200€/mes)</option>
                             <option value="Otra consulta">Otra consulta / Proyecto a medida</option>
                         </select>
                     </div>
@@ -576,6 +863,15 @@
                         <span>Enviar Mensaje</span>
                     </button>
                 </form>
+
+                <div class="mt-4 pt-4 border-t border-zinc-100">
+                    <a href="https://wa.me/34602317364?text=Hola%2C%20quisiera%20informaci%C3%B3n%20para%20mi%20negocio"
+                        target="_blank" rel="noopener noreferrer"
+                        class="w-full inline-flex items-center justify-center gap-2 border border-zinc-300 hover:border-zinc-950/40 text-zinc-700 text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors">
+                        <i data-lucide="message-circle" class="w-4 h-4" aria-hidden="true"></i>
+                        WhatsApp
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -688,11 +984,11 @@
         (function () {
             const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-            function setupSequence({ wrapId, itemSelector, inClass, buildSteps, onReset, onShowAll }) {
+            function setupSequence({ wrapId, itemSelector, inClass, buildSteps, onReset, onShowAll, onComplete, autoPlay = true }) {
                 const wrap = document.getElementById(wrapId);
-                if (!wrap) return;
+                if (!wrap) return null;
                 const items = Array.from(wrap.querySelectorAll(itemSelector));
-                if (!items.length) return;
+                if (!items.length) return null;
 
                 function reset() {
                     items.forEach((item) => item.classList.remove(inClass));
@@ -706,7 +1002,7 @@
 
                 if (reduceMotion) {
                     showAll();
-                    return;
+                    return { play: showAll, reset };
                 }
 
                 let timeouts = [];
@@ -724,9 +1020,16 @@
                     reset();
                     // fuerza el reflow para que el reinicio se aplique antes de repetir la transición
                     void wrap.offsetWidth;
-                    buildSteps(items).forEach(([fn, delay]) => {
+                    const steps = buildSteps(items);
+                    let maxDelay = 0;
+                    steps.forEach(([fn, delay]) => {
                         timeouts.push(setTimeout(fn, delay));
+                        if (delay > maxDelay) maxDelay = delay;
                     });
+                    // avisa cuando termina esta secuencia, para poder encadenar la siguiente (correo)
+                    if (onComplete) {
+                        timeouts.push(setTimeout(onComplete, maxDelay + 400));
+                    }
                 }
 
                 if ('IntersectionObserver' in window) {
@@ -740,7 +1043,7 @@
                                 }
                                 // solo (re)inicia si de verdad se había salido antes, para que no
                                 // se reinicie en bucle mientras la sección sigue a la vista
-                                if (!active) play();
+                                if (autoPlay && !active) play();
                             } else if (active) {
                                 // espera un momento antes de reiniciar, por si vuelve a entrar enseguida
                                 exitTimer = setTimeout(() => {
@@ -753,50 +1056,222 @@
                         });
                     }, { threshold: 0.4 });
                     observer.observe(wrap);
-                } else {
+                } else if (autoPlay) {
                     showAll();
                 }
+
+                return { play, reset };
             }
 
-            // WhatsApp: saludo → hora → "escribiendo…" → respuesta → cierre → chips
-            setupSequence({
-                wrapId: 'whatsapp-mockup',
-                itemSelector: '.msg-item',
-                inClass: 'msg-in',
-                onReset(wrap) { /* noop */ },
+            // Formulario web: los campos se "escriben" letra a letra (no fade-in), luego envío y confirmación
+            (function () {
+                const formWrap = document.getElementById('form-mockup');
+                if (!formWrap) return;
+                const fields = Array.from(formWrap.querySelectorAll('.form-field'));
+                const submitItem = formWrap.querySelector('.form-item');
+                const submitBtn = formWrap.querySelector('.submit-btn');
+                const successItem = formWrap.querySelector('.form-success');
+                if (!fields.length) return;
+
+                function resetForm() {
+                    fields.forEach((field) => {
+                        const valueEl = field.querySelector('.field-value');
+                        const box = field.querySelector('.field-box');
+                        if (valueEl) valueEl.textContent = '';
+                        if (box) box.classList.remove('field-focus');
+                    });
+                    if (submitItem) submitItem.classList.remove('form-in');
+                    if (submitBtn) submitBtn.classList.remove('submit-pressed');
+                    if (successItem) successItem.classList.remove('form-in');
+                }
+
+                function showAllForm() {
+                    fields.forEach((field) => {
+                        const valueEl = field.querySelector('.field-value');
+                        if (valueEl) valueEl.textContent = field.dataset.value || '';
+                    });
+                    if (submitItem) submitItem.classList.add('form-in');
+                    if (successItem) successItem.classList.add('form-in');
+                }
+
+                if (reduceMotion) {
+                    showAllForm();
+                    return;
+                }
+
+                let timeouts = [];
+                function clearTimeouts() {
+                    timeouts.forEach((id) => clearTimeout(id));
+                    timeouts = [];
+                }
+
+                let active = false;
+                let exitTimer = null;
+
+                function typeField(field, onDone) {
+                    const box = field.querySelector('.field-box');
+                    const valueEl = field.querySelector('.field-value');
+                    const text = field.dataset.value || '';
+                    if (box) box.classList.add('field-focus');
+                    let i = 0;
+                    function step() {
+                        if (valueEl) valueEl.textContent = text.slice(0, i);
+                        i++;
+                        if (i <= text.length) {
+                            timeouts.push(setTimeout(step, 28 + Math.random() * 35));
+                        } else {
+                            timeouts.push(setTimeout(() => {
+                                if (box) box.classList.remove('field-focus');
+                                onDone();
+                            }, 300));
+                        }
+                    }
+                    step();
+                }
+
+                function play() {
+                    active = true;
+                    clearTimeouts();
+                    resetForm();
+                    void formWrap.offsetWidth;
+                    let idx = 0;
+                    function next() {
+                        if (idx >= fields.length) {
+                            timeouts.push(setTimeout(() => {
+                                if (submitItem) submitItem.classList.add('form-in');
+                                timeouts.push(setTimeout(() => {
+                                    if (submitBtn) submitBtn.classList.add('submit-pressed');
+                                    timeouts.push(setTimeout(() => {
+                                        if (submitBtn) submitBtn.classList.remove('submit-pressed');
+                                        if (successItem) successItem.classList.add('form-in');
+                                    }, 220));
+                                }, 700));
+                            }, 300));
+                            return;
+                        }
+                        typeField(fields[idx], () => {
+                            idx++;
+                            timeouts.push(setTimeout(next, 250));
+                        });
+                    }
+                    next();
+                }
+
+                if ('IntersectionObserver' in window) {
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                if (exitTimer) {
+                                    clearTimeout(exitTimer);
+                                    exitTimer = null;
+                                }
+                                if (!active) play();
+                            } else if (active) {
+                                exitTimer = setTimeout(() => {
+                                    active = false;
+                                    clearTimeouts();
+                                    resetForm();
+                                    exitTimer = null;
+                                }, 500);
+                            }
+                        });
+                    }, { threshold: 0.4 });
+                    observer.observe(formWrap);
+                } else {
+                    showAllForm();
+                }
+            })();
+
+            // Correo: no arranca solo — lo dispara WhatsApp al terminar su conversación,
+            // para que ambos mockups sigan un orden cronológico. Antes de rellenarse con
+            // contenido, la tarjeta entera sale deslizándose desde detrás de WhatsApp,
+            // como si hubiera estado escondida hasta ese momento.
+            const emailControl = setupSequence({
+                wrapId: 'email-mockup',
+                itemSelector: '.email-item',
+                inClass: 'email-in',
+                autoPlay: false,
+                onReset() {
+                    const emailWrap = document.getElementById('email-mockup');
+                    if (emailWrap) emailWrap.classList.remove('email-mockup-in');
+                    const placeholder = document.getElementById('email-placeholder');
+                    if (placeholder) placeholder.style.opacity = '1';
+                },
                 onShowAll() {
-                    const typing = document.querySelector('#whatsapp-mockup .msg-typing');
-                    if (typing) typing.style.display = 'none';
+                    const emailWrap = document.getElementById('email-mockup');
+                    if (emailWrap) emailWrap.classList.add('email-mockup-in');
+                    const placeholder = document.getElementById('email-placeholder');
+                    if (placeholder) placeholder.style.opacity = '0';
                 },
                 buildSteps(items) {
-                    const wrap = document.getElementById('whatsapp-mockup');
-                    const typing = wrap.querySelector('.msg-typing');
-                    const reply = wrap.querySelector('.msg-reply');
-                    if (typing) typing.style.display = '';
-                    const rest = items.filter((item) => item !== typing && item !== reply);
-                    const [msgOut1, msgTimestamp, msgOut2, msgChips] = rest;
-                    const steps = [
-                        [() => msgOut1 && msgOut1.classList.add('msg-in'), 0],
-                        [() => msgTimestamp && msgTimestamp.classList.add('msg-in'), 500],
-                        [() => typing && typing.classList.add('msg-in'), 1200],
-                        [() => {
-                            if (typing) typing.classList.remove('msg-in');
-                            if (reply) reply.classList.add('msg-in');
-                        }, 2500],
-                        [() => msgOut2 && msgOut2.classList.add('msg-in'), 3000],
-                        [() => msgChips && msgChips.classList.add('msg-in'), 3500],
-                    ];
+                    const emailWrap = document.getElementById('email-mockup');
+                    const placeholder = document.getElementById('email-placeholder');
+                    const steps = [[() => {
+                        if (placeholder) placeholder.style.opacity = '0';
+                        if (emailWrap) emailWrap.classList.add('email-mockup-in');
+                    }, 0]];
+                    items.forEach((item, i) => {
+                        steps.push([() => item.classList.add('email-in'), 500 + i * 400]);
+                    });
                     return steps;
                 },
             });
 
-            // Correo: remitente → asunto → párrafos → botón (con destello) → nota final
+            // WhatsApp: conversación completa (saludo → escribiendo → respuesta → horarios →
+            // escribiendo → respuesta → cierre), y al terminar arranca el correo
             setupSequence({
-                wrapId: 'email-mockup',
-                itemSelector: '.email-item',
-                inClass: 'email-in',
+                wrapId: 'whatsapp-mockup',
+                itemSelector: '.msg-item',
+                inClass: 'msg-in',
+                onShowAll() {
+                    document.querySelectorAll('#whatsapp-mockup .msg-typing').forEach((t) => {
+                        t.style.display = 'none';
+                    });
+                },
+                onComplete() {
+                    // dispara el correo: primero sale la tarjeta deslizándose (estaba
+                    // escondida) y luego se va rellenando por dentro — ver buildSteps de emailControl
+                    if (emailControl) emailControl.play();
+                },
                 buildSteps(items) {
-                    return items.map((item, i) => [() => item.classList.add('email-in'), i * 400]);
+                    const steps = [];
+                    let t = 0;
+                    const STEP = 650;
+                    const TYPE_STEP = 900;
+                    items.forEach((item) => {
+                        const isTyping = item.classList.contains('msg-typing');
+                        if (isTyping) item.style.display = '';
+                        steps.push([() => item.classList.add('msg-in'), t]);
+                        if (isTyping) {
+                            const hideAt = t + TYPE_STEP;
+                            steps.push([() => item.classList.remove('msg-in'), hideAt]);
+                            t = hideAt;
+                        } else {
+                            t += STEP;
+                        }
+                    });
+                    return steps;
+                },
+            });
+
+            // Excel/Notion: fila de cliente nueva + confirmación de sincronización,
+            // independiente de WhatsApp/correo, con su propio disparador al hacer scroll
+            setupSequence({
+                wrapId: 'sheet-mockup',
+                itemSelector: '.sheet-item',
+                inClass: 'sheet-in',
+                buildSteps(items) {
+                    // items[0] = insignia "Sincronizado con Notion" (arriba), items[1..] = filas nuevas
+                    const badge = items[0];
+                    const rows = items.slice(1);
+                    const steps = [];
+                    let t = 400;
+                    rows.forEach((row) => {
+                        steps.push([() => row.classList.add('sheet-in'), t]);
+                        t += 700;
+                    });
+                    steps.push([() => badge.classList.add('sheet-in'), t + 200]);
+                    return steps;
                 },
             });
         })();
