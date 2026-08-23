@@ -5,25 +5,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Política de privacidad de Inspire Webs." />
+  <meta name="description" content="Política de privacidad de InspireWebs." />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#10B981" />
+  <meta name="theme-color" content="#0b0d0c" />
   <meta name="author" content="Yassine Yahya" />
 
   <link rel="canonical" href="https://inspirewebs.com/legal/privacidad.html" />
   <link rel="icon" type="image/png" href="../assets/logo.png" />
 
-  <title>Política de Privacidad · Inspire Webs</title>
+  <title>Política de Privacidad · InspireWebs</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    html {
-      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    body {
+      font-family: 'Archivo', system-ui, sans-serif;
+    }
+
+    .font-mono {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
     }
   </style>
 </head>
@@ -31,20 +35,24 @@
 <body class="bg-zinc-950 text-zinc-100 antialiased selection:bg-emerald-600 selection:text-white overflow-x-hidden">
 
   <!-- HEADER -->
-  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-zinc-950/80 border-b border-zinc-800/80">
-    <div class="container mx-auto px-6 h-16 flex items-center justify-between">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/85 backdrop-blur-md border-b border-zinc-800/80 transition-all">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center" aria-label="Navegación principal">
       <a href="../index.html" class="flex items-center gap-2 group focus:outline-none" aria-label="InspireWebs Inicio">
-        <img src="../assets/logo-white.png" alt="InspireWebs Logo" class="h-5 md:h-6 w-auto object-contain"
+        <img src="../assets/logo-white.png" alt="InspireWebs Logo"
+          class="h-5 md:h-6 w-auto object-contain transition-transform group-hover:scale-105"
           onerror="this.onerror=null; this.replaceWith(document.getElementById('logo-fallback').cloneNode(true));">
-        <div id="logo-fallback" class="hidden text-lg font-extrabold text-white relative">
-          I<span class="w-2 h-2 rounded-full bg-[#10B981] inline-block absolute -top-0.5 left-[2px]"></span>nspireWebs
+        <div id="logo-fallback" class="hidden items-center">
+          <span class="text-2xl md:text-3xl font-extrabold tracking-tighter text-white relative">
+            I<span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500 absolute -top-1 left-[3px]"></span>nspire<span
+              class="font-extrabold">Webs</span>
+          </span>
         </div>
       </a>
       <a href="../index.html#contacto"
-        class="bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors">
+        class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 md:px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-md">
         Hablemos
       </a>
-    </div>
+    </nav>
   </header>
 
   <!-- MAIN -->
@@ -56,14 +64,14 @@
         Volver al inicio
       </a>
 
-      <h1 class="text-3xl md:text-4xl font-bold text-white mb-3">Política de Privacidad</h1>
+      <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-white mb-3">Política de Privacidad</h1>
       <p class="text-sm text-zinc-500 mb-12">Última actualización: agosto de 2026</p>
 
       <div class="space-y-10">
         <section>
-          <h2 class="text-xl font-semibold text-white mb-3">1. Responsable del tratamiento</h2>
+          <h2 class="text-xl font-bold tracking-tight text-white mb-3">1. Responsable del tratamiento</h2>
           <ul class="list-disc list-inside text-zinc-400 text-sm leading-relaxed space-y-1">
-            <li>Titular: Yassine Yahya (Inspire Webs)</li>
+            <li>Titular: Yassine Yahya (InspireWebs)</li>
             <li>Correo electrónico: <a href="mailto:yassineyahya50@gmail.com"
                 class="text-emerald-400 hover:text-emerald-300 underline underline-offset-2">yassineyahya50@gmail.com</a>
             </li>
@@ -72,7 +80,7 @@
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold text-white mb-3">2. Finalidad del tratamiento</h2>
+          <h2 class="text-xl font-bold tracking-tight text-white mb-3">2. Finalidad del tratamiento</h2>
           <p class="text-zinc-400 text-sm leading-relaxed">
             Los datos personales que nos facilitas a través de los formularios de contacto de esta
             web (nombre, correo electrónico, teléfono y mensaje) se utilizan exclusivamente para:
@@ -89,7 +97,7 @@
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold text-white mb-3">3. Legitimación</h2>
+          <h2 class="text-xl font-bold tracking-tight text-white mb-3">3. Legitimación</h2>
           <p class="text-zinc-400 text-sm leading-relaxed">
             La base legal para el tratamiento de tus datos es tu consentimiento expreso, otorgado al
             rellenar y enviar voluntariamente cualquiera de los formularios de esta web, así como la
@@ -98,7 +106,7 @@
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold text-white mb-3">4. Destinatarios</h2>
+          <h2 class="text-xl font-bold tracking-tight text-white mb-3">4. Destinatarios</h2>
           <p class="text-zinc-400 text-sm leading-relaxed">
             Los formularios de esta web son gestionados mediante el proveedor
             <strong class="text-zinc-200">Formspree</strong>, que actúa como encargado del
@@ -108,7 +116,7 @@
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold text-white mb-3">5. Conservación de los datos</h2>
+          <h2 class="text-xl font-bold tracking-tight text-white mb-3">5. Conservación de los datos</h2>
           <p class="text-zinc-400 text-sm leading-relaxed">
             Tus datos se conservarán durante el tiempo necesario para atender tu consulta y, en caso
             de establecerse una relación comercial, durante el tiempo exigido por la legislación
@@ -117,7 +125,7 @@
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold text-white mb-3">6. Tus derechos</h2>
+          <h2 class="text-xl font-bold tracking-tight text-white mb-3">6. Tus derechos</h2>
           <p class="text-zinc-400 text-sm leading-relaxed">
             Puedes ejercer en cualquier momento tus derechos de acceso, rectificación, supresión,
             oposición, limitación del tratamiento y portabilidad de tus datos, escribiendo a
@@ -132,7 +140,7 @@
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold text-white mb-3">7. Medidas de seguridad</h2>
+          <h2 class="text-xl font-bold tracking-tight text-white mb-3">7. Medidas de seguridad</h2>
           <p class="text-zinc-400 text-sm leading-relaxed">
             Se han adoptado las medidas técnicas y organizativas necesarias para garantizar la
             seguridad e integridad de los datos personales tratados, así como para evitar su
@@ -144,18 +152,18 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="py-10 border-t border-zinc-800/60 text-center text-xs text-zinc-400">
+  <footer class="py-10 border-t border-zinc-800/60 text-center text-xs text-zinc-500">
     <div class="container mx-auto px-6 flex flex-col items-center justify-center gap-4">
       <a href="../index.html" class="inline-block" aria-label="InspireWebs Inicio">
         <img src="../assets/logo-white.png" alt="InspireWebs Logo"
           class="h-4 w-auto opacity-80 hover:opacity-100 transition-opacity"
           onerror="this.onerror=null; this.replaceWith(document.getElementById('logo-fallback-footer').cloneNode(true));">
         <div id="logo-fallback-footer" class="hidden text-lg font-extrabold text-zinc-300 relative">
-          I<span class="w-2 h-2 rounded-full bg-[#10B981] inline-block absolute -top-0.5 left-[2px]"></span>nspireWebs
+          I<span class="w-2 h-2 rounded-full bg-emerald-500 inline-block absolute -top-0.5 left-[2px]"></span>nspireWebs
         </div>
       </a>
       <span class="text-[11px] font-semibold tracking-wide text-zinc-500">yassine yahya</span>
-      <p>&copy; 2026 InspireWebs. Websites Design & Automations.</p>
+      <p class="font-mono text-[11px] tracking-wide">INSPIREWEBS © 2026 · HECHO A MANO, POR SUPUESTO</p>
       <div class="flex items-center gap-3 text-[11px] text-zinc-500">
         <a href="aviso-legal.html" class="hover:text-zinc-300 transition-colors">Aviso Legal</a>
         <span class="text-zinc-700">&middot;</span>

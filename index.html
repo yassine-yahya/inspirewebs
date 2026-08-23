@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO & Metadata -->
-    <title>InspireWebs | Website Responsive, Diseño Optimizado &amp; Redes</title>
+    <title>InspireWebs | Websites, Automatización &amp; Diseño</title>
     <meta name="description"
-        content="Diseño web profesional, website responsive, diseño optimizado, automatizaciones sencillas y packs para redes sociales para autónomos y comercios locales.">
+        content="Construyo tu web y hago que siga trabajando por ti: websites, automatizaciones de email/WhatsApp y diseño para redes, todo por la misma persona.">
     <meta name="author" content="Yassine Yahya">
     <meta name="robots" content="index, follow">
     <meta name="keywords"
-        content="diseño web autonomos, website responsive, diseño optimizado, automatizaciones pymes, plantillas redes sociales">
-    <meta name="theme-color" content="#10B981">
+        content="diseño web autonomos, website responsive, automatizaciones pymes, plantillas redes sociales, whatsapp automatico">
+    <meta name="theme-color" content="#0b0d0c">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://inspirewebs.com">
@@ -23,9 +23,9 @@
 
     <!-- Open Graph / Redes Sociales -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="InspireWebs | Digitalización para Pequeños Negocios">
+    <meta property="og:title" content="InspireWebs | Websites, Automatización &amp; Diseño">
     <meta property="og:description"
-        content="Impulsa tu negocio con una website responsive, diseño optimizado y plantillas para redes sociales.">
+        content="Construyo tu web y hago que siga trabajando por ti: websites, automatizaciones de email/WhatsApp y diseño para redes, todo por la misma persona.">
     <meta property="og:url" content="https://inspirewebs.com">
     <meta property="og:image" content="https://inspirewebs.com/assets/logo.png">
     <meta property="og:site_name" content="InspireWebs">
@@ -33,15 +33,17 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="InspireWebs | Digitalización para Pequeños Negocios">
+    <meta name="twitter:title" content="InspireWebs | Websites, Automatización &amp; Diseño">
     <meta name="twitter:description"
-        content="Impulsa tu negocio con una website responsive, diseño optimizado y plantillas para redes sociales.">
+        content="Construyo tu web y hago que siga trabajando por ti: websites, automatizaciones de email/WhatsApp y diseño para redes.">
     <meta name="twitter:image" content="https://inspirewebs.com/assets/logo.png">
 
     <!-- CSS Externo y Estilos Críticos -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
 
     <!-- Datos estructurados -->
@@ -56,38 +58,80 @@
 
     <style>
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-family: 'Archivo', system-ui, sans-serif;
+        }
+
+        .font-mono {
+            font-family: 'JetBrains Mono', ui-monospace, monospace;
         }
 
         .bg-grid-pattern {
-            background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+            background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
             background-size: 24px 24px;
         }
 
-        @keyframes subtle-float {
+        .diagonal-lines {
+            background-image: repeating-linear-gradient(135deg, rgba(237, 239, 234, 0.08) 0 8px, transparent 8px 16px);
+        }
+
+        .whatsapp-bg {
+            background-color: #0b141a;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+            background-size: 18px 18px;
+        }
+
+        .msg-item.msg-in,
+        .email-item.email-in {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+
+        @keyframes ctaGlow {
 
             0%,
             100% {
-                transform: translateY(0px);
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.35);
             }
 
             50% {
-                transform: translateY(-8px);
+                box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
             }
         }
 
-        .animate-subtle-float {
-            animation: subtle-float 5s ease-in-out infinite;
+        .email-cta.email-in {
+            animation: ctaGlow 1.8s ease-out 1;
         }
 
-        .hero-glow {
-            background: radial-gradient(circle at 50% 30%, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+        @keyframes typingDotBounce {
+
+            0%,
+            60%,
+            100% {
+                transform: translateY(0);
+                opacity: 0.5;
+            }
+
+            30% {
+                transform: translateY(-3px);
+                opacity: 1;
+            }
+        }
+
+        .typing-dot {
+            animation: typingDotBounce 1.1s ease-in-out infinite;
+        }
+
+        .typing-dot:nth-child(2) {
+            animation-delay: 0.15s;
+        }
+
+        .typing-dot:nth-child(3) {
+            animation-delay: 0.3s;
         }
     </style>
 </head>
 
-<body
-    class="bg-zinc-950 text-zinc-100 antialiased selection:bg-emerald-600 selection:text-white overflow-x-hidden bg-grid-pattern">
+<body class="bg-zinc-950 text-zinc-100 antialiased selection:bg-emerald-600 selection:text-white overflow-x-hidden">
 
     <!-- NAVBAR CON LOGO INTEGRADO -->
     <header
@@ -100,645 +144,433 @@
                     class="h-5 md:h-6 w-auto object-contain transition-transform group-hover:scale-105"
                     onerror="this.onerror=null; this.replaceWith(document.getElementById('logo-fallback').cloneNode(true));">
 
-                <div id="logo-fallback" class="hidden flex items-center">
+                <div id="logo-fallback" class="hidden items-center">
                     <span class="text-2xl md:text-3xl font-extrabold tracking-tighter text-white relative">
                         I<span
-                            class="inline-block w-2.5 h-2.5 rounded-full bg-[#10B981] absolute -top-1 left-[3px]"></span>nspire<span
+                            class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500 absolute -top-1 left-[3px]"></span>nspire<span
                             class="font-extrabold">Webs</span>
                     </span>
                 </div>
             </a>
 
-            <div class="flex items-center space-x-6">
-                <a href="#servicios"
-                    class="text-sm font-medium text-zinc-300 hover:text-emerald-400 transition-colors hidden sm:inline-block">Servicios</a>
-                <a href="#precios"
-                    class="text-sm font-medium text-zinc-300 hover:text-emerald-400 transition-colors hidden sm:inline-block">Precios</a>
-                <a href="#faq"
-                    class="text-sm font-medium text-zinc-300 hover:text-emerald-400 transition-colors hidden sm:inline-block">FAQ</a>
+            <div class="hidden md:flex items-center gap-7 text-sm font-medium text-zinc-400">
+                <a href="#servicios" class="hover:text-emerald-400 transition-colors">Servicios</a>
+                <a href="#proceso" class="hover:text-emerald-400 transition-colors">Proceso</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <div class="hidden lg:flex items-center gap-2 font-mono text-[11px] text-emerald-400">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Disponible ahora
+                </div>
                 <a href="#contacto"
-                    class="bg-zinc-100 hover:bg-white text-zinc-900 px-5 py-2 rounded-xl text-sm font-semibold transition-all shadow-md flex items-center gap-2 hover:scale-[1.02]">
-                    <span>Contactar</span>
-                    <i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i>
+                    class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 md:px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-md">
+                    Empezar un proyecto
                 </a>
             </div>
         </nav>
     </header>
 
-    <!-- HERO SECTION CON BLOQUE DE GARANTÍAS -->
-    <section class="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden hero-glow">
-        <div class="container mx-auto px-6 relative z-10 max-w-5xl">
-
-            <div class="text-center max-w-3xl mx-auto">
-                <div data-aos="fade-down" data-aos-duration="800"
-                    class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-zinc-900 text-zinc-300 text-xs font-medium tracking-wide mb-8 border border-zinc-800">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                    Websites, Diseños & Automatización.
-                </div>
-
-                <h1 data-aos="fade-up" data-aos-duration="800" data-aos-delay="100"
-                    class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight text-white">
-                    Website responsive y automatizaciones con un <span
-                        class="underline decoration-emerald-500 underline-offset-8">diseño optimizado</span>
-                </h1>
-
-                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200"
-                    class="text-base md:text-lg text-zinc-300 mb-10 max-w-2xl mx-auto font-normal leading-relaxed">
-                    Desarrollamos sitios web adaptables, automatizamos flujos de trabajo y impulsamos la imagen de
-                    tu marca en redes sociales.
-                </p>
-
-                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="300"
-                    class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
-                    <a href="#contacto"
-                        class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-8 py-4 rounded-xl transition-all shadow-lg shadow-emerald-600/25 text-center flex items-center justify-center gap-2">
-                        <i data-lucide="message-square" class="w-5 h-5" aria-hidden="true"></i>
-                        Hablar de mi proyecto
-                    </a>
-                    <a href="#servicios"
-                        class="bg-zinc-900 border border-emerald-500/60 hover:border-emerald-400 text-zinc-300 font-semibold px-8 py-4 rounded-xl transition-all text-center flex items-center justify-center gap-2 hover:bg-zinc-800/80">
-                        <i data-lucide="layout-grid" class="w-5 h-5" aria-hidden="true"></i>
-                        Ver servicios
-                    </a>
-                </div>
+    <!-- HERO -->
+    <section class="relative min-h-screen flex flex-col justify-center pt-24 pb-12 overflow-hidden bg-grid-pattern">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div data-aos="fade-up" data-aos-duration="700"
+                class="font-mono text-[11px] md:text-xs tracking-[0.2em] text-emerald-400 mb-5">
+                WEBSITES · AUTOMATIZACIÓN · DISEÑO
             </div>
 
-            <!-- BLOQUE DE ICONOS DE GARANTÍA DE CALIDAD -->
-            <div data-aos="fade-up" data-aos-delay="400"
-                class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 pt-6 border-t border-zinc-800/80">
-                <div
-                    class="p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-emerald-500/40 transition-all flex flex-col items-center text-center group">
-                    <div
-                        class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                        <i data-lucide="palette" class="w-6 h-6"></i>
-                    </div>
-                    <span class="text-sm font-bold text-white mb-1">Diseño 100% Único</span>
-                    <span class="text-xs text-zinc-400">Personalizado a la medida de tu marca</span>
-                </div>
+            <h1 data-aos="fade-up" data-aos-duration="700" data-aos-delay="100"
+                class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.94] text-white max-w-5xl mb-6">
+                Construyo tu web y hago que siga trabajando por ti.
+            </h1>
 
-                <div
-                    class="p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-amber-500/40 transition-all flex flex-col items-center text-center group">
-                    <div
-                        class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                        <i data-lucide="zap" class="w-6 h-6"></i>
-                    </div>
-                    <span class="text-sm font-bold text-white mb-1">Carga &lt; 0.8 Segundos</span>
-                    <span class="text-xs text-zinc-400">Puntuación máxima 100/100 Speed</span>
-                </div>
+            <p data-aos="fade-up" data-aos-duration="700" data-aos-delay="200"
+                class="text-base md:text-lg text-zinc-400 leading-relaxed max-w-2xl mb-8">
+                Webs rápidas, automatizaciones de email y WhatsApp, y diseño para redes — todo hecho por la
+                misma persona, de principio a fin.
+            </p>
 
-                <div
-                    class="p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-emerald-500/40 transition-all flex flex-col items-center text-center group">
-                    <div
-                        class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                        <i data-lucide="smartphone" class="w-6 h-6"></i>
-                    </div>
-                    <span class="text-sm font-bold text-white mb-1">Website Responsive</span>
-                    <span class="text-xs text-zinc-400">Adaptabilidad perfecta en smartphones</span>
-                </div>
-
-                <div
-                    class="p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-purple-500/40 transition-all flex flex-col items-center text-center group">
-                    <div
-                        class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                        <i data-lucide="shield-check" class="w-6 h-6"></i>
-                    </div>
-                    <span class="text-sm font-bold text-white mb-1">Garantía & Seguridad</span>
-                    <span class="text-xs text-zinc-400">Código limpio y protección SSL</span>
-                </div>
-
-                <div
-                    class="p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-cyan-500/40 transition-all flex flex-col items-center text-center group">
-                    <div
-                        class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                        <i data-lucide="search" class="w-6 h-6"></i>
-                    </div>
-                    <span class="text-sm font-bold text-white mb-1">Optimización SEO</span>
-                    <span class="text-xs text-zinc-400">Estructura lista para destacar en Google</span>
-                </div>
-
-                <div
-                    class="p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-pink-500/40 transition-all flex flex-col items-center text-center group">
-                    <div
-                        class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-500/20 text-pink-400 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                        <i data-lucide="headphones" class="w-6 h-6"></i>
-                    </div>
-                    <span class="text-sm font-bold text-white mb-1">Soporte Directo</span>
-                    <span class="text-xs text-zinc-400">Atención cercana de persona a persona</span>
-                </div>
+            <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="300"
+                class="flex flex-col sm:flex-row gap-4">
+                <a href="#servicios"
+                    class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-7 py-3.5 rounded-lg transition-all shadow-lg shadow-emerald-600/20 text-center flex items-center justify-center gap-2">
+                    <i data-lucide="eye" class="w-4 h-4" aria-hidden="true"></i>
+                    Ver servicios
+                </a>
+                <a href="https://wa.me/34602317364?text=Hola%2C%20quisiera%20informaci%C3%B3n%20para%20mi%20negocio"
+                    target="_blank" rel="noopener noreferrer"
+                    class="border border-zinc-700 hover:border-emerald-500/60 text-zinc-200 font-semibold px-7 py-3.5 rounded-lg transition-all text-center flex items-center justify-center gap-2">
+                    <i data-lucide="phone-call" class="w-4 h-4" aria-hidden="true"></i>
+                    Agenda una llamada de 15 min
+                </a>
             </div>
-
         </div>
     </section>
 
-    <!-- SERVICIO 1: PÁGINAS WEB -->
-    <section id="servicios" class="py-24 border-t border-zinc-800/80 relative">
-        <div class="container mx-auto px-6 max-w-6xl">
-            <div class="mb-12" data-aos="fade-right">
-                <span
-                    class="text-emerald-400 text-xs font-semibold uppercase tracking-wider bg-emerald-500/10 px-3 py-1 rounded-md border border-emerald-500/20">Servicio
-                    01</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-white mt-3">Websites Design & Automations</h2>
+    <!-- DECLARACIÓN -->
+    <section id="trabajo" class="py-6 md:py-10 overflow-hidden">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-8">
+                <div data-aos="fade-up" data-parallax="left"
+                    class="aspect-square w-full max-w-md bg-white rounded-2xl p-8 md:p-10 flex flex-col justify-between shadow-2xl shadow-black/40 border border-zinc-200">
+                    <div class="font-mono text-xs md:text-sm tracking-[0.2em] text-zinc-400">
+                        LO QUE HACEMOS
+                    </div>
+                    <div class="text-4xl md:text-6xl leading-[0.95] font-black tracking-tight text-zinc-950">
+                        Una máquina de conseguir clientes.
+                    </div>
+                    <div class="text-sm md:text-base font-bold text-zinc-400">inspirewebs.com</div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100" data-parallax="right"
+                    class="aspect-square w-full max-w-md bg-zinc-900 border border-zinc-800 rounded-2xl p-8 md:p-10 flex flex-col justify-between shadow-2xl shadow-black/40">
+                    <div class="font-mono text-xs md:text-sm tracking-[0.2em] text-emerald-400">
+                        LO QUE ENTREGAMOS
+                    </div>
+                    <div class="text-4xl md:text-6xl leading-[0.95] font-black tracking-tight text-white">
+                        Rápida. Clara. Hecha para vender.
+                    </div>
+                    <div class="text-sm md:text-base font-bold text-zinc-500">inspirewebs.com</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRES COSAS: SERVICIOS -->
+    <section id="servicios" class="py-20 md:py-28">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div data-aos="fade-up"
+                class="flex items-baseline justify-between pb-5 mb-2 border-b border-zinc-800">
+                <h2 class="text-sm md:text-base font-bold text-white">Tres cosas, y funcionan juntas</h2>
+                <span class="font-mono text-[11px] text-zinc-600">01 — 03</span>
             </div>
 
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div data-aos="fade-right" data-aos-delay="150">
-                    <p class="text-zinc-300 mb-8 text-base font-normal leading-relaxed">
-                        Creamos páginas web orientadas a resultados. Con una maquetación responsive garantizada y una
-                        estructura completamente optimizada para cargar rápido en smartphones, tablets y ordenadores.
+            <!-- 01 WEBSITES -->
+            <div data-aos="fade-up"
+                class="grid grid-cols-1 lg:grid-cols-[120px_1fr_280px] gap-4 lg:gap-10 py-9 border-b border-zinc-800">
+                <div class="font-mono text-5xl md:text-6xl font-black leading-none text-emerald-500/30">01</div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-extrabold tracking-tight text-white">Websites</div>
+                    <p class="mt-3 text-zinc-400 text-[15px] leading-relaxed max-w-lg">
+                        Una página o diez. Escritas, diseñadas y construidas por la misma persona, así que nada
+                        se pierde en el proceso. Te quedas con los archivos y los accesos.
                     </p>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div
-                            class="p-5 bg-zinc-900/60 border border-zinc-800/80 rounded-xl hover:border-zinc-700 transition-colors">
-                            <i data-lucide="smartphone" class="w-5 h-5 text-emerald-400 mb-2" aria-hidden="true"></i>
-                            <span class="text-zinc-200 text-sm font-semibold block mb-1">Website Responsive</span>
-                            <span class="text-xs text-zinc-400">Adaptabilidad total a móviles y monitores.</span>
-                        </div>
-                        <div
-                            class="p-5 bg-zinc-900/60 border border-zinc-800/80 rounded-xl hover:border-zinc-700 transition-colors">
-                            <i data-lucide="zap" class="w-5 h-5 text-emerald-400 mb-2" aria-hidden="true"></i>
-                            <span class="text-zinc-200 text-sm font-semibold block mb-1">Diseño Optimizado</span>
-                            <span class="text-xs text-zinc-400">Velocidad extrema y código limpio.</span>
-                        </div>
-                        <div
-                            class="p-5 bg-zinc-900/60 border border-zinc-800/80 rounded-xl hover:border-zinc-700 transition-colors">
-                            <i data-lucide="map-pin" class="w-5 h-5 text-emerald-400 mb-2" aria-hidden="true"></i>
-                            <span class="text-zinc-200 text-sm font-semibold block mb-1">Enfoque Local</span>
-                            <span class="text-xs text-zinc-400">Preparada para destacar en tu ciudad.</span>
-                        </div>
-                        <div
-                            class="p-5 bg-zinc-900/60 border border-zinc-800/80 rounded-xl hover:border-zinc-700 transition-colors">
-                            <i data-lucide="user" class="w-5 h-5 text-emerald-400 mb-2" aria-hidden="true"></i>
-                            <span class="text-zinc-200 text-sm font-semibold block mb-1">Contacto Directo</span>
-                            <span class="text-xs text-zinc-400">Canales ágiles para comunicarte con clientes.</span>
-                        </div>
+                    <div class="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-white border border-emerald-500/30 bg-emerald-500/5 rounded-full px-3 py-1.5">
+                        DESDE 499€
                     </div>
                 </div>
-
-                <!-- SVG WEB ADAPTATIVA -->
-                <div class="relative flex justify-center items-center" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="w-full max-w-md animate-subtle-float">
-                        <svg class="w-full h-auto drop-shadow-2xl" viewBox="0 0 400 240" fill="none"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración web adaptativa">
-                            <rect x="20" y="20" width="360" height="200" rx="12" fill="#18181B" stroke="#27272A"
-                                stroke-width="2" />
-                            <rect x="20" y="20" width="360" height="32" rx="12" fill="#27272A" />
-                            <circle cx="40" cy="36" r="4" fill="#EF4444" />
-                            <circle cx="52" cy="36" r="4" fill="#F59E0B" />
-                            <circle cx="64" cy="36" r="4" fill="#10B981" />
-                            <rect x="90" y="28" width="180" height="16" rx="8" fill="#18181B" />
-                            <rect x="40" y="70" width="180" height="16" rx="4" fill="#10B981" />
-                            <rect x="40" y="96" width="220" height="8" rx="4" fill="#3F3F46" />
-                            <rect x="40" y="110" width="160" height="8" rx="4" fill="#27272A" />
-                            <rect x="40" y="132" width="90" height="28" rx="8" fill="#059669" />
-                            <rect x="270" y="80" width="90" height="120" rx="10" fill="#09090B" stroke="#3F3F46"
-                                stroke-width="2" />
-                            <rect x="280" y="95" width="70" height="8" rx="4" fill="#10B981" />
-                            <rect x="280" y="110" width="50" height="6" rx="3" fill="#3F3F46" />
-                            <rect x="280" y="122" width="60" height="6" rx="3" fill="#27272A" />
-                            <rect x="280" y="138" width="40" height="18" rx="6" fill="#10B981" />
-                        </svg>
-                    </div>
+                <div class="flex flex-wrap gap-2 content-start">
+                    <span class="border border-zinc-800 text-zinc-400 text-xs px-3 py-1.5 rounded-full">Landing
+                        pages</span>
+                    <span class="border border-zinc-800 text-zinc-400 text-xs px-3 py-1.5 rounded-full">Redacción
+                        de textos</span>
+                    <span class="border border-zinc-800 text-zinc-400 text-xs px-3 py-1.5 rounded-full">Formularios
+                        de reserva</span>
+                    <span class="border border-zinc-800 text-zinc-400 text-xs px-3 py-1.5 rounded-full">Hosting</span>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- SERVICIO 2: AUTOMATIZACIONES SENCILLAS -->
-    <section id="automatizaciones" class="py-24 bg-zinc-900/40 border-t border-zinc-800/80 relative">
-        <div class="container mx-auto px-6 max-w-6xl">
-            <div class="mb-12" data-aos="fade-right">
-                <span
-                    class="text-emerald-400 text-xs font-semibold uppercase tracking-wider bg-emerald-500/10 px-3 py-1 rounded-md border border-emerald-500/20">Servicio
-                    02</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-white mt-3">Automatizaciones e Integración</h2>
-            </div>
-
-            <div class="grid lg:grid-cols-2 gap-12 items-center mb-12">
-                <!-- SVG FLUJO AUTOMATIZACIÓN -->
-                <div class="relative flex justify-center items-center order-2 lg:order-1" data-aos="zoom-in"
-                    data-aos-delay="200">
-                    <div class="w-full max-w-md animate-subtle-float">
-                        <svg class="w-full h-auto drop-shadow-2xl" viewBox="0 0 400 240" fill="none"
-                            xmlns="http://www.w3.org/2000/svg" role="img"
-                            aria-label="Ilustración flujo de automatización">
-                            <rect x="30" y="60" width="100" height="120" rx="10" fill="#18181B" stroke="#3F3F46"
-                                stroke-width="2" />
-                            <rect x="42" y="75" width="50" height="8" rx="4" fill="#10B981" />
-                            <rect x="42" y="95" width="76" height="12" rx="4" fill="#27272A" />
-                            <rect x="42" y="115" width="76" height="12" rx="4" fill="#27272A" />
-                            <rect x="42" y="140" width="40" height="16" rx="6" fill="#059669" />
-                            <path d="M 130 120 L 190 120" stroke="#10B981" stroke-width="3" stroke-dasharray="6 6" />
-                            <circle cx="190" cy="120" r="6" fill="#10B981" />
-                            <rect x="190" y="85" width="70" height="70" rx="16" fill="#10B981" opacity="0.15"
-                                stroke="#10B981" stroke-width="2" />
-                            <circle cx="225" cy="120" r="16" fill="#10B981" />
-                            <path d="M220 120L223 123L230 116" stroke="white" stroke-width="2.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M 260 120 L 310 120" stroke="#10B981" stroke-width="3" />
-                            <rect x="300" y="50" width="70" height="140" rx="12" fill="#09090B" stroke="#10B981"
-                                stroke-width="2" />
-                            <rect x="312" y="70" width="46" height="30" rx="6" fill="#10B981" opacity="0.2" />
-                            <circle cx="335" cy="85" r="6" fill="#10B981" />
-                            <rect x="312" y="110" width="46" height="6" rx="3" fill="#3F3F46" />
-                            <rect x="312" y="122" width="30" height="6" rx="3" fill="#27272A" />
-                        </svg>
-                    </div>
-                </div>
-
-                <div class="order-1 lg:order-2" data-aos="fade-left" data-aos-delay="100">
-                    <p class="text-zinc-300 text-base font-normal leading-relaxed mb-6">
-                        Conectamos tu sitio con tu email, bases de datos o mensajes para garantizar una respuesta rápida
-                        y sin perder tiempo con tareas manuales repetitivas.
+            <!-- 02 AUTOMATIZACIÓN -->
+            <div data-aos="fade-up"
+                class="grid grid-cols-1 lg:grid-cols-[120px_1fr_280px] gap-4 lg:gap-10 py-9 border-b border-zinc-800">
+                <div class="font-mono text-5xl md:text-6xl font-black leading-none text-emerald-500/30">02</div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-extrabold tracking-tight text-white">Automatización</div>
+                    <p class="mt-3 text-zinc-400 text-[15px] leading-relaxed max-w-lg">
+                        Alguien rellena el formulario a las 11 de la noche. Recibe un email amable al instante,
+                        un recordatorio por WhatsApp dos días después, y tú recibes un aviso en tu bandeja de
+                        entrada. Nadie tiene que acordarse de nada.
                     </p>
-                    <div class="space-y-3">
-                        <div class="flex items-center gap-3 p-3.5 bg-zinc-900/80 border border-zinc-800 rounded-xl">
-                            <i data-lucide="check" class="w-5 h-5 text-emerald-400 shrink-0" aria-hidden="true"></i>
-                            <span class="text-xs text-zinc-300">Avisos inmediatos en tu móvil al completar
-                                formularios.</span>
-                        </div>
-                        <div class="flex items-center gap-3 p-3.5 bg-zinc-900/80 border border-zinc-800 rounded-xl">
-                            <i data-lucide="check" class="w-5 h-5 text-emerald-400 shrink-0" aria-hidden="true"></i>
-                            <span class="text-xs text-zinc-300">Confirmación instantánea para tus futuros
-                                clientes.</span>
-                        </div>
+                    <div class="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-white border border-emerald-500/30 bg-emerald-500/5 rounded-full px-3 py-1.5">
+                        DESDE 300€
                     </div>
                 </div>
-            </div>
-
-            <!-- PASOS DEL FLUJO -->
-            <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="bg-zinc-900/60 border border-zinc-800/80 p-5 rounded-xl" data-aos="fade-up"
-                    data-aos-delay="100">
-                    <span class="text-xs font-mono text-emerald-400 font-bold block mb-2">01</span>
-                    <h3 class="font-semibold text-white mb-1 text-sm">El cliente escribe</h3>
-                    <p class="text-xs text-zinc-400">Completa el formulario en la web.</p>
-                </div>
-                <div class="bg-zinc-900/60 border border-zinc-800/80 p-5 rounded-xl" data-aos="fade-up"
-                    data-aos-delay="200">
-                    <span class="text-xs font-mono text-emerald-400 font-bold block mb-2">02</span>
-                    <h3 class="font-semibold text-white mb-1 text-sm">Alerta instantánea</h3>
-                    <p class="text-xs text-zinc-400">Aviso a tu correo o WhatsApp.</p>
-                </div>
-                <div class="bg-zinc-900/60 border border-zinc-800/80 p-5 rounded-xl" data-aos="fade-up"
-                    data-aos-delay="300">
-                    <span class="text-xs font-mono text-emerald-400 font-bold block mb-2">03</span>
-                    <h3 class="font-semibold text-white mb-1 text-sm">Respuesta auto</h3>
-                    <p class="text-xs text-zinc-400">Confirmación recibida al instante.</p>
-                </div>
-                <div class="bg-zinc-900/60 border border-zinc-800/80 p-5 rounded-xl" data-aos="fade-up"
-                    data-aos-delay="400">
-                    <span class="text-xs font-mono text-emerald-400 font-bold block mb-2">04</span>
-                    <h3 class="font-semibold text-white mb-1 text-sm">Gestión limpia</h3>
-                    <p class="text-xs text-zinc-400">Datos guardados de forma ordenada.</p>
+                <div class="flex flex-wrap gap-2 content-start">
+                    <span class="border border-zinc-800 text-zinc-400 text-xs px-3 py-1.5 rounded-full">Emails de
+                        bienvenida</span>
+                    <span class="border border-zinc-800 text-zinc-400 text-xs px-3 py-1.5 rounded-full">Respuestas
+                        por WhatsApp</span>
+                    <span
+                        class="border border-zinc-800 text-zinc-400 text-xs px-3 py-1.5 rounded-full">Recordatorios</span>
+                    <span class="border border-zinc-800 text-zinc-400 text-xs px-3 py-1.5 rounded-full">Gestión
+                        de contactos</span>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- SERVICIO 3: DISEÑO PARA REDES SOCIALES -->
-    <section id="redes" class="py-24 border-t border-zinc-800/80 relative">
-        <div class="container mx-auto px-6 max-w-6xl">
-            <div class="mb-12" data-aos="fade-right">
-                <span
-                    class="text-emerald-400 text-xs font-semibold uppercase tracking-wider bg-emerald-500/10 px-3 py-1 rounded-md border border-emerald-500/20">Servicio
-                    03</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-white mt-3">Pack Visual para Redes Sociales</h2>
-            </div>
-
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div data-aos="fade-right" data-aos-delay="100">
-                    <p class="text-zinc-300 text-base font-normal leading-relaxed mb-6">
-                        Mantén una imagen profesional e impecable en tus perfiles. Creamos un kit de plantillas
-                        personalizadas alineadas con los colores y la identidad de tu marca para que publicar en
-                        Instagram o Facebook sea rápido y sin complicaciones.
+            <!-- 03 DISEÑO -->
+            <div data-aos="fade-up" class="grid grid-cols-1 lg:grid-cols-[120px_1fr_280px] gap-4 lg:gap-10 py-9">
+                <div class="font-mono text-5xl md:text-6xl font-black leading-none text-emerald-500/30">03</div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-extrabold tracking-tight text-white">Diseño</div>
+                    <p class="mt-3 text-zinc-400 text-[15px] leading-relaxed max-w-lg">
+                        Publicaciones para redes, anuncios y algún que otro menú o flyer, con la misma
+                        tipografía, colores y estilo que tu web, para que todo parezca un mismo negocio.
                     </p>
-
-                    <div class="space-y-4 mb-8">
-                        <div class="flex items-start gap-3 p-3.5 bg-zinc-900/60 border border-zinc-800/80 rounded-xl">
-                            <div class="p-2 bg-emerald-500/10 rounded-lg text-emerald-400 shrink-0">
-                                <i data-lucide="layout-grid" class="w-5 h-5" aria-hidden="true"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-sm font-semibold text-white">9 Plantillas Editables</h3>
-                                <p class="text-xs text-zinc-400">Diseñadas para ser totalmente reutilizables en tus
-                                    publicaciones diarias.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3 p-3.5 bg-zinc-900/60 border border-zinc-800/80 rounded-xl">
-                            <div class="p-2 bg-emerald-500/10 rounded-lg text-emerald-400 shrink-0">
-                                <i data-lucide="smartphone" class="w-5 h-5" aria-hidden="true"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-sm font-semibold text-white">Historias y Feed</h3>
-                                <p class="text-xs text-zinc-400">Formatos optimizados para Reels/Stories (1080x1920) y
-                                    Muro (1080x1080).</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3 p-3.5 bg-zinc-900/60 border border-zinc-800/80 rounded-xl">
-                            <div class="p-2 bg-emerald-500/10 rounded-lg text-emerald-400 shrink-0">
-                                <i data-lucide="palette" class="w-5 h-5" aria-hidden="true"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-sm font-semibold text-white">Coherencia de Marca</h3>
-                                <p class="text-xs text-zinc-400">Tipografías, paleta de colores y elementos visuales
-                                    acordes a tu web.</p>
-                            </div>
-                        </div>
+                    <div class="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-white border border-emerald-500/30 bg-emerald-500/5 rounded-full px-3 py-1.5">
+                        DESDE 150€ / MES
                     </div>
                 </div>
-
-                <!-- SVG PLANTILLAS REDES -->
-                <div class="relative flex justify-center items-center" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="w-full max-w-md animate-subtle-float">
-                        <svg class="w-full h-auto drop-shadow-2xl" viewBox="0 0 400 240" fill="none"
-                            xmlns="http://www.w3.org/2000/svg" role="img"
-                            aria-label="Ilustración plantillas redes sociales">
-                            <rect x="40" y="40" width="130" height="150" rx="12" fill="#18181B" stroke="#3F3F46"
-                                stroke-width="2" />
-                            <rect x="52" y="52" width="106" height="70" rx="6" fill="#10B981" opacity="0.2" />
-                            <circle cx="105" cy="87" r="16" fill="#10B981" />
-                            <rect x="52" y="132" width="70" height="8" rx="4" fill="#E4E4E7" />
-                            <rect x="52" y="146" width="90" height="6" rx="3" fill="#3F3F46" />
-                            <rect x="52" y="158" width="50" height="6" rx="3" fill="#27272A" />
-
-                            <rect x="190" y="20" width="100" height="180" rx="12" fill="#09090B" stroke="#10B981"
-                                stroke-width="2" />
-                            <rect x="200" y="32" width="80" height="110" rx="8" fill="#18181B" />
-                            <path d="M200 110 Q 240 70, 280 110 L 280 142 L 200 142 Z" fill="#059669" opacity="0.6" />
-                            <circle cx="240" cy="65" r="12" fill="#F59E0B" />
-                            <rect x="200" y="152" width="60" height="8" rx="4" fill="#E4E4E7" />
-                            <rect x="200" y="166" width="40" height="14" rx="6" fill="#10B981" />
-
-                            <rect x="265" y="60" width="95" height="120" rx="10" fill="#18181B" stroke="#27272A"
-                                stroke-width="2" />
-                            <rect x="275" y="72" width="75" height="45" rx="6" fill="#27272A" />
-                            <rect x="275" y="125" width="55" height="6" rx="3" fill="#A1A1AA" />
-                            <rect x="275" y="137" width="40" height="6" rx="3" fill="#3F3F46" />
-                        </svg>
-                    </div>
+                <div class="flex flex-wrap gap-2 content-start">
+                    <span class="border border-zinc-800 text-zinc-400 text-xs px-3 py-1.5 rounded-full">Plantillas
+                        de publicaciones</span>
+                    <span class="border border-zinc-800 text-zinc-400 text-xs px-3 py-1.5 rounded-full">Historias</span>
+                    <span class="border border-zinc-800 text-zinc-400 text-xs px-3 py-1.5 rounded-full">Logo y
+                        tipografía</span>
+                    <span class="border border-zinc-800 text-zinc-400 text-xs px-3 py-1.5 rounded-full">Material
+                        impreso</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN DE PRECIOS -->
-    <section id="precios" class="py-24 bg-zinc-900/40 border-t border-zinc-800/80 relative">
-        <div class="container mx-auto px-6 max-w-6xl">
-            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
-                <span
-                    class="text-emerald-400 text-xs font-semibold uppercase tracking-wider bg-emerald-500/10 px-3 py-1 rounded-md border border-emerald-500/20">Planes
-                    Transparentes</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-white mt-4">Soluciones a la medida de tu negocio</h2>
-                <p class="text-zinc-400 text-sm mt-2">Precios claros, sin sorpresas ni costes ocultos.</p>
+    <!-- AUTOMATIZACIÓN EN LA PRÁCTICA -->
+    <section class="py-20 md:py-24 bg-zinc-900/40 border-y border-zinc-800/80">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div data-aos="fade-up" class="font-mono text-[11px] tracking-[0.18em] text-emerald-400 mb-3">
+                AUTOMATIZACIÓN EN LA PRÁCTICA
             </div>
+            <h2 data-aos="fade-up"
+                class="text-3xl md:text-[40px] font-extrabold tracking-tight text-white mb-3 max-w-2xl">
+                Los dos mensajes que hacen la mayor parte del trabajo
+            </h2>
+            <p data-aos="fade-up" class="text-zinc-400 text-base max-w-lg mb-12">
+                Escritos con tu voz, enviados en un horario que puedes explicar en una frase.
+            </p>
 
-            <div class="grid md:grid-cols-3 gap-8 items-stretch">
-                <!-- PLAN 1 -->
-                <div class="bg-zinc-900/80 border border-zinc-800 rounded-2xl p-8 flex flex-col justify-between hover:border-zinc-700 transition-all"
-                    data-aos="fade-up" data-aos-delay="100">
-                    <div>
-                        <h3 class="text-lg font-bold text-white mb-2">Pack Visual Redes</h3>
-                        <p class="text-xs text-zinc-400 mb-6">Ideal para renovar la imagen de tu negocio en redes
-                            sociales.</p>
-                        <div class="text-3xl font-extrabold text-white mb-6">150€ <span
-                                class="text-xs font-normal text-zinc-400">/ pago único</span></div>
-                        <ul class="space-y-3 text-xs text-zinc-300 mb-8">
-                            <li class="flex items-center gap-2"><i data-lucide="check"
-                                    class="w-4 h-4 text-emerald-400"></i> 9 Plantillas editables</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check"
-                                    class="w-4 h-4 text-emerald-400"></i> Formatos Feed y Stories</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check"
-                                    class="w-4 h-4 text-emerald-400"></i> Paleta de colores de marca</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check"
-                                    class="w-4 h-4 text-emerald-400"></i> Entrega en 3-5 días</li>
-                        </ul>
+            <div data-aos="fade-up" class="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-6 items-start">
+
+                <!-- MOCKUP WHATSAPP -->
+                <div id="whatsapp-mockup" class="bg-[#111b21] border border-zinc-800 rounded-xl overflow-hidden">
+                    <div class="flex items-center gap-2.5 px-4 py-3 border-b border-black/30 bg-[#202c33]">
+                        <div class="w-8 h-8 rounded-full bg-zinc-700"></div>
+                        <div>
+                            <div class="text-[13px] font-bold text-white">InspireWebs</div>
+                            <div class="font-mono text-[10px] text-emerald-400">en línea · responde en minutos</div>
+                        </div>
                     </div>
-                    <a href="#contacto"
-                        class="w-full bg-zinc-800 hover:bg-zinc-700 text-white font-semibold py-3 rounded-xl text-xs text-center transition-all block">Solicitar
-                        Pack</a>
+                    <div class="px-4 py-4 flex flex-col gap-2.5 whatsapp-bg">
+                        <div class="msg-item opacity-0 translate-y-3 transition-all duration-500 ease-out self-end max-w-[85%] bg-emerald-600 text-white text-sm leading-snug px-3.5 py-2.5 rounded-2xl rounded-br-sm">
+                            Hola Sara, te escribo para confirmar que recibiste nuestro correo del martes
+                            sobre la página de reservas. ¿Seguimos adelante con el proyecto?
+                        </div>
+                        <div class="msg-item opacity-0 translate-y-3 transition-all duration-500 ease-out self-end font-mono text-[10px] text-zinc-600 -mt-1">09:12 · enviado el día 2</div>
+                        <div class="msg-item msg-typing opacity-0 translate-y-3 transition-all duration-500 ease-out self-start bg-zinc-800 rounded-2xl rounded-bl-sm px-3.5 py-2.5 flex gap-1 items-center">
+                            <span class="w-1.5 h-1.5 rounded-full bg-zinc-500 typing-dot"></span>
+                            <span class="w-1.5 h-1.5 rounded-full bg-zinc-500 typing-dot"></span>
+                            <span class="w-1.5 h-1.5 rounded-full bg-zinc-500 typing-dot"></span>
+                        </div>
+                        <div class="msg-item msg-reply opacity-0 translate-y-3 transition-all duration-500 ease-out self-start max-w-[85%] bg-zinc-800 text-zinc-100 text-sm leading-snug px-3.5 py-2.5 rounded-2xl rounded-bl-sm">
+                            Sí, disculpa la demora. ¿Podríamos hablar el jueves?
+                        </div>
+                        <div class="msg-item opacity-0 translate-y-3 transition-all duration-500 ease-out self-end max-w-[85%] bg-emerald-600 text-white text-sm leading-snug px-3.5 py-2.5 rounded-2xl rounded-br-sm">
+                            Perfecto, el jueves nos viene bien. ¿A las 10:00 o a las 16:00?
+                        </div>
+                        <div class="msg-item opacity-0 translate-y-3 transition-all duration-500 ease-out self-start flex gap-2 mt-1">
+                            <span class="border border-zinc-700 text-zinc-300 text-xs px-3 py-1.5 rounded-full">10:00</span>
+                            <span class="border border-zinc-700 text-zinc-300 text-xs px-3 py-1.5 rounded-full">16:00</span>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- PLAN 2 (DESTACADO) -->
-                <div class="bg-zinc-900 border-2 border-emerald-500 rounded-2xl p-8 flex flex-col justify-between relative shadow-xl shadow-emerald-500/10 hover:border-emerald-400 transition-all transform hover:-translate-y-1"
-                    data-aos="fade-up" data-aos-delay="200">
+                <!-- MOCKUP EMAIL -->
+                <div id="email-mockup" class="bg-stone-100 rounded-xl overflow-hidden">
                     <div
-                        class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-emerald-500 text-zinc-950 font-extrabold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full">
-                        Más Recomendado
+                        class="flex items-center justify-between px-5 py-3 border-b border-black/10 font-mono text-[10.5px] text-zinc-500">
+                        <span class="flex items-center gap-1.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                            ENVIADO AUTOMÁTICAMENTE · 2 MIN DESPUÉS DEL FORMULARIO
+                        </span>
+                        <span>Bandeja de entrada</span>
                     </div>
-                    <div>
-                        <h3 class="text-lg font-bold text-white mb-2">Web + Automatización</h3>
-                        <p class="text-xs text-zinc-400 mb-6">La solución completa para captar clientes en automático.
+                    <div class="px-6 md:px-8 py-7">
+                        <div class="email-item opacity-0 translate-y-3 transition-all duration-500 ease-out flex items-center gap-3 mb-5">
+                            <div
+                                class="w-9 h-9 rounded-full bg-emerald-600 text-white flex items-center justify-center text-sm font-extrabold shrink-0">
+                                I</div>
+                            <div>
+                                <div class="text-sm font-bold text-zinc-900">InspireWebs</div>
+                                <div class="text-xs text-zinc-500">para ti · 23:04</div>
+                            </div>
+                        </div>
+                        <div class="email-item opacity-0 translate-y-3 transition-all duration-500 ease-out text-xl md:text-2xl font-extrabold tracking-tight text-zinc-900 mb-4">
+                            Hemos recibido tu mensaje — esto es lo siguiente
+                        </div>
+                        <p class="email-item opacity-0 translate-y-3 transition-all duration-500 ease-out text-[15px] leading-relaxed text-zinc-700 mb-3">
+                            Hola Sara, gracias por contactar con nosotros. Hemos revisado tu mensaje sobre
+                            la nueva página de reservas y ya tenemos algunas ideas para tu proyecto.
                         </p>
-                        <div class="text-3xl font-extrabold text-white mb-6">799€ <span
-                                class="text-xs font-normal text-zinc-400">/ pago único</span></div>
-                        <ul class="space-y-3 text-xs text-zinc-300 mb-8">
-                            <li class="flex items-center gap-2"><i data-lucide="check"
-                                    class="w-4 h-4 text-emerald-400"></i> Website Responsive a medida</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check"
-                                    class="w-4 h-4 text-emerald-400"></i> Diseño Optimizado ultra rápido</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check"
-                                    class="w-4 h-4 text-emerald-400"></i> Integración WhatsApp & Email</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check"
-                                    class="w-4 h-4 text-emerald-400"></i> Flujo de avisos automatizado</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check"
-                                    class="w-4 h-4 text-emerald-400"></i> Pack 9 Plantillas para Redes</li>
-                        </ul>
+                        <p class="email-item opacity-0 translate-y-3 transition-all duration-500 ease-out text-[15px] leading-relaxed text-zinc-700 mb-4">
+                            Te enviaremos una propuesta detallada en menos de 24 horas. Si prefieres hablarlo
+                            directamente, reserva una llamada de quince minutos en el horario que mejor te venga.
+                        </p>
+                        <div class="email-item email-cta opacity-0 translate-y-3 transition-all duration-500 ease-out inline-block bg-emerald-600 text-white text-sm font-semibold px-5 py-3 rounded-lg mb-4">
+                            Elegir un horario
+                        </div>
+                        <div class="h-px bg-black/10 mb-3"></div>
+                        <div class="email-item opacity-0 translate-y-3 transition-all duration-500 ease-out text-xs text-zinc-500 leading-relaxed">
+                            InspireWebs · Las respuestas las escribe una persona real, solo el envío es
+                            automático.
+                        </div>
                     </div>
-                    <a href="#contacto"
-                        class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3 rounded-xl text-xs text-center transition-all block shadow-md">Comenzar
-                        Proyecto</a>
-                </div>
-
-                <!-- PLAN 3 -->
-                <div class="bg-zinc-900/80 border border-zinc-800 rounded-2xl p-8 flex flex-col justify-between hover:border-zinc-700 transition-all"
-                    data-aos="fade-up" data-aos-delay="300">
-                    <div>
-                        <h3 class="text-lg font-bold text-white mb-2">Website Responsive</h3>
-                        <p class="text-xs text-zinc-400 mb-6">Perfecta para tener presencia profesional en internet.</p>
-                        <div class="text-3xl font-extrabold text-white mb-6">499€ <span
-                                class="text-xs font-normal text-zinc-400">/ pago único</span></div>
-                        <ul class="space-y-3 text-xs text-zinc-300 mb-8">
-                            <li class="flex items-center gap-2"><i data-lucide="check"
-                                    class="w-4 h-4 text-emerald-400"></i> Diseño 100% adaptable a móvil</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check"
-                                    class="w-4 h-4 text-emerald-400"></i> Optimización de velocidad</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check"
-                                    class="w-4 h-4 text-emerald-400"></i> Formulario de contacto directo</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check"
-                                    class="w-4 h-4 text-emerald-400"></i> SEO básico local incluido</li>
-                        </ul>
-                    </div>
-                    <a href="#contacto"
-                        class="w-full bg-zinc-800 hover:bg-zinc-700 text-white font-semibold py-3 rounded-xl text-xs text-center transition-all block">Solicitar
-                        Web</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TESTIMONIOS -->
-    <section id="testimonios" class="py-24 border-t border-zinc-800/80 relative">
-        <div class="container mx-auto px-6 max-w-6xl">
-            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
-                <span
-                    class="text-emerald-400 text-xs font-semibold uppercase tracking-wider bg-emerald-500/10 px-3 py-1 rounded-md border border-emerald-500/20">Confianza
-                    Directa</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-white mt-4">Lo que opinan otros autónomos</h2>
+    <!-- DISEÑO EN LA PRÁCTICA -->
+    <section class="py-20 md:py-24 overflow-hidden">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div data-aos="fade-up" class="font-mono text-[11px] tracking-[0.18em] text-emerald-400 mb-3">
+                DISEÑO EN LA PRÁCTICA
             </div>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-zinc-900/60 border border-zinc-800 p-6 rounded-2xl" data-aos="fade-up"
-                    data-aos-delay="100">
-                    <div class="flex text-amber-400 mb-3" aria-label="5 de 5 estrellas">
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <h2 data-aos="fade-up" class="text-3xl md:text-[40px] font-extrabold tracking-tight text-white mb-10 max-w-2xl">
+                Publicaciones creadas con el mismo estilo que tu web
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+                <div data-aos="fade-up" data-parallax="left">
+                    <div class="aspect-square bg-emerald-600 rounded-lg p-6 flex flex-col justify-between">
+                        <div class="font-mono text-[10.5px] text-emerald-950/70">01 / OFERTA</div>
+                        <div class="text-2xl md:text-[26px] leading-[1.05] font-black tracking-tight text-emerald-950">
+                            Tres emails. Un WhatsApp. Cero perseguir clientes.
+                        </div>
+                        <div class="text-xs font-bold text-emerald-950/70">inspirewebs.com</div>
                     </div>
-                    <p class="text-xs text-zinc-300 leading-relaxed mb-4">"Ahora los mensajes del formulario me entran
-                        directos al WhatsApp. He ganado muchísimo tiempo y mis clientes agradecen la rapidez."</p>
-                    <span class="text-xs font-semibold text-white block">Carlos R.</span>
-                    <span class="text-[10px] text-zinc-400">Reformas & Electricidad</span>
+                    <div class="font-mono text-[10.5px] text-zinc-600 mt-2.5">INSTAGRAM 1:1</div>
                 </div>
-                <div class="bg-zinc-900/60 border border-zinc-800 p-6 rounded-2xl" data-aos="fade-up"
-                    data-aos-delay="200">
-                    <div class="flex text-amber-400 mb-3" aria-label="5 de 5 estrellas">
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="aspect-square bg-stone-100 rounded-lg p-6 flex flex-col justify-between">
+                        <div class="font-mono text-[10.5px] text-zinc-500">02 / PRUEBA</div>
+                        <div>
+                            <div class="text-5xl md:text-6xl font-black tracking-tight text-zinc-900">48h</div>
+                            <div class="mt-2 text-base font-bold leading-snug text-zinc-700">
+                                desde el primer mensaje hasta una llamada agendada, sin mover un dedo.
+                            </div>
+                        </div>
+                        <div class="text-xs font-bold text-zinc-500">inspirewebs.com</div>
                     </div>
-                    <p class="text-xs text-zinc-300 leading-relaxed mb-4">"La web carga súper rápido en el móvil y se ve
-                        impecable. Nada de rodeos ni precios ocultos."</p>
-                    <span class="text-xs font-semibold text-white block">Elena M.</span>
-                    <span class="text-[10px] text-zinc-400">Estudio de Fisioterapia</span>
+                    <div class="font-mono text-[10.5px] text-zinc-600 mt-2.5">INSTAGRAM 1:1</div>
                 </div>
-                <div class="bg-zinc-900/60 border border-zinc-800 p-6 rounded-2xl" data-aos="fade-up"
-                    data-aos-delay="300">
-                    <div class="flex text-amber-400 mb-3" aria-label="5 de 5 estrellas">
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <div data-aos="fade-up" data-aos-delay="200" data-parallax="right">
+                    <div class="aspect-square bg-zinc-900 border border-zinc-800 rounded-lg p-6 flex flex-col justify-between">
+                        <div class="font-mono text-[10.5px] text-emerald-400">03 / PRINCIPIO</div>
+                        <div class="text-2xl md:text-[26px] leading-[1.05] font-black tracking-tight text-white">
+                            Buen diseño no se nota. Solo funciona.
+                        </div>
+                        <div class="text-xs font-bold text-zinc-500">inspirewebs.com</div>
                     </div>
-                    <p class="text-xs text-zinc-300 leading-relaxed mb-4">"Trato directo y cercano de verdad. Me ayudó a
-                        preparar las plantillas de redes y la página web todo en uno."</p>
-                    <span class="text-xs font-semibold text-white block">Marcos V.</span>
-                    <span class="text-[10px] text-zinc-400">Consultor Independiente</span>
+                    <div class="font-mono text-[10.5px] text-zinc-600 mt-2.5">INSTAGRAM 1:1</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ ACCESIBLE Y DESPLEGABLE -->
-    <section id="faq" class="py-24 border-t border-zinc-800/80 bg-zinc-900/20 relative">
-        <div class="container mx-auto px-6 max-w-3xl" data-aos="fade-up">
-            <div class="text-center mb-12">
-                <span
-                    class="text-emerald-400 text-xs font-semibold uppercase tracking-wider bg-emerald-500/10 px-3 py-1 rounded-md border border-emerald-500/20">Dudas
-                    Frecuentes</span>
-                <h2 class="text-3xl font-bold text-white mt-4">Preguntas Frecuentes</h2>
-            </div>
-            <div class="space-y-4">
-                <details
-                    class="group bg-zinc-900/80 border border-zinc-800 rounded-xl p-4 [&_summary::-webkit-details-marker]:hidden">
-                    <summary
-                        class="flex cursor-pointer items-center justify-between gap-1.5 text-zinc-200 font-semibold text-sm">
-                        <span>¿Por qué hay cuotas o costes de mantenimiento?</span>
-                        <span class="shrink-0 transition duration-300 group-open:-rotate-180">
-                            <i data-lucide="chevron-down" class="w-4 h-4 text-emerald-400"></i>
-                        </span>
-                    </summary>
-                    <p class="mt-3 text-xs text-zinc-400 leading-relaxed">
-                        El diseño y desarrollo inicial son de pago único. Sin embargo, para mantener tu sitio visible en
-                        internet existen gastos externos obligatorios como el <strong>dominio</strong> (tu dirección
-                        .com/.es) y el <strong>servidor de alojamiento (hosting)</strong>, que suelen costar unos
-                        30-40€/año. En el caso de requerir integraciones de automatización muy avanzadas o soporte
-                        técnico continuo, pueden existir pequeñas licencias o planes opcionales que te explicamos con
-                        total transparencia antes de empezar.
+    <!-- PROCESO -->
+    <section id="proceso" class="pb-20 md:pb-28">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div data-aos="fade-up"
+                class="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-zinc-800 border border-zinc-800 rounded-xl overflow-hidden">
+                <div class="p-7 md:p-8">
+                    <div class="font-mono text-[11px] text-emerald-400 mb-3">PASO 01</div>
+                    <div class="text-lg font-extrabold tracking-tight text-white mb-2">Una llamada, luego un
+                        plan</div>
+                    <p class="text-[14.5px] leading-relaxed text-zinc-400">
+                        Quince minutos para entender qué te está frenando. Te doy un plan por escrito y un
+                        precio cerrado.
                     </p>
-                </details>
-                <details
-                    class="group bg-zinc-900/80 border border-zinc-800 rounded-xl p-4 [&_summary::-webkit-details-marker]:hidden">
-                    <summary
-                        class="flex cursor-pointer items-center justify-between gap-1.5 text-zinc-200 font-semibold text-sm">
-                        <span>¿Cuánto tiempo tarda la entrega?</span>
-                        <span class="shrink-0 transition duration-300 group-open:-rotate-180">
-                            <i data-lucide="chevron-down" class="w-4 h-4 text-emerald-400"></i>
-                        </span>
-                    </summary>
-                    <p class="mt-3 text-xs text-zinc-400 leading-relaxed">
-                        El plazo habitual es de entre 5 y 10 días laborables una vez recibida la información básica de
-                        tu negocio.
+                </div>
+                <div class="p-7 md:p-8">
+                    <div class="font-mono text-[11px] text-emerald-400 mb-3">PASO 02</div>
+                    <div class="text-lg font-extrabold tracking-tight text-white mb-2">Construyo con
+                        transparencia</div>
+                    <p class="text-[14.5px] leading-relaxed text-zinc-400">
+                        Ves la web mientras se construye y revisas cada mensaje automático antes de que se
+                        envíe.
                     </p>
-                </details>
-                <details
-                    class="group bg-zinc-900/80 border border-zinc-800 rounded-xl p-4 [&_summary::-webkit-details-marker]:hidden">
-                    <summary
-                        class="flex cursor-pointer items-center justify-between gap-1.5 text-zinc-200 font-semibold text-sm">
-                        <span>¿Necesito contratar un hosting o dominio aparte?</span>
-                        <span class="shrink-0 transition duration-300 group-open:-rotate-180">
-                            <i data-lucide="chevron-down" class="w-4 h-4 text-emerald-400"></i>
-                        </span>
-                    </summary>
-                    <p class="mt-3 text-xs text-zinc-400 leading-relaxed">
-                        Te asesoro gratuitamente en la contratación de tu propio dominio y alojamiento básico
-                        (aproximadamente 30-40€/año) para que la propiedad quede a tu nombre sin intermediarios.
+                </div>
+                <div class="p-7 md:p-8">
+                    <div class="font-mono text-[11px] text-emerald-400 mb-3">PASO 03</div>
+                    <div class="text-lg font-extrabold tracking-tight text-white mb-2">Entrega, y sigo cerca
+                    </div>
+                    <p class="text-[14.5px] leading-relaxed text-zinc-400">
+                        Accesos, un vídeo explicativo corto, y un mes de ajustes incluido.
                     </p>
-                </details>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- FORMULARIO DE CONTACTO -->
-    <section id="contacto" class="py-24 border-t border-zinc-800/80 relative">
-        <div class="container mx-auto px-6 max-w-xl" data-aos="fade-up">
-            <div class="bg-zinc-900 border border-zinc-800 p-8 md:p-10 rounded-2xl shadow-xl">
-                <div class="text-center mb-8">
-                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Hablemos de tu proyecto</h2>
-                    <p class="text-zinc-400 text-sm font-normal">Respuesta rápida directa a tu correo en menos de 24
-                        horas.</p>
+    <!-- SIGUIENTE PASO + FORMULARIO -->
+    <section id="contacto" class="bg-stone-100 py-16 md:py-24">
+        <div class="container mx-auto px-6 max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+
+            <div data-aos="fade-up" class="lg:sticky lg:top-32">
+                <div class="font-mono text-[11px] tracking-[0.18em] text-zinc-500 mb-4">SIGUIENTE PASO</div>
+                <h2 class="text-4xl sm:text-5xl font-black tracking-tight text-zinc-950 max-w-xl leading-[1.02]">
+                    Cuéntame qué te está frenando, y te digo si puedo arreglarlo.
+                </h2>
+                <p class="mt-4 max-w-md text-zinc-600 text-[15px] leading-relaxed">
+                    Nada de formularios interminables. Solo escríbeme y cuéntame más o menos qué necesitas.
+                </p>
+                <div class="mt-8 flex flex-col gap-2.5">
+                    <a href="mailto:yassineyahya50@gmail.com"
+                        class="inline-flex items-center justify-center gap-2 bg-zinc-950 hover:bg-zinc-800 text-white text-sm font-semibold px-6 py-3.5 rounded-lg transition-colors">
+                        <i data-lucide="mail" class="w-4 h-4" aria-hidden="true"></i>
+                        yassineyahya50@gmail.com
+                    </a>
+                    <a href="https://wa.me/34602317364?text=Hola%2C%20quisiera%20informaci%C3%B3n%20para%20mi%20negocio"
+                        target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center justify-center gap-2 border border-zinc-950/25 hover:border-zinc-950/50 text-zinc-950 text-sm font-semibold px-6 py-3.5 rounded-lg transition-colors">
+                        <i data-lucide="message-circle" class="w-4 h-4" aria-hidden="true"></i>
+                        Escríbeme por WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="100"
+                class="bg-white border border-zinc-200 rounded-xl p-5 md:p-6 shadow-sm">
+                <div class="mb-4">
+                    <h3 class="text-base font-bold text-zinc-950 mb-1">Hablemos de tu proyecto</h3>
+                    <p class="text-zinc-500 text-xs">Respuesta rápida directa a tu correo en menos de 24 horas.</p>
                 </div>
 
-                <form id="contact-form" action="https://formspree.io/f/mqpzdqao" method="POST" class="space-y-5" novalidate>
+                <form id="contact-form" action="https://formspree.io/f/mqpzdqao" method="POST" class="space-y-3"
+                    novalidate>
                     <div>
                         <label for="name"
-                            class="block text-xs font-semibold text-zinc-300 mb-2 uppercase tracking-wider">Tu
+                            class="block text-[11px] font-semibold text-zinc-500 mb-1 uppercase tracking-wider">Tu
                             Nombre</label>
                         <input type="text" id="name" name="name" required placeholder="Ej. Juan Pérez"
-                            class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-zinc-200 focus:outline-none focus:border-emerald-500 transition-colors text-sm">
+                            class="w-full bg-zinc-50 border border-zinc-300 rounded-lg px-3.5 py-2.5 text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:border-emerald-600 transition-colors text-sm">
                     </div>
                     <div>
                         <label for="email"
-                            class="block text-xs font-semibold text-zinc-300 mb-2 uppercase tracking-wider">Correo
+                            class="block text-[11px] font-semibold text-zinc-500 mb-1 uppercase tracking-wider">Correo
                             Electrónico</label>
                         <input type="email" id="email" name="email" required placeholder="juan@minegocio.com"
-                            class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-zinc-200 focus:outline-none focus:border-emerald-500 transition-colors text-sm">
+                            class="w-full bg-zinc-50 border border-zinc-300 rounded-lg px-3.5 py-2.5 text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:border-emerald-600 transition-colors text-sm">
                     </div>
                     <div>
                         <label for="service"
-                            class="block text-xs font-semibold text-zinc-300 mb-2 uppercase tracking-wider">¿Qué opción
-                            te interesa?</label>
+                            class="block text-[11px] font-semibold text-zinc-500 mb-1 uppercase tracking-wider">¿Qué
+                            opción te interesa?</label>
                         <select id="service" name="service"
-                            class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-zinc-200 focus:outline-none focus:border-emerald-500 transition-colors text-sm">
-                            <option value="Web + Automatización (799€)">Web + Automatización (799€) - Recomendado
-                            </option>
-                            <option value="Website Responsive (499€)">Website Responsive (499€)</option>
-                            <option value="Pack Visual Redes (150€)">Pack Visual Redes (150€)</option>
+                            class="w-full bg-zinc-50 border border-zinc-300 rounded-lg px-3.5 py-2.5 text-zinc-900 focus:outline-none focus:border-emerald-600 transition-colors text-sm">
+                            <option value="Website (desde 499€)">Website (desde 499€)</option>
+                            <option value="Automatización (desde 300€)">Automatización (desde 300€)</option>
+                            <option value="Diseño para redes (desde 150€/mes)">Diseño para redes (desde
+                                150€/mes)</option>
                             <option value="Otra consulta">Otra consulta / Proyecto a medida</option>
                         </select>
                     </div>
                     <div>
                         <label for="message"
-                            class="block text-xs font-semibold text-zinc-300 mb-2 uppercase tracking-wider">Mensaje</label>
-                        <textarea id="message" name="message" rows="4"
+                            class="block text-[11px] font-semibold text-zinc-500 mb-1 uppercase tracking-wider">Mensaje</label>
+                        <textarea id="message" name="message" rows="3"
                             placeholder="Cuéntame brevemente qué hace tu negocio..."
-                            class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-zinc-200 focus:outline-none focus:border-emerald-500 transition-colors text-sm"></textarea>
+                            class="w-full bg-zinc-50 border border-zinc-300 rounded-lg px-3.5 py-2.5 text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:border-emerald-600 transition-colors text-sm"></textarea>
                     </div>
                     <button type="submit" id="contact-submit-btn"
-                        class="w-full bg-emerald-600 hover:bg-emerald-500 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold py-3.5 rounded-xl transition-all shadow-md flex items-center justify-center gap-2">
+                        class="w-full bg-zinc-950 hover:bg-zinc-800 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold py-2.5 rounded-lg transition-all shadow-md flex items-center justify-center gap-2 text-sm">
                         <i data-lucide="send" class="w-4 h-4" aria-hidden="true"></i>
                         <span>Enviar Mensaje</span>
                     </button>
@@ -748,7 +580,7 @@
     </section>
 
     <!-- BOTÓN FLOTANTE WHATSAPP -->
-    <a href="https://wa.me/34602317364?text=Hola,%20quisiera%20información%20para%20mi%20negocio" target="_blank"
+    <a href="https://wa.me/34602317364?text=Hola%2C%20quisiera%20informaci%C3%B3n%20para%20mi%20negocio" target="_blank"
         rel="noopener noreferrer"
         class="fixed bottom-6 right-6 z-50 bg-emerald-600 hover:bg-emerald-500 text-white p-4 rounded-full shadow-lg transition-all transform hover:scale-105 flex items-center justify-center group"
         aria-label="Contactar por WhatsApp">
@@ -760,7 +592,7 @@
     </a>
 
     <!-- FOOTER CON LOGO -->
-    <footer class="py-10 border-t border-zinc-800/60 text-center text-xs text-zinc-400">
+    <footer class="py-10 border-t border-zinc-800/60 text-center text-xs text-zinc-500">
         <div class="container mx-auto px-6 flex flex-col items-center justify-center gap-4">
             <a href="#" class="inline-block" aria-label="InspireWebs Inicio">
                 <img src="assets/logo-white.png" alt="InspireWebs Logo"
@@ -768,11 +600,11 @@
                     onerror="this.onerror=null; this.replaceWith(document.getElementById('logo-fallback-footer').cloneNode(true));">
                 <div id="logo-fallback-footer" class="hidden text-lg font-extrabold text-zinc-300 relative">
                     I<span
-                        class="w-2 h-2 rounded-full bg-[#10B981] inline-block absolute -top-0.5 left-[2px]"></span>nspireWebs
+                        class="w-2 h-2 rounded-full bg-emerald-500 inline-block absolute -top-0.5 left-[2px]"></span>nspireWebs
                 </div>
             </a>
             <span class="text-[11px] font-semibold tracking-wide text-zinc-500">yassine yahya</span>
-            <p>&copy; 2026 InspireWebs. Websites Design & Automations.</p>
+            <p class="font-mono text-[11px] tracking-wide">INSPIREWEBS © 2026 · HECHO A MANO, POR SUPUESTO</p>
             <div class="flex items-center gap-3 text-[11px] text-zinc-500">
                 <a href="legal/aviso-legal.html" class="hover:text-zinc-300 transition-colors">Aviso Legal</a>
                 <span class="text-zinc-700">&middot;</span>
@@ -793,8 +625,7 @@
                 <i data-lucide="x" class="w-5 h-5" aria-hidden="true"></i>
             </button>
 
-            <div id="form-modal-icon"
-                class="w-12 h-12 rounded-full flex items-center justify-center mb-4">
+            <div id="form-modal-icon" class="w-12 h-12 rounded-full flex items-center justify-center mb-4">
                 <i id="form-modal-icon-glyph" data-lucide="check" class="w-6 h-6" aria-hidden="true"></i>
             </div>
 
@@ -849,6 +680,161 @@
                 });
             }
         });
+    </script>
+    <script>
+        // Animaciones de los mockups (WhatsApp y correo): se reproducen cada vez que la sección entra en el
+        // viewport al hacer scroll, y se reinician si sales y vuelves a entrar.
+        (function () {
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            function setupSequence({ wrapId, itemSelector, inClass, buildSteps, onReset, onShowAll }) {
+                const wrap = document.getElementById(wrapId);
+                if (!wrap) return;
+                const items = Array.from(wrap.querySelectorAll(itemSelector));
+                if (!items.length) return;
+
+                function reset() {
+                    items.forEach((item) => item.classList.remove(inClass));
+                    if (onReset) onReset();
+                }
+
+                function showAll() {
+                    items.forEach((item) => item.classList.add(inClass));
+                    if (onShowAll) onShowAll();
+                }
+
+                if (reduceMotion) {
+                    showAll();
+                    return;
+                }
+
+                let timeouts = [];
+                function clearTimeouts() {
+                    timeouts.forEach((id) => clearTimeout(id));
+                    timeouts = [];
+                }
+
+                let active = false;
+                let exitTimer = null;
+
+                function play() {
+                    active = true;
+                    clearTimeouts();
+                    reset();
+                    // fuerza el reflow para que el reinicio se aplique antes de repetir la transición
+                    void wrap.offsetWidth;
+                    buildSteps(items).forEach(([fn, delay]) => {
+                        timeouts.push(setTimeout(fn, delay));
+                    });
+                }
+
+                if ('IntersectionObserver' in window) {
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                // cancela una salida pendiente por pequeñas sacudidas de scroll
+                                if (exitTimer) {
+                                    clearTimeout(exitTimer);
+                                    exitTimer = null;
+                                }
+                                // solo (re)inicia si de verdad se había salido antes, para que no
+                                // se reinicie en bucle mientras la sección sigue a la vista
+                                if (!active) play();
+                            } else if (active) {
+                                // espera un momento antes de reiniciar, por si vuelve a entrar enseguida
+                                exitTimer = setTimeout(() => {
+                                    active = false;
+                                    clearTimeouts();
+                                    reset();
+                                    exitTimer = null;
+                                }, 500);
+                            }
+                        });
+                    }, { threshold: 0.4 });
+                    observer.observe(wrap);
+                } else {
+                    showAll();
+                }
+            }
+
+            // WhatsApp: saludo → hora → "escribiendo…" → respuesta → cierre → chips
+            setupSequence({
+                wrapId: 'whatsapp-mockup',
+                itemSelector: '.msg-item',
+                inClass: 'msg-in',
+                onReset(wrap) { /* noop */ },
+                onShowAll() {
+                    const typing = document.querySelector('#whatsapp-mockup .msg-typing');
+                    if (typing) typing.style.display = 'none';
+                },
+                buildSteps(items) {
+                    const wrap = document.getElementById('whatsapp-mockup');
+                    const typing = wrap.querySelector('.msg-typing');
+                    const reply = wrap.querySelector('.msg-reply');
+                    if (typing) typing.style.display = '';
+                    const rest = items.filter((item) => item !== typing && item !== reply);
+                    const [msgOut1, msgTimestamp, msgOut2, msgChips] = rest;
+                    const steps = [
+                        [() => msgOut1 && msgOut1.classList.add('msg-in'), 0],
+                        [() => msgTimestamp && msgTimestamp.classList.add('msg-in'), 500],
+                        [() => typing && typing.classList.add('msg-in'), 1200],
+                        [() => {
+                            if (typing) typing.classList.remove('msg-in');
+                            if (reply) reply.classList.add('msg-in');
+                        }, 2500],
+                        [() => msgOut2 && msgOut2.classList.add('msg-in'), 3000],
+                        [() => msgChips && msgChips.classList.add('msg-in'), 3500],
+                    ];
+                    return steps;
+                },
+            });
+
+            // Correo: remitente → asunto → párrafos → botón (con destello) → nota final
+            setupSequence({
+                wrapId: 'email-mockup',
+                itemSelector: '.email-item',
+                inClass: 'email-in',
+                buildSteps(items) {
+                    return items.map((item, i) => [() => item.classList.add('email-in'), i * 400]);
+                },
+            });
+        })();
+    </script>
+    <script>
+        // Movimiento tipo carrusel: los cuadros entran y salen de lado según el scroll, y se revierte al subir
+        (function () {
+            const els = Array.from(document.querySelectorAll('[data-parallax]'));
+            if (!els.length) return;
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+            let ticking = false;
+
+            function update() {
+                ticking = false;
+                const vh = window.innerHeight;
+                const maxShift = Math.min(window.innerWidth * (window.innerWidth < 640 ? 0.45 : 0.3), 480);
+                els.forEach((el) => {
+                    const rect = el.getBoundingClientRect();
+                    const elCenter = rect.top + rect.height / 2;
+                    // 1 cuando el elemento entra por abajo, 0 en el centro del viewport, -1 cuando sale por arriba
+                    const progress = (elCenter - vh / 2) / (vh / 2 + rect.height / 2);
+                    const clamped = Math.max(-1, Math.min(1, progress));
+                    const dir = el.dataset.parallax === 'left' ? -1 : 1;
+                    el.style.transform = `translateX(${clamped * maxShift * dir}px)`;
+                });
+            }
+
+            function onScroll() {
+                if (!ticking) {
+                    ticking = true;
+                    requestAnimationFrame(update);
+                }
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', onScroll);
+            update();
+        })();
     </script>
     <script>
         // Banner de consentimiento de cookies (cookies técnicas, sin analítica ni publicidad)
