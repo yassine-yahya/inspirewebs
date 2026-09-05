@@ -61,6 +61,133 @@
             font-family: 'Archivo', system-ui, sans-serif;
         }
 
+        body.light-mode {
+            background: #f8fafc !important;
+            color: #0f172a !important;
+        }
+
+        .container {
+            max-width: 1180px;
+        }
+
+        body.light-mode header {
+            background: rgba(255, 255, 255, 0.92) !important;
+            border-color: rgba(15, 23, 42, 0.08) !important;
+        }
+
+        body.light-mode footer {
+            background: #05070a !important;
+            border-color: rgba(255, 255, 255, 0.08) !important;
+            color: #ffffff !important;
+        }
+
+        body.light-mode footer * {
+            color: #ffffff !important;
+        }
+
+        body.light-mode footer .text-zinc-400,
+        body.light-mode footer .text-zinc-300,
+        body.light-mode footer .text-zinc-600,
+        body.light-mode footer a {
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+
+        body.light-mode .bg-zinc-950,
+        body.light-mode .bg-zinc-950\/85,
+        body.light-mode .bg-zinc-950\/90,
+        body.light-mode .bg-zinc-900,
+        body.light-mode .bg-zinc-800,
+        body.light-mode .bg-zinc-100,
+        body.light-mode .bg-white {
+            background-color: #ffffff !important;
+        }
+
+        body.light-mode .text-white,
+        body.light-mode .text-zinc-100,
+        body.light-mode .text-zinc-200,
+        body.light-mode .text-zinc-300,
+        body.light-mode .text-zinc-400,
+        body.light-mode .text-zinc-500,
+        body.light-mode .text-zinc-600,
+        body.light-mode .text-zinc-700,
+        body.light-mode .text-zinc-800,
+        body.light-mode .text-zinc-900 {
+            color: #0f172a !important;
+        }
+
+        body.light-mode .card-dark,
+        body.light-mode .card-dark * {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%) !important;
+            color: #0f172a !important;
+        }
+
+        body.light-mode .result-card,
+        body.light-mode .result-card * {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+        }
+
+        body.light-mode .result-card .text-zinc-300,
+        body.light-mode .result-card .text-zinc-400,
+        body.light-mode .result-card .text-zinc-500 {
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+
+        body.light-mode .card-dark .text-zinc-300,
+        body.light-mode .card-dark .text-zinc-400,
+        body.light-mode .card-dark .text-zinc-500 {
+            color: rgba(15, 23, 42, 0.7) !important;
+        }
+
+        body.light-mode .card-contrast,
+        body.light-mode .card-contrast * {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%) !important;
+            color: #0f172a !important;
+        }
+
+        body.light-mode .card-contrast .text-zinc-300,
+        body.light-mode .card-contrast .text-zinc-400,
+        body.light-mode .card-contrast .text-zinc-500 {
+            color: rgba(15, 23, 42, 0.7) !important;
+        }
+
+        body.light-mode .text-zinc-400 {
+            color: #475569 !important;
+        }
+
+        body.light-mode .text-zinc-500,
+        body.light-mode .text-zinc-600 {
+            color: #334155 !important;
+        }
+
+        body.light-mode .border-zinc-900,
+        body.light-mode .border-zinc-800,
+        body.light-mode .border-zinc-700,
+        body.light-mode .border-zinc-600,
+        body.light-mode .border-zinc-500,
+        body.light-mode .border-zinc-400,
+        body.light-mode .border-zinc-300,
+        body.light-mode .border-zinc-200 {
+            border-color: rgba(15, 23, 42, 0.10) !important;
+        }
+
+        body.light-mode .bg-grid-pattern {
+            background-image: radial-gradient(rgba(15, 23, 42, 0.08) 1px, transparent 1px);
+        }
+
+        body.light-mode .diagonal-lines {
+            background-image: repeating-linear-gradient(135deg, rgba(15, 23, 42, 0.08) 0 8px, transparent 8px 16px);
+        }
+
+        body.light-mode .whatsapp-bg {
+            background-color: #eff6ff;
+            background-image: radial-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+        }
+
+        body.light-mode a img[alt="InspireWebs Logo"] {
+            filter: invert(1) brightness(0.2) contrast(1.3);
+        }
+
         .font-mono {
             font-family: 'JetBrains Mono', ui-monospace, monospace;
         }
@@ -201,7 +328,7 @@
     </style>
 </head>
 
-<body class="bg-zinc-950 text-zinc-100 antialiased selection:bg-emerald-600 selection:text-white overflow-x-hidden">
+<body class="light-mode bg-zinc-950 text-zinc-100 antialiased selection:bg-emerald-600 selection:text-white overflow-x-hidden">
 
     <!-- NAVBAR CON LOGO INTEGRADO -->
     <header
@@ -235,7 +362,7 @@
                 </div>
                 <a href="#contacto"
                     class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 md:px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-md">
-                    Contáctame
+                    Contacto
                 </a>
             </div>
         </nav>
@@ -245,28 +372,27 @@
     <section class="relative pt-28 md:pt-32 pb-12 overflow-hidden bg-grid-pattern">
         <div class="container mx-auto px-6 max-w-6xl">
             <h1 data-aos="fade-up" data-aos-duration="700" data-aos-delay="100"
-                class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.94] text-white max-w-5xl mb-6">
-                Construyo tu web y hago que siga trabajando por ti.
+                class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-[-0.07em] leading-[0.9] text-white max-w-5xl mb-6">
+                Webs que convierten visitas en clientes.
             </h1>
 
             <p data-aos="fade-up" data-aos-duration="700" data-aos-delay="200"
                 class="text-base md:text-lg text-zinc-400 leading-relaxed max-w-2xl mb-8">
-                Webs rápidas, automatizaciones de email y WhatsApp, y diseño para redes — todo hecho por la
-                misma persona, de principio a fin.
+                Diseño web, automatizaciones y contenido visual para negocios que quieren vender más sin perder tiempo ni claridad.
             </p>
 
             <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="300"
                 class="flex flex-col sm:flex-row gap-4">
                 <a href="#servicios"
-                    class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-7 py-3.5 rounded-lg transition-all shadow-lg shadow-emerald-600/20 text-center flex items-center justify-center gap-2">
+                    class="bg-white hover:bg-zinc-100 text-zinc-900 font-semibold px-7 py-3.5 rounded-lg transition-all shadow-[0_0_0_1px_rgba(15,23,42,0.08),0_8px_20px_rgba(15,23,42,0.08)] text-center flex items-center justify-center gap-2">
                     <i data-lucide="eye" class="w-4 h-4" aria-hidden="true"></i>
                     Ver servicios
                 </a>
-                <a href="https://wa.me/34602317364?text=Hola%2C%20quiero%20agendar%20una%20llamada%20de%2015%20minutos%20contigo"
+                <a href="https://wa.me/34602317364?text=Hola%2C%20quiero%20reservar%20una%20llamada%20contigo"
                     target="_blank" rel="noopener noreferrer"
-                    class="border border-zinc-700 hover:border-emerald-500/60 text-zinc-200 font-semibold px-7 py-3.5 rounded-lg transition-all text-center flex items-center justify-center gap-2">
+                    class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-7 py-3.5 rounded-lg transition-all shadow-lg shadow-emerald-600/20 text-center flex items-center justify-center gap-2">
                     <i data-lucide="phone-call" class="w-4 h-4" aria-hidden="true"></i>
-                    Agenda una llamada de 15 min
+                    Reservar una llamada
                 </a>
             </div>
         </div>
@@ -277,24 +403,24 @@
         <div class="container mx-auto px-6 max-w-4xl">
             <div class="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-8">
                 <div data-aos="fade-up" data-parallax="left"
-                    class="aspect-square w-full max-w-xs bg-gradient-to-br from-white via-zinc-100 to-zinc-300 border border-zinc-200 rounded-lg p-5 flex flex-col justify-between overflow-hidden">
-                    <div class="font-mono text-[10.5px] text-zinc-500">
-                        LO QUE HACEMOS
+                    class="aspect-square w-full max-w-xs bg-gradient-to-br from-emerald-500 via-emerald-600 to-emerald-700 border border-emerald-500 rounded-2xl p-5 flex flex-col justify-between overflow-hidden shadow-xl shadow-emerald-600/20">
+                    <div class="font-mono text-[10.5px] text-emerald-50/90">
+                        LO QUE GENERA
                     </div>
-                    <div class="text-4xl sm:text-xl md:text-3xl lg:text-2xl leading-[0.95] font-black tracking-tight text-zinc-950">
-                        37% más de clientes con la web.
+                    <div class="text-4xl sm:text-xl md:text-3xl lg:text-2xl leading-[0.95] font-black tracking-[-0.05em] text-white">
+                        Confianza. Contacto. Ventas.
                     </div>
-                    <div class="text-xs font-bold text-zinc-500">inspirewebs.com</div>
+                    <div class="text-xs font-bold text-emerald-50/80">inspirewebs.com</div>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="100" data-parallax="right"
-                    class="aspect-square w-full max-w-xs bg-zinc-900 border border-zinc-800 rounded-lg p-5 flex flex-col justify-between overflow-hidden">
+                    class="card-contrast aspect-square w-full max-w-xs bg-gradient-to-br from-zinc-950 via-zinc-900 to-black border border-zinc-700 rounded-2xl p-5 flex flex-col justify-between overflow-hidden shadow-xl shadow-black/20">
                     <div class="font-mono text-[10.5px] text-emerald-400">
-                        LO QUE ENTREGAMOS
+                        LO QUE ENTREGAS
                     </div>
-                    <div class="text-4xl sm:text-xl md:text-3xl lg:text-2xl leading-[0.95] font-black tracking-tight text-white">
-                        Rápida. Clara. Permanente.
+                    <div class="text-4xl sm:text-xl md:text-3xl lg:text-2xl leading-[0.95] font-black tracking-[-0.05em] text-white">
+                        Tu negocio atento incluso cuando no estás.
                     </div>
-                    <div class="text-xs font-bold text-zinc-500">inspirewebs.com</div>
+                    <div class="text-xs font-bold text-zinc-300">inspirewebs.com</div>
                 </div>
             </div>
         </div>
@@ -305,7 +431,7 @@
         <div class="container mx-auto px-6 max-w-5xl">
             <div data-aos="fade-up"
                 class="flex items-baseline justify-between pb-5 mb-2 border-b border-zinc-800">
-                <h2 class="text-sm md:text-base font-bold text-white">Tres cosas, y funcionan juntas</h2>
+                <h2 class="text-sm md:text-base font-bold text-white">Soluciones que encajan con tu negocio</h2>
                 <span class="font-mono text-[11px] text-zinc-600">01 — 03</span>
             </div>
 
@@ -314,15 +440,10 @@
                 class="grid grid-cols-1 lg:grid-cols-[120px_1fr_280px] gap-4 lg:gap-10 py-9 border-b border-zinc-800">
                 <div class="font-mono text-5xl md:text-6xl font-black leading-none text-emerald-500/30">W</div>
                 <div>
-                    <div class="text-3xl md:text-4xl font-extrabold tracking-tight text-white">Websites</div>
+                    <div class="text-3xl md:text-4xl font-extrabold tracking-tight text-white">Webs que convierten</div>
                     <p class="mt-3 text-zinc-400 text-[15px] leading-relaxed max-w-lg">
-                        Una web rápida y responsive, pensada para convertir visitas en clientes. La escribo,
-                        la diseño y la construyo yo mismo, así que nada se pierde por el camino. Te quedas con
-                        los archivos y los accesos, lista para crecer cuando lo necesites.
+                        Una web clara, rápida y enfocada en la acción. Diseño y estructura pensados para que cada visita tenga un camino directo hacia tu agenda, WhatsApp o formulario de contacto.
                     </p>
-                    <div class="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-white bg-emerald-500/5 rounded-full px-3 py-1.5">
-                        DESDE 400€ - 900€
-                    </div>
                 </div>
                 <div class="flex flex-wrap gap-2 content-start">
                     <span class="border border-zinc-800 text-zinc-400 text-xs px-3 py-1.5 rounded-full">Landing
@@ -340,16 +461,10 @@
                 class="grid grid-cols-1 lg:grid-cols-[120px_1fr_280px] gap-4 lg:gap-10 py-9 border-b border-zinc-800">
                 <div class="font-mono text-5xl md:text-6xl font-black leading-none text-emerald-500/30">A</div>
                 <div>
-                    <div class="text-3xl md:text-4xl font-extrabold tracking-tight text-white">Automatización</div>
+                    <div class="text-3xl md:text-4xl font-extrabold tracking-tight text-white">Automatización que ahorra tiempo</div>
                     <p class="mt-3 text-zinc-400 text-[15px] leading-relaxed max-w-lg">
-                        Automatizo las tareas repetitivas que hoy haces a mano: mensajes de bienvenida,
-                        recordatorios y seguimientos por email o WhatsApp, y la actualización de tus datos
-                        en el CRM, en Excel o en Notion. Todo ocurre solo, en el momento justo, sin que
-                        tengas que acordarte de nada ni copiar información entre herramientas.
+                        Reviso las tareas repetitivas y las convierto en procesos automáticos: mensajes, recordatorios, seguimiento y actualización de datos para que tú te centres en vender y atender mejor.
                     </p>
-                    <div class="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-white bg-emerald-500/5 rounded-full px-3 py-1.5">
-                        DESDE 100€ - 250€ / MES
-                    </div>
                 </div>
                 <div class="flex flex-wrap gap-2 content-start">
                     <span class="border border-zinc-800 text-zinc-400 text-xs px-3 py-1.5 rounded-full">Emails de
@@ -367,14 +482,10 @@
             <div data-aos="fade-up" class="grid grid-cols-1 lg:grid-cols-[120px_1fr_280px] gap-4 lg:gap-10 py-9">
                 <div class="font-mono text-5xl md:text-6xl font-black leading-none text-emerald-500/30">D</div>
                 <div>
-                    <div class="text-3xl md:text-4xl font-extrabold tracking-tight text-white">Diseño</div>
+                    <div class="text-3xl md:text-4xl font-extrabold tracking-tight text-white">Diseño que refuerza la marca</div>
                     <p class="mt-3 text-zinc-400 text-[15px] leading-relaxed max-w-lg">
-                        Publicaciones para redes, anuncios y algún que otro menú o flyer, con la misma
-                        tipografía, colores y estilo que tu web, para que todo parezca un mismo negocio.
+                        Publicaciones, anuncios y piezas visuales con el mismo estilo que tu web para que toda tu presencia online parezca una sola marca coherente y profesional.
                     </p>
-                    <div class="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-white bg-emerald-500/5 rounded-full px-3 py-1.5">
-                        DESDE 80€ - 200€ / MES
-                    </div>
                 </div>
                 <div class="flex flex-wrap gap-2 content-start">
                     <span class="border border-zinc-800 text-zinc-400 text-xs px-3 py-1.5 rounded-full">Plantillas
@@ -385,6 +496,18 @@
                     <span class="border border-zinc-800 text-zinc-400 text-xs px-3 py-1.5 rounded-full">Material
                         impreso</span>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-6 md:pb-8">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="flex justify-center">
+                <a href="#contacto"
+                    class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-7 py-3.5 rounded-xl transition-all shadow-lg shadow-emerald-600/20 text-center flex items-center justify-center gap-2">
+                    <i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i>
+                    Quiero una consulta gratis
+                </a>
             </div>
         </div>
     </section>
@@ -462,65 +585,70 @@
     <!-- DISEÑO EN LA PRÁCTICA -->
     <section class="py-20 md:py-24 overflow-hidden">
         <div class="container mx-auto px-6 max-w-5xl">
-            <h2 data-aos="fade-up" class="text-3xl md:text-[40px] font-extrabold tracking-tight text-white mb-10 max-w-2xl">
+            <h2 data-aos="fade-up" class="text-3xl md:text-[40px] font-extrabold tracking-[-0.05em] text-white mb-10 max-w-2xl">
                 El mismo diseño para tu web, tus redes sociales y tu marca
             </h2>
 
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
                 <div data-aos="fade-up" data-parallax="left">
-                    <div class="aspect-square bg-gradient-to-br from-emerald-400 via-emerald-600 to-emerald-800 rounded-lg p-5 flex flex-col justify-between overflow-hidden">
-                        <div class="font-mono text-[10.5px] text-emerald-950/70">01 / OFERTA</div>
-                        <div class="text-4xl sm:text-xl md:text-3xl lg:text-2xl leading-[0.95] font-black tracking-tight text-emerald-950">
-                            Diseño personalizado que atrae leads.
+                    <div class="aspect-square bg-gradient-to-br from-emerald-300 via-emerald-500 to-emerald-700 rounded-2xl p-5 flex flex-col justify-between overflow-hidden shadow-xl shadow-emerald-600/15">
+                        <div class="font-mono text-[10.5px] text-emerald-950/80">01 / CAPTACIÓN</div>
+                        <div class="text-4xl sm:text-xl md:text-3xl lg:text-2xl leading-[0.95] font-black tracking-[-0.05em] text-emerald-950">
+                            Más visitas, más mensajes, más clientes.
                         </div>
-                        <div class="text-xs font-bold text-emerald-950/70">inspirewebs.com</div>
+                        <div class="text-xs font-bold text-emerald-950/80">inspirewebs.com</div>
                     </div>
-                    <div class="font-mono text-[10.5px] text-zinc-600 mt-2.5">INSTAGRAM 1:1</div>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="100">
-                    <div class="aspect-square bg-gradient-to-br from-white via-zinc-100 to-zinc-300 border border-zinc-200 rounded-lg p-5 flex flex-col justify-between overflow-hidden">
+                    <div class="aspect-square bg-gradient-to-br from-white via-zinc-100 to-zinc-300 border border-zinc-200 rounded-2xl p-5 flex flex-col justify-between overflow-hidden shadow-lg shadow-zinc-200/50">
                         <div class="font-mono text-[10.5px] text-zinc-500">02 / IDENTIDAD</div>
-                        <div class="text-4xl sm:text-xl md:text-3xl lg:text-2xl leading-[0.95] font-black tracking-tight text-zinc-950">
+                        <div class="text-4xl sm:text-xl md:text-3xl lg:text-2xl leading-[0.95] font-black tracking-[-0.05em] text-zinc-950">
                             Clara. Consistente. Que funciona.
                         </div>
                         <div class="text-xs font-bold text-zinc-500">inspirewebs.com</div>
                     </div>
-                    <div class="font-mono text-[10.5px] text-zinc-600 mt-2.5">INSTAGRAM 1:1</div>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="200" data-parallax="right">
-                    <div class="aspect-square bg-zinc-900 border border-zinc-800 rounded-lg p-5 flex flex-col justify-between overflow-hidden">
-                        <div class="font-mono text-[10.5px] text-emerald-400">03 / PRINCIPIO</div>
-                        <div class="text-4xl sm:text-xl md:text-3xl lg:text-2xl leading-[0.95] font-black tracking-tight text-white">
-                            Disponible. Adaptada. Personalizada.
+                    <div class="result-card aspect-square bg-black border border-zinc-800 rounded-2xl p-5 flex flex-col justify-between overflow-hidden shadow-xl shadow-black/20">
+                        <div class="font-mono text-[10.5px] text-emerald-400">03 / RESULTADO</div>
+                        <div class="text-4xl sm:text-xl md:text-3xl lg:text-2xl leading-[0.95] font-black tracking-[-0.05em] text-white">
+                            37% más de clientes con la web.
                         </div>
-                        <div class="text-xs font-bold text-zinc-500">inspirewebs.com</div>
+                        <div class="text-xs font-bold text-zinc-300">inspirewebs.com</div>
                     </div>
-                    <div class="font-mono text-[10.5px] text-zinc-600 mt-2.5">INSTAGRAM 1:1</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- AUTOMATIZACIÓN EN LA PRÁCTICA -->
-    <section class="py-20 md:py-24 bg-zinc-900/40 border-y border-zinc-800/80">
+    <section class="py-20 md:py-24">
         <div class="container mx-auto px-6 max-w-5xl">
             <h2 data-aos="fade-up"
                 class="text-3xl md:text-[40px] font-extrabold tracking-tight text-white mb-3 max-w-2xl">
-                Menos tareas repetitivas. Más cosas automáticas.
+                Automatización que te hace ganar tiempo.
             </h2>
-            <p data-aos="fade-up" class="text-zinc-400 text-base max-w-lg mb-12">
-                La automatización se encarga de escribir y enviar por ti, siempre a tiempo, para que dejes de perseguir tareas manuales.
+            <p data-aos="fade-up" class="text-zinc-400 text-base max-w-lg mb-8">
+                Mensajes, recordatorios y seguimiento automáticos para que tu negocio responda antes, sin perder tiempo en tareas repetitivas.
             </p>
+
+            <div class="mb-10 flex justify-center md:justify-start">
+                <a href="#contacto"
+                    class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-7 py-3.5 rounded-xl transition-all shadow-lg shadow-emerald-600/20 text-center flex items-center justify-center gap-2">
+                    <i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i>
+                    Automatiza mi negocio
+                </a>
+            </div>
 
             <div data-aos="fade-up" class="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-6 items-start">
 
                 <!-- MOCKUP WHATSAPP -->
                 <div id="whatsapp-mockup" class="bg-[#111b21] border border-zinc-800 rounded-xl overflow-hidden flex flex-col">
                     <div class="flex items-center gap-2.5 px-4 py-3 border-b border-black/30 bg-[#202c33]">
-                        <div class="w-8 h-8 rounded-full bg-zinc-700 shrink-0"></div>
+                        <div class="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-300 to-emerald-600 shrink-0"></div>
                         <div class="flex-1 min-w-0">
-                            <div class="text-[13px] font-bold text-white truncate">InspireWebs</div>
-                            <div class="font-mono text-[10px] text-emerald-400">en línea · responde en minutos</div>
+                            <div class="text-[13px] font-bold text-white truncate">Luna Beauty Bot</div>
+                            <div class="font-mono text-[10px] text-emerald-300">IA · responde al instante</div>
                         </div>
                         <div class="flex items-center gap-3 text-zinc-400 shrink-0">
                             <i data-lucide="video" class="w-4 h-4" aria-hidden="true"></i>
@@ -529,14 +657,12 @@
                         </div>
                     </div>
                     <div class="px-4 py-3.5 flex flex-col justify-end gap-1.5 whatsapp-bg min-h-[300px]">
-                        <div class="msg-item opacity-0 translate-y-3 transition-all duration-500 ease-out self-end max-w-[85%] bg-emerald-600 text-white rounded-2xl rounded-br-sm px-3 py-2">
+                        <div class="msg-item opacity-0 translate-y-3 transition-all duration-500 ease-out self-start max-w-[85%] bg-zinc-800 text-zinc-100 rounded-2xl rounded-bl-sm px-3 py-2">
                             <div class="text-[13px] leading-snug">
-                                Hola Sara, soy de InspireWebs. ¿Recibiste el correo sobre tu web de
-                                reservas? Podemos empezar cuando quieras.
+                                Hola 💕 soy Luna Beauty Bot. ¿Qué tratamiento te interesa: facial, depilación o cuerpo?
                             </div>
-                            <div class="flex items-center justify-end gap-1 mt-0.5">
-                                <span class="text-[10px] text-emerald-100/70">09:12</span>
-                                <i data-lucide="check-check" class="w-3.5 h-3.5 text-sky-300" aria-hidden="true"></i>
+                            <div class="flex items-center justify-end mt-0.5">
+                                <span class="text-[10px] text-zinc-500">09:10</span>
                             </div>
                         </div>
                         <div class="msg-item msg-typing opacity-0 translate-y-3 transition-all duration-500 ease-out self-start bg-zinc-800 rounded-2xl rounded-bl-sm px-3 py-2 flex gap-1 items-center">
@@ -544,39 +670,47 @@
                             <span class="w-1.5 h-1.5 rounded-full bg-zinc-500 typing-dot"></span>
                             <span class="w-1.5 h-1.5 rounded-full bg-zinc-500 typing-dot"></span>
                         </div>
-                        <div class="msg-item msg-reply opacity-0 translate-y-3 transition-all duration-500 ease-out self-start max-w-[85%] bg-zinc-800 text-zinc-100 rounded-2xl rounded-bl-sm px-3 py-2">
-                            <div class="text-[13px] leading-snug">Sí, perdón la demora. ¿Hablamos el jueves?</div>
+                        <div class="msg-item msg-reply opacity-0 translate-y-3 transition-all duration-500 ease-out self-end max-w-[85%] bg-emerald-600 text-white rounded-2xl rounded-br-sm px-3 py-2">
+                            <div class="text-[13px] leading-snug">Quiero un tratamiento facial y depilación.</div>
+                            <div class="flex items-center justify-end gap-1 mt-0.5">
+                                <span class="text-[10px] text-emerald-100/80">09:11</span>
+                                <i data-lucide="check-check" class="w-3.5 h-3.5 text-sky-300" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="msg-item opacity-0 translate-y-3 transition-all duration-500 ease-out self-start max-w-[85%] bg-zinc-800 text-zinc-100 rounded-2xl rounded-bl-sm px-3 py-2">
+                            <div class="text-[13px] leading-snug">Perfecto. Te recomiendo una limpieza facial + tratamiento personalizado según tu tipo de piel. ¿Quieres ver disponibilidad?</div>
                             <div class="flex items-center justify-end mt-0.5">
-                                <span class="text-[10px] text-zinc-500">09:14</span>
+                                <span class="text-[10px] text-zinc-500">09:12</span>
                             </div>
                         </div>
                         <div class="msg-item opacity-0 translate-y-3 transition-all duration-500 ease-out self-end max-w-[85%] bg-emerald-600 text-white rounded-2xl rounded-br-sm px-3 py-2">
-                            <div class="text-[13px] leading-snug">Perfecto, el jueves nos viene bien. ¿A las 10:00 o a las 16:00?</div>
+                            <div class="text-[13px] leading-snug">Sí, quiero reservar cita.</div>
                             <div class="flex items-center justify-end gap-1 mt-0.5">
-                                <span class="text-[10px] text-emerald-100/70">09:15</span>
+                                <span class="text-[10px] text-emerald-100/80">09:13</span>
                                 <i data-lucide="check-check" class="w-3.5 h-3.5 text-sky-300" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="msg-item opacity-0 translate-y-3 transition-all duration-500 ease-out self-start flex gap-2">
-                            <span class="border border-zinc-700 text-zinc-300 text-xs px-2.5 py-1 rounded-full">10:00</span>
-                            <span class="border border-zinc-700 text-zinc-300 text-xs px-2.5 py-1 rounded-full">16:00</span>
+                            <span class="border border-zinc-700 text-zinc-300 text-xs px-2.5 py-1 rounded-full">Facial</span>
+                            <span class="border border-zinc-700 text-zinc-300 text-xs px-2.5 py-1 rounded-full">Depilación</span>
+                            <span class="border border-zinc-700 text-zinc-300 text-xs px-2.5 py-1 rounded-full">Cuerpo</span>
                         </div>
                         <div class="msg-item msg-typing opacity-0 translate-y-3 transition-all duration-500 ease-out self-start bg-zinc-800 rounded-2xl rounded-bl-sm px-3 py-2 flex gap-1 items-center">
                             <span class="w-1.5 h-1.5 rounded-full bg-zinc-500 typing-dot"></span>
                             <span class="w-1.5 h-1.5 rounded-full bg-zinc-500 typing-dot"></span>
                             <span class="w-1.5 h-1.5 rounded-full bg-zinc-500 typing-dot"></span>
                         </div>
-                        <div class="msg-item opacity-0 translate-y-3 transition-all duration-500 ease-out self-start max-w-[85%] bg-zinc-800 text-zinc-100 rounded-2xl rounded-bl-sm px-3 py-2">
-                            <div class="text-[13px] leading-snug">16:00 me viene perfecto 👍</div>
-                            <div class="flex items-center justify-end mt-0.5">
-                                <span class="text-[10px] text-zinc-500">09:17</span>
+                        <div class="msg-item opacity-0 translate-y-3 transition-all duration-500 ease-out self-end max-w-[85%] bg-emerald-600 text-white rounded-2xl rounded-br-sm px-3 py-2">
+                            <div class="text-[13px] leading-snug">¿Qué días tienes disponibles?</div>
+                            <div class="flex items-center justify-end gap-1 mt-0.5">
+                                <span class="text-[10px] text-emerald-100/80">09:14</span>
+                                <i data-lucide="check-check" class="w-3.5 h-3.5 text-sky-300" aria-hidden="true"></i>
                             </div>
                         </div>
-                        <div class="msg-item opacity-0 translate-y-3 transition-all duration-500 ease-out self-end max-w-[85%] bg-emerald-600 text-white rounded-2xl rounded-br-sm px-3 py-2">
-                            <div class="text-[13px] leading-snug">Genial, te mando la invitación por correo ahora mismo.</div>
-                            <div class="flex items-center justify-end gap-1 mt-0.5">
-                                <span class="text-[10px] text-emerald-100/70">09:18</span>
-                                <i data-lucide="check-check" class="w-3.5 h-3.5 text-sky-300" aria-hidden="true"></i>
+                        <div class="msg-item opacity-0 translate-y-3 transition-all duration-500 ease-out self-start max-w-[85%] bg-zinc-800 text-zinc-100 rounded-2xl rounded-bl-sm px-3 py-2">
+                            <div class="text-[13px] leading-snug">Tenemos hueco para jueves 18:00 o sábado 10:30. ¿Cuál prefieres?</div>
+                            <div class="flex items-center justify-end mt-0.5">
+                                <span class="text-[10px] text-zinc-500">09:15</span>
                             </div>
                         </div>
                     </div>
@@ -726,9 +860,12 @@
     <!-- PROCESO -->
     <section id="proceso" class="py-20 md:py-28">
         <div class="container mx-auto px-6 max-w-5xl">
+            <div data-aos="fade-up" class="mb-8">
+                <div class="font-mono text-[10.5px] tracking-[0.18em] text-zinc-500 mb-3">PROCESO</div>
+            </div>
             <div data-aos="fade-up"
                 class="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-8">
-                <div>
+                <div class="pt-5">
                     <div class="font-mono text-4xl md:text-5xl font-black leading-none text-emerald-500/30 mb-4">01</div>
                     <div class="text-lg font-extrabold tracking-tight text-white mb-2">Una llamada, luego un
                         plan</div>
@@ -737,7 +874,7 @@
                         precio cerrado.
                     </p>
                 </div>
-                <div>
+                <div class="pt-5">
                     <div class="font-mono text-4xl md:text-5xl font-black leading-none text-emerald-500/30 mb-4">02</div>
                     <div class="text-lg font-extrabold tracking-tight text-white mb-2">Construyo con
                         transparencia</div>
@@ -745,7 +882,7 @@
                         Ves cómo avanza el trabajo y revisas cada detalle antes de que quede terminado.
                     </p>
                 </div>
-                <div>
+                <div class="pt-5">
                     <div class="font-mono text-4xl md:text-5xl font-black leading-none text-emerald-500/30 mb-4">03</div>
                     <div class="text-lg font-extrabold tracking-tight text-white mb-2">Entrega, y sigo cerca
                     </div>
@@ -757,51 +894,6 @@
         </div>
     </section>
 
-    <!-- PACK -->
-    <section class="pb-16 md:pb-20">
-        <div class="container mx-auto px-6 max-w-5xl">
-            <div data-aos="fade-up"
-                class="relative lg:max-w-2xl bg-gradient-to-br from-emerald-500 via-emerald-600 to-emerald-800 rounded-2xl p-6 md:p-9 overflow-hidden">
-                <div
-                    class="absolute top-5 right-5 md:top-7 md:right-7 bg-white text-emerald-700 text-[11px] font-black tracking-wide px-3 py-1.5 rounded-full shadow-md">
-                    AHORRA 30%
-                </div>
-                <div class="font-mono text-[11px] tracking-[0.18em] text-emerald-100 mb-3">PACK</div>
-                <h3 class="text-2xl md:text-[32px] font-extrabold tracking-tight text-white max-w-lg leading-tight mb-5">
-                    Website nueva, 3 automatizaciones y diseño para redes, todo en un solo pack.
-                </h3>
-                <ul class="space-y-2 mb-7 text-emerald-50 text-sm max-w-md">
-                    <li class="flex items-start gap-2">
-                        <i data-lucide="check" class="w-4 h-4 text-white shrink-0 mt-0.5" aria-hidden="true"></i>
-                        Website completa, lista para convertir visitas en clientes
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <i data-lucide="check" class="w-4 h-4 text-white shrink-0 mt-0.5" aria-hidden="true"></i>
-                        3 automatizaciones a medida (WhatsApp, email, CRM/Excel/Notion)
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <i data-lucide="check" class="w-4 h-4 text-white shrink-0 mt-0.5" aria-hidden="true"></i>
-                        Diseño para redes — hasta 12 publicaciones al mes
-                    </li>
-                </ul>
-                <div class="flex flex-wrap items-end gap-x-7 gap-y-3 mb-7">
-                    <div>
-                        <div class="font-mono text-[10px] tracking-wide text-emerald-100">PAGO ÚNICO</div>
-                        <div class="text-3xl font-black text-white">599€</div>
-                    </div>
-                    <div>
-                        <div class="font-mono text-[10px] tracking-wide text-emerald-100">DESPUÉS</div>
-                        <div class="text-3xl font-black text-white">299€<span class="text-base font-bold">/mes</span>
-                        </div>
-                    </div>
-                </div>
-                <a href="#contacto"
-                    class="inline-flex items-center justify-center gap-2 bg-white hover:bg-emerald-50 text-emerald-700 font-bold px-6 py-3 rounded-lg transition-colors text-sm">
-                    Quiero el Pack
-                </a>
-            </div>
-        </div>
-    </section>
 
     <!-- SIGUIENTE PASO + FORMULARIO -->
     <section id="contacto" class="bg-stone-100 py-16 md:py-24">
@@ -810,7 +902,7 @@
             <div data-aos="fade-up" class="lg:sticky lg:top-32">
                 <div class="font-mono text-[11px] tracking-[0.18em] text-zinc-500 mb-4">SIGUIENTE PASO</div>
                 <h2 class="text-4xl sm:text-5xl font-black tracking-tight text-zinc-950 max-w-xl leading-[1.02]">
-                    Cuéntame qué te está frenando, y te digo si puedo arreglarlo.
+                    Cuéntame tu objetivo y te digo qué puede funcionar.
                 </h2>
             </div>
 
@@ -843,10 +935,10 @@
                             opción te interesa?</label>
                         <select id="service" name="service"
                             class="w-full bg-zinc-50 border border-zinc-300 rounded-lg px-3.5 py-2.5 text-zinc-900 focus:outline-none focus:border-emerald-600 transition-colors text-sm">
-                            <option value="Pack (599€ + 299€/mes)">Pack (599€ + 299€/mes)</option>
-                            <option value="Website (desde 400€ - 900€)">Website (desde 400€ - 900€)</option>
-                            <option value="Automatización (desde 100€ - 250€/mes)">Automatización (desde 100€ - 250€/mes)</option>
-                            <option value="Diseño para redes (desde 80€ - 200€/mes)">Diseño para redes (desde 80€ - 200€/mes)</option>
+                            <option value="Pack">Pack</option>
+                            <option value="Website">Website</option>
+                            <option value="Automatización">Automatización</option>
+                            <option value="Diseño para redes">Diseño para redes</option>
                             <option value="Otra consulta">Otra consulta / Proyecto a medida</option>
                         </select>
                     </div>
@@ -889,7 +981,7 @@
     </a>
 
     <!-- FOOTER CON LOGO -->
-    <footer class="py-10 border-t border-zinc-800/60 text-center text-xs text-zinc-500">
+    <footer class="py-10 border-t border-zinc-800/60 text-center text-xs bg-black text-zinc-400">
         <div class="container mx-auto px-6 flex flex-col items-center justify-center gap-4">
             <a href="#" class="inline-block" aria-label="InspireWebs Inicio">
                 <img src="assets/logo-white.png" alt="InspireWebs Logo"
@@ -900,14 +992,14 @@
                         class="w-2 h-2 rounded-full bg-emerald-500 inline-block absolute -top-0.5 left-[2px]"></span>nspireWebs
                 </div>
             </a>
-            <span class="text-[11px] font-semibold tracking-wide text-zinc-500">yassine yahya</span>
-            <p class="font-mono text-[11px] tracking-wide">INSPIREWEBS © 2026 · WEBSITES DESIGN AUTOMATION</p>
-            <div class="flex items-center gap-3 text-[11px] text-zinc-500">
-                <a href="legal/aviso-legal.html" class="hover:text-zinc-300 transition-colors">Aviso Legal</a>
-                <span class="text-zinc-700">&middot;</span>
-                <a href="legal/privacidad.html" class="hover:text-zinc-300 transition-colors">Privacidad</a>
-                <span class="text-zinc-700">&middot;</span>
-                <a href="legal/cookies.html" class="hover:text-zinc-300 transition-colors">Cookies</a>
+            <span class="text-[11px] font-semibold tracking-wide text-zinc-400">InspireWebs · yassine yahya</span>
+            <p class="font-mono text-[11px] tracking-wide text-zinc-400">INSPIREWEBS © 2026 · WEBSITES DESIGN AUTOMATION</p>
+            <div class="flex items-center gap-3 text-[11px] text-zinc-400">
+                <a href="legal/aviso-legal.html" class="hover:text-zinc-200 transition-colors">Aviso Legal</a>
+                <span class="text-zinc-600">&middot;</span>
+                <a href="legal/privacidad.html" class="hover:text-zinc-200 transition-colors">Privacidad</a>
+                <span class="text-zinc-600">&middot;</span>
+                <a href="legal/cookies.html" class="hover:text-zinc-200 transition-colors">Cookies</a>
             </div>
         </div>
     </footer>
